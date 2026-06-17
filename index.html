@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Security+ Practice Quiz</title>
-  <link rel="stylesheet" href="style.css?v=ui-clean-20260617b" />
+  <link rel="stylesheet" href="style.css?v=mistakes-20260617" />
 </head>
 <body>
   <main class="quiz-container">
@@ -13,6 +13,12 @@
     <div class="top-bar">
       <p id="progress">Loading...</p>
       <button id="resetBtn">Reset Progress</button>
+    </div>
+
+    <div class="mode-bar">
+      <button id="allBtn" class="secondary-btn">All Questions</button>
+      <button id="mistakesBtn" class="secondary-btn">Review Mistakes (<span id="mistakeCount">0</span>)</button>
+      <button id="clearMistakesBtn" class="secondary-btn danger-btn">Clear Mistakes</button>
     </div>
 
     <section class="card">
@@ -25,10 +31,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=ui-clean-20260617b"></script>
+  <script src="app.js?v=mistakes-20260617"></script>
 </body>
 </html>
-
-
-
-

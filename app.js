@@ -1,6 +1,8 @@
 ﻿let questions = [];
+let activeQuestions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 let answered = false;
+let reviewMode = false;
 
 const progressEl = document.getElementById("progress");
 const domainEl = document.getElementById("domain");
@@ -10,17 +12,23 @@ const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
 const nextBtn = document.getElementById("nextBtn");
 const resetBtn = document.getElementById("resetBtn");
+const allBtn = document.getElementById("allBtn");
+const mistakesBtn = document.getElementById("mistakesBtn");
+const clearMistakesBtn = document.getElementById("clearMistakesBtn");
+const mistakeCountEl = document.getElementById("mistakeCount");
 
 fetch("questions.json?v=" + Date.now())
   .then(response => response.json())
   .then(data => {
     questions = data;
+    activeQuestions = questions;
 
-    if (currentIndex >= questions.length) {
+    if (currentIndex >= activeQuestions.length) {
       currentIndex = 0;
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
 
+    updateMistakeCount();
     showQuestion();
   })
   .catch(error => {
@@ -28,11 +36,64 @@ fetch("questions.json?v=" + Date.now())
     console.error(error);
   });
 
+function getMistakeIds() {
+  try {
+    return JSON.parse(localStorage.getItem("securityPlusMistakeIds")) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveMistakeIds(ids) {
+  localStorage.setItem("securityPlusMistakeIds", JSON.stringify(ids));
+  updateMistakeCount();
+}
+
+function addMistake(id) {
+  const ids = getMistakeIds();
+  const idText = String(id);
+
+  if (!ids.includes(idText)) {
+    ids.push(idText);
+    saveMistakeIds(ids);
+  }
+}
+
+function removeMistake(id) {
+  const idText = String(id);
+  const ids = getMistakeIds().filter(existingId => existingId !== idText);
+  saveMistakeIds(ids);
+}
+
+function updateMistakeCount() {
+  mistakeCountEl.textContent = getMistakeIds().length;
+}
+
 function hideFeedbackAreas() {
   feedbackEl.textContent = "";
   explanationEl.textContent = "";
   feedbackEl.style.display = "none";
   explanationEl.style.display = "none";
+}
+
+function setAllMode() {
+  reviewMode = false;
+  activeQuestions = questions;
+  currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
+
+  if (currentIndex >= activeQuestions.length) {
+    currentIndex = 0;
+  }
+
+  showQuestion();
+}
+
+function setMistakeMode() {
+  reviewMode = true;
+  const mistakeIds = getMistakeIds();
+  activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
+  currentIndex = 0;
+  showQuestion();
 }
 
 function showQuestion() {
@@ -50,19 +111,30 @@ function showQuestion() {
     return;
   }
 
-  if (currentIndex >= questions.length) {
-    questionEl.textContent = "You have completed all questions.";
+  if (reviewMode && activeQuestions.length === 0) {
+    questionEl.textContent = "You have no mistakes to review.";
     domainEl.textContent = "";
-    progressEl.textContent = "Completed " + questions.length + " questions";
-    optionsEl.innerHTML = "";
-    hideFeedbackAreas();
+    progressEl.textContent = "Review Mistakes";
     nextBtn.style.display = "none";
     return;
   }
 
-  const q = questions[currentIndex];
+  if (currentIndex >= activeQuestions.length) {
+    questionEl.textContent = reviewMode ? "You have reviewed all missed questions." : "You have completed all questions.";
+    domainEl.textContent = "";
+    progressEl.textContent = reviewMode
+      ? "Completed mistake review"
+      : "Completed " + activeQuestions.length + " questions";
+    nextBtn.style.display = "none";
+    return;
+  }
 
-  progressEl.textContent = "Question " + (currentIndex + 1) + " of " + questions.length;
+  const q = activeQuestions[currentIndex];
+
+  progressEl.textContent = reviewMode
+    ? "Review Mistakes: Question " + (currentIndex + 1) + " of " + activeQuestions.length
+    : "Question " + (currentIndex + 1) + " of " + activeQuestions.length;
+
   domainEl.textContent = q.domain;
   questionEl.textContent = q.question;
 
@@ -70,12 +142,19 @@ function showQuestion() {
     const option = document.createElement("div");
     option.className = "option";
     option.textContent = letter + ". " + text;
-    option.addEventListener("click", () => checkAnswer(option, letter, q.answer, q.explanation));
+    option.addEventListener("click", () => checkAnswer(option, letter, q.answer, q.explanation, q.id));
     optionsEl.appendChild(option);
   }
 }
 
-function checkAnswer(selectedOption, selected, correct, explanation) {
+function applyAnswerStyle(element, isCorrect) {
+  element.classList.add(isCorrect ? "correct" : "wrong");
+  element.style.setProperty("background-color", isCorrect ? "#d4edda" : "#f8d7da", "important");
+  element.style.setProperty("border-color", isCorrect ? "#28a745" : "#dc3545", "important");
+  element.style.setProperty("color", isCorrect ? "#155724" : "#721c24", "important");
+}
+
+function checkAnswer(selectedOption, selected, correct, explanation, questionId) {
   if (answered) return;
 
   answered = true;
@@ -87,10 +166,7 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
     option.style.pointerEvents = "none";
 
     if (option.textContent.startsWith(correct + ".")) {
-      option.classList.add("correct");
-      option.style.backgroundColor = "#d4edda";
-      option.style.borderColor = "#28a745";
-      option.style.color = "#155724";
+      applyAnswerStyle(option, true);
     }
   });
 
@@ -99,12 +175,11 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
 
   if (selected === correct) {
     feedbackEl.textContent = "Correct.";
+    removeMistake(questionId);
   } else {
-    selectedOption.classList.add("wrong");
-    selectedOption.style.backgroundColor = "#f8d7da";
-    selectedOption.style.borderColor = "#dc3545";
-    selectedOption.style.color = "#721c24";
+    applyAnswerStyle(selectedOption, false);
     feedbackEl.textContent = "Wrong. The correct answer is " + correct + ".";
+    addMistake(questionId);
   }
 
   explanationEl.textContent = explanation;
@@ -112,12 +187,35 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
 
 nextBtn.addEventListener("click", () => {
   currentIndex++;
-  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+
+  if (!reviewMode) {
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  }
+
   showQuestion();
 });
 
 resetBtn.addEventListener("click", () => {
+  reviewMode = false;
+  activeQuestions = questions;
   currentIndex = 0;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
+});
+
+allBtn.addEventListener("click", () => {
+  setAllMode();
+});
+
+mistakesBtn.addEventListener("click", () => {
+  setMistakeMode();
+});
+
+clearMistakesBtn.addEventListener("click", () => {
+  localStorage.setItem("securityPlusMistakeIds", JSON.stringify([]));
+  updateMistakeCount();
+
+  if (reviewMode) {
+    setMistakeMode();
+  }
 });

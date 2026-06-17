@@ -137,3 +137,23 @@ button:disabled {
 #explanation:empty {
   display: none !important;
 }
+
+.mode-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn {
+  background: #555;
+  color: white;
+}
+
+.danger-btn {
+  background: #b42318;
+}
+
+.secondary-btn:hover {
+  opacity: 0.9;
+}
