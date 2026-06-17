@@ -15,10 +15,12 @@ fetch("questions.json?v=" + Date.now())
   .then(response => response.json())
   .then(data => {
     questions = data;
+
     if (currentIndex >= questions.length) {
       currentIndex = 0;
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
+
     showQuestion();
   })
   .catch(error => {
@@ -26,17 +28,25 @@ fetch("questions.json?v=" + Date.now())
     console.error(error);
   });
 
+function hideFeedbackAreas() {
+  feedbackEl.textContent = "";
+  explanationEl.textContent = "";
+  feedbackEl.style.display = "none";
+  explanationEl.style.display = "none";
+}
+
 function showQuestion() {
   answered = false;
   nextBtn.disabled = true;
-  feedbackEl.textContent = "";
-  explanationEl.textContent = "";
+  nextBtn.style.display = "inline-block";
+  hideFeedbackAreas();
   optionsEl.innerHTML = "";
 
   if (questions.length === 0) {
     questionEl.textContent = "No questions found.";
     domainEl.textContent = "";
     progressEl.textContent = "No questions loaded";
+    nextBtn.style.display = "none";
     return;
   }
 
@@ -44,7 +54,9 @@ function showQuestion() {
     questionEl.textContent = "You have completed all questions.";
     domainEl.textContent = "";
     progressEl.textContent = "Completed " + questions.length + " questions";
-    nextBtn.disabled = true;
+    optionsEl.innerHTML = "";
+    hideFeedbackAreas();
+    nextBtn.style.display = "none";
     return;
   }
 
@@ -82,6 +94,9 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
     }
   });
 
+  feedbackEl.style.display = "block";
+  explanationEl.style.display = "block";
+
   if (selected === correct) {
     feedbackEl.textContent = "Correct.";
   } else {
@@ -95,17 +110,14 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
   explanationEl.textContent = explanation;
 }
 
-
-
-
 nextBtn.addEventListener("click", () => {
   currentIndex++;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
-

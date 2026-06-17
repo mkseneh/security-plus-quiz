@@ -132,3 +132,8 @@ button:disabled {
 #explanation:empty {
   display: none;
 }
+
+#feedback:empty,
+#explanation:empty {
+  display: none !important;
+}
