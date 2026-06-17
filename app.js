@@ -11,7 +11,7 @@ const explanationEl = document.getElementById("explanation");
 const nextBtn = document.getElementById("nextBtn");
 const resetBtn = document.getElementById("resetBtn");
 
-fetch("questions.json?v=clean-20260617")
+fetch("questions.json?v=q13-20260617")
   .then(response => response.json())
   .then(data => {
     questions = data;
@@ -105,6 +105,7 @@ resetBtn.addEventListener("click", () => {
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
 
 
 
