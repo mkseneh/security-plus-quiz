@@ -24,7 +24,7 @@ fetch("questions.json")
 
 function showQuestion() {
   answered = false;
-  nextbtn.style.pointerEvents = "none";
+  nextBtn.disabled = true;
   feedbackEl.textContent = "";
   explanationEl.textContent = "";
   optionsEl.innerHTML = "";
@@ -40,7 +40,7 @@ function showQuestion() {
     questionEl.textContent = "You have completed all questions.";
     domainEl.textContent = "";
     progressEl.textContent = `Completed ${questions.length} questions`;
-    nextbtn.style.pointerEvents = "none";
+    nextBtn.disabled = true;
     return;
   }
 
@@ -91,3 +91,4 @@ resetBtn.addEventListener("click", () => {
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
