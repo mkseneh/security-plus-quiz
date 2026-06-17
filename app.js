@@ -92,3 +92,40 @@ resetBtn.addEventListener("click", () => {
   showQuestion();
 });
 
+
+// FINAL OVERRIDE: force answer colours using inline styles.
+checkAnswer = function(button, selected, correct, explanation) {
+  if (answered) return;
+
+  answered = true;
+  nextBtn.disabled = false;
+
+  const optionButtons = document.querySelectorAll(".option");
+
+  optionButtons.forEach(btn => {
+    btn.disabled = false;
+    btn.style.pointerEvents = "none";
+    btn.style.backgroundColor = "#ffffff";
+    btn.style.borderColor = "#cccccc";
+    btn.style.color = "#222222";
+
+    if (btn.textContent.startsWith(correct + ".")) {
+      btn.classList.add("correct");
+      btn.style.backgroundColor = "#d4edda";
+      btn.style.borderColor = "#28a745";
+      btn.style.color = "#155724";
+    }
+  });
+
+  if (selected === correct) {
+    feedbackEl.textContent = "Correct.";
+  } else {
+    button.classList.add("wrong");
+    button.style.backgroundColor = "#f8d7da";
+    button.style.borderColor = "#dc3545";
+    button.style.color = "#721c24";
+    feedbackEl.textContent = `Wrong. The correct answer is ${correct}.`;
+  }
+
+  explanationEl.textContent = explanation;
+};
