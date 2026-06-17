@@ -51,10 +51,10 @@ function showQuestion() {
   questionEl.textContent = q.question;
 
   for (const [letter, text] of Object.entries(q.options)) {
-    const button = document.createElement("button");
+    const button = document.createElement("div");
     button.className = "option";
     button.textContent = `${letter}. ${text}`;
-    button.onclick = () => checkAnswer(button, letter, q.answer, q.explanation);
+    button.addEventListener("click", () => checkAnswer(button, letter, q.answer, q.explanation));
     optionsEl.appendChild(button);
   }
 }
@@ -129,3 +129,4 @@ checkAnswer = function(button, selected, correct, explanation) {
 
   explanationEl.textContent = explanation;
 };
+
