@@ -130,3 +130,25 @@ button:disabled:not(.option) {
     align-items: flex-start;
   }
 }
+
+.option.correct,
+button.option.correct,
+button.option.correct:disabled {
+  background: #d4edda !important;
+  border-color: #28a745 !important;
+  color: #155724 !important;
+  opacity: 1 !important;
+}
+
+.option.wrong,
+button.option.wrong,
+button.option.wrong:disabled {
+  background: #f8d7da !important;
+  border-color: #dc3545 !important;
+  color: #721c24 !important;
+  opacity: 1 !important;
+}
+
+button.option:disabled {
+  opacity: 1 !important;
+}
