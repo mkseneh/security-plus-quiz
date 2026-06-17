@@ -1,4 +1,4 @@
-let questions = [];
+﻿let questions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 let answered = false;
 
@@ -24,7 +24,7 @@ fetch("questions.json")
 
 function showQuestion() {
   answered = false;
-  nextBtn.disabled = true;
+  nextbtn.style.pointerEvents = "none";
   feedbackEl.textContent = "";
   explanationEl.textContent = "";
   optionsEl.innerHTML = "";
@@ -40,7 +40,7 @@ function showQuestion() {
     questionEl.textContent = "You have completed all questions.";
     domainEl.textContent = "";
     progressEl.textContent = `Completed ${questions.length} questions`;
-    nextBtn.disabled = true;
+    nextbtn.style.pointerEvents = "none";
     return;
   }
 
