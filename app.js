@@ -95,14 +95,17 @@ function checkAnswer(selectedOption, selected, correct, explanation) {
   explanationEl.textContent = explanation;
 }
 
+
+
+
 nextBtn.addEventListener("click", () => {
   currentIndex++;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
-
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
