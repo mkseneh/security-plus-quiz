@@ -11,10 +11,14 @@ const explanationEl = document.getElementById("explanation");
 const nextBtn = document.getElementById("nextBtn");
 const resetBtn = document.getElementById("resetBtn");
 
-fetch("questions.json?v=q13-20260617")
+fetch("questions.json?v=" + Date.now())
   .then(response => response.json())
   .then(data => {
     questions = data;
+    if (currentIndex >= questions.length) {
+      currentIndex = 0;
+      localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    }
     showQuestion();
   })
   .catch(error => {
@@ -59,53 +63,46 @@ function showQuestion() {
   }
 }
 
-function applyAnswerStyle(element, isCorrect) {
-  element.classList.add(isCorrect ? "correct" : "wrong");
-  element.style.setProperty("background-color", isCorrect ? "#d4edda" : "#f8d7da", "important");
-  element.style.setProperty("border-color", isCorrect ? "#28a745" : "#dc3545", "important");
-  element.style.setProperty("color", isCorrect ? "#155724" : "#721c24", "important");
-}
-
-function checkAnswer(selectedElement, selected, correct, explanation) {
+function checkAnswer(selectedOption, selected, correct, explanation) {
   if (answered) return;
 
   answered = true;
   nextBtn.disabled = false;
 
-  const optionElements = document.querySelectorAll(".option");
+  const allOptions = document.querySelectorAll(".option");
 
-  optionElements.forEach(element => {
-    element.style.pointerEvents = "none";
+  allOptions.forEach(option => {
+    option.style.pointerEvents = "none";
 
-    if (element.textContent.startsWith(correct + ".")) {
-      applyAnswerStyle(element, true);
+    if (option.textContent.startsWith(correct + ".")) {
+      option.classList.add("correct");
+      option.style.backgroundColor = "#d4edda";
+      option.style.borderColor = "#28a745";
+      option.style.color = "#155724";
     }
   });
 
   if (selected === correct) {
     feedbackEl.textContent = "Correct.";
   } else {
-    applyAnswerStyle(selectedElement, false);
+    selectedOption.classList.add("wrong");
+    selectedOption.style.backgroundColor = "#f8d7da";
+    selectedOption.style.borderColor = "#dc3545";
+    selectedOption.style.color = "#721c24";
     feedbackEl.textContent = "Wrong. The correct answer is " + correct + ".";
   }
 
   explanationEl.textContent = explanation;
 }
 
-
-
-
 nextBtn.addEventListener("click", () => {
   currentIndex++;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
-
-
-
-
