@@ -68,7 +68,7 @@ function checkAnswer(button, selected, correct, explanation) {
   const optionButtons = document.querySelectorAll(".option");
 
   optionButtons.forEach(btn => {
-    btn.disabled = true;
+    btn.style.pointerEvents = "none";
 
     if (btn.textContent.startsWith(correct + ".")) {
       btn.classList.add("correct");
@@ -85,12 +85,6 @@ function checkAnswer(button, selected, correct, explanation) {
 
   explanationEl.textContent = explanation;
 }
-
-nextBtn.addEventListener("click", () => {
-  currentIndex++;
-  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  showQuestion();
-});
 
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
