@@ -103,3 +103,9 @@ resetBtn.addEventListener("click", () => {
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
+
+nextBtn.addEventListener("click", () => {
+  currentIndex++;
+  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  showQuestion();
+});
