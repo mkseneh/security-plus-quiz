@@ -1,4 +1,4 @@
-﻿body {
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
@@ -57,20 +57,25 @@ h1 {
   cursor: pointer;
 }
 
-.option:hover {
+.option:hover:not(:disabled) {
   background: #eef3ff;
 }
 
+.option:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+
 .option.correct {
-  background: #d4edda !important;
-  border-color: #28a745 !important;
-  color: #155724 !important;
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
 }
 
 .option.wrong {
-  background: #f8d7da !important;
-  border-color: #dc3545 !important;
-  color: #721c24 !important;
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
 }
 
 button {

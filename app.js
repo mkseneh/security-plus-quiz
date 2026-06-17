@@ -1,4 +1,4 @@
-﻿let questions = [];
+let questions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 let answered = false;
 
@@ -85,12 +85,6 @@ function checkAnswer(button, selected, correct, explanation) {
 
   explanationEl.textContent = explanation;
 }
-
-nextBtn.addEventListener("click", () => {
-  currentIndex++;
-  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  showQuestion();
-});
 
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
