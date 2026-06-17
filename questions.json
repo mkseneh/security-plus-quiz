@@ -37,5 +37,135 @@
                     },
         "answer":  "B",
         "explanation":  "Mandatory Access Control uses classifications and labels. It is common in military and government-style environments."
+    },
+    {
+        "id":  4,
+        "domain":  "Security Concepts",
+        "question":  "Which part of the CIA triad is most affected when a web server is taken offline by a denial-of-service attack?",
+        "options":  {
+                        "A":  "Confidentiality",
+                        "B":  "Integrity",
+                        "C":  "Availability",
+                        "D":  "Non-repudiation"
+                    },
+        "answer":  "C",
+        "explanation":  "Availability means systems and data are accessible when needed. A denial-of-service attack mainly affects availability."
+    },
+    {
+        "id":  5,
+        "domain":  "Security Concepts",
+        "question":  "Which term means proving that a user is who they claim to be?",
+        "options":  {
+                        "A":  "Authorisation",
+                        "B":  "Authentication",
+                        "C":  "Accounting",
+                        "D":  "Encryption"
+                    },
+        "answer":  "B",
+        "explanation":  "Authentication verifies identity. Authorisation decides what the user is allowed to access after identity has been verified."
+    },
+    {
+        "id":  6,
+        "domain":  "Security Concepts",
+        "question":  "Which term means giving a user permission to access a specific resource?",
+        "options":  {
+                        "A":  "Authentication",
+                        "B":  "Authorisation",
+                        "C":  "Hashing",
+                        "D":  "Tokenisation"
+                    },
+        "answer":  "B",
+        "explanation":  "Authorisation controls permissions. It decides what an authenticated user can access or do."
+    },
+    {
+        "id":  7,
+        "domain":  "Security Concepts",
+        "question":  "Which security concept helps prove that a person cannot deny performing an action?",
+        "options":  {
+                        "A":  "Non-repudiation",
+                        "B":  "Availability",
+                        "C":  "Obfuscation",
+                        "D":  "Segmentation"
+                    },
+        "answer":  "A",
+        "explanation":  "Non-repudiation provides proof that an action occurred and links it to a specific person or system."
+    },
+    {
+        "id":  8,
+        "domain":  "Security Controls",
+        "question":  "A security guard checks ID cards before allowing people into a building. What type of control is this?",
+        "options":  {
+                        "A":  "Physical control",
+                        "B":  "Technical control",
+                        "C":  "Managerial control",
+                        "D":  "Compensating control"
+                    },
+        "answer":  "A",
+        "explanation":  "A security guard is a physical control because it protects the physical environment."
+    },
+    {
+        "id":  9,
+        "domain":  "Security Controls",
+        "question":  "A firewall blocks unwanted network traffic. What type of control is this?",
+        "options":  {
+                        "A":  "Physical control",
+                        "B":  "Technical control",
+                        "C":  "Administrative control",
+                        "D":  "Managerial control"
+                    },
+        "answer":  "B",
+        "explanation":  "A firewall is a technical control because it uses technology to enforce security."
+    },
+    {
+        "id":  10,
+        "domain":  "Security Controls",
+        "question":  "A company policy tells employees how they may use company laptops. What type of control is this?",
+        "options":  {
+                        "A":  "Physical control",
+                        "B":  "Technical control",
+                        "C":  "Managerial control",
+                        "D":  "Detective control"
+                    },
+        "answer":  "C",
+        "explanation":  "Policies are managerial or administrative controls because they define rules and expected behaviour."
+    },
+    {
+        "id":  11,
+        "domain":  "Security Controls",
+        "question":  "Which control is designed to identify that a security event has happened?",
+        "options":  {
+                        "A":  "Preventive",
+                        "B":  "Detective",
+                        "C":  "Corrective",
+                        "D":  "Deterrent"
+                    },
+        "answer":  "B",
+        "explanation":  "Detective controls identify or alert on events. Examples include logs, alarms, and intrusion detection systems."
+    },
+    {
+        "id":  12,
+        "domain":  "Security Controls",
+        "question":  "Which control is designed to fix a problem after an incident has occurred?",
+        "options":  {
+                        "A":  "Preventive",
+                        "B":  "Detective",
+                        "C":  "Corrective",
+                        "D":  "Deterrent"
+                    },
+        "answer":  "C",
+        "explanation":  "Corrective controls restore systems or reduce damage after an incident. Examples include backups and patching after compromise."
+    },
+    {
+        "id":  13,
+        "domain":  "Security Controls",
+        "question":  "A warning banner says unauthorised access is prohibited. What type of control is this?",
+        "options":  {
+                        "A":  "Deterrent",
+                        "B":  "Corrective",
+                        "C":  "Compensating",
+                        "D":  "Recovery"
+                    },
+        "answer":  "A",
+        "explanation":  "A deterrent control discourages unwanted behaviour. A warning banner may discourage unauthorised access."
     }
 ]
