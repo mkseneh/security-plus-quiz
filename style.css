@@ -127,3 +127,8 @@ button:disabled {
     align-items: flex-start;
   }
 }
+
+#feedback:empty,
+#explanation:empty {
+  display: none;
+}
