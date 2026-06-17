@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
@@ -46,36 +46,33 @@ h1 {
 .option {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   margin: 12px 0;
   padding: 16px;
   font-size: 20px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 8px;
-  background: #fff;
+  background: #ffffff !important;
   color: #222;
   cursor: pointer;
+  user-select: none;
 }
 
-.option:hover:not(:disabled) {
-  background: #eef3ff;
-}
-
-.option:disabled {
-  cursor: not-allowed;
-  opacity: 1;
+.option:hover {
+  background: #eef3ff !important;
 }
 
 .option.correct {
-  background: #d4edda;
-  border-color: #28a745;
-  color: #155724;
+  background: #d4edda !important;
+  border-color: #28a745 !important;
+  color: #155724 !important;
 }
 
 .option.wrong {
-  background: #f8d7da;
-  border-color: #dc3545;
-  color: #721c24;
+  background: #f8d7da !important;
+  border-color: #dc3545 !important;
+  color: #721c24 !important;
 }
 
 button {
@@ -88,7 +85,7 @@ button {
   font-size: 18px;
 }
 
-button:disabled:not(.option) {
+button:disabled {
   background: #aaa;
   cursor: not-allowed;
 }
@@ -129,42 +126,4 @@ button:disabled:not(.option) {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-.option.correct,
-button.option.correct,
-button.option.correct:disabled {
-  background: #d4edda !important;
-  border-color: #28a745 !important;
-  color: #155724 !important;
-  opacity: 1 !important;
-}
-
-.option.wrong,
-button.option.wrong,
-button.option.wrong:disabled {
-  background: #f8d7da !important;
-  border-color: #dc3545 !important;
-  color: #721c24 !important;
-  opacity: 1 !important;
-}
-
-button.option:disabled {
-  opacity: 1 !important;
-}
-
-div.option.correct {
-  background: #d4edda !important;
-  border: 2px solid #28a745 !important;
-  color: #155724 !important;
-}
-
-div.option.wrong {
-  background: #f8d7da !important;
-  border: 2px solid #dc3545 !important;
-  color: #721c24 !important;
-}
-
-div.option {
-  user-select: none;
 }

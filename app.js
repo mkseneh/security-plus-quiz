@@ -11,7 +11,7 @@ const explanationEl = document.getElementById("explanation");
 const nextBtn = document.getElementById("nextBtn");
 const resetBtn = document.getElementById("resetBtn");
 
-fetch("questions.json")
+fetch("questions.json?v=clean-20260617")
   .then(response => response.json())
   .then(data => {
     questions = data;
@@ -39,94 +39,67 @@ function showQuestion() {
   if (currentIndex >= questions.length) {
     questionEl.textContent = "You have completed all questions.";
     domainEl.textContent = "";
-    progressEl.textContent = `Completed ${questions.length} questions`;
+    progressEl.textContent = "Completed " + questions.length + " questions";
     nextBtn.disabled = true;
     return;
   }
 
   const q = questions[currentIndex];
 
-  progressEl.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
+  progressEl.textContent = "Question " + (currentIndex + 1) + " of " + questions.length;
   domainEl.textContent = q.domain;
   questionEl.textContent = q.question;
 
   for (const [letter, text] of Object.entries(q.options)) {
-    const button = document.createElement("div");
-    button.className = "option";
-    button.textContent = `${letter}. ${text}`;
-    button.addEventListener("click", () => checkAnswer(button, letter, q.answer, q.explanation));
-    optionsEl.appendChild(button);
+    const option = document.createElement("div");
+    option.className = "option";
+    option.textContent = letter + ". " + text;
+    option.addEventListener("click", () => checkAnswer(option, letter, q.answer, q.explanation));
+    optionsEl.appendChild(option);
   }
 }
 
-function checkAnswer(button, selected, correct, explanation) {
+function applyAnswerStyle(element, isCorrect) {
+  element.classList.add(isCorrect ? "correct" : "wrong");
+  element.style.setProperty("background-color", isCorrect ? "#d4edda" : "#f8d7da", "important");
+  element.style.setProperty("border-color", isCorrect ? "#28a745" : "#dc3545", "important");
+  element.style.setProperty("color", isCorrect ? "#155724" : "#721c24", "important");
+}
+
+function checkAnswer(selectedElement, selected, correct, explanation) {
   if (answered) return;
 
   answered = true;
   nextBtn.disabled = false;
 
-  const optionButtons = document.querySelectorAll(".option");
+  const optionElements = document.querySelectorAll(".option");
 
-  optionButtons.forEach(btn => {
-    btn.style.pointerEvents = "none";
+  optionElements.forEach(element => {
+    element.style.pointerEvents = "none";
 
-    if (btn.textContent.startsWith(correct + ".")) {
-      btn.classList.add("correct");
+    if (element.textContent.startsWith(correct + ".")) {
+      applyAnswerStyle(element, true);
     }
   });
 
   if (selected === correct) {
-    button.classList.add("correct");
     feedbackEl.textContent = "Correct.";
   } else {
-    button.classList.add("wrong");
-    feedbackEl.textContent = `Wrong. The correct answer is ${correct}.`;
+    applyAnswerStyle(selectedElement, false);
+    feedbackEl.textContent = "Wrong. The correct answer is " + correct + ".";
   }
 
   explanationEl.textContent = explanation;
 }
+
+nextBtn.addEventListener("click", () => {
+  currentIndex++;
+  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  showQuestion();
+});
 
 resetBtn.addEventListener("click", () => {
   currentIndex = 0;
   localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
-
-
-// FINAL OVERRIDE: force answer colours using inline styles.
-checkAnswer = function(button, selected, correct, explanation) {
-  if (answered) return;
-
-  answered = true;
-  nextBtn.disabled = false;
-
-  const optionButtons = document.querySelectorAll(".option");
-
-  optionButtons.forEach(btn => {
-    btn.disabled = false;
-    btn.style.pointerEvents = "none";
-    btn.style.backgroundColor = "#ffffff";
-    btn.style.borderColor = "#cccccc";
-    btn.style.color = "#222222";
-
-    if (btn.textContent.startsWith(correct + ".")) {
-      btn.classList.add("correct");
-      btn.style.backgroundColor = "#d4edda";
-      btn.style.borderColor = "#28a745";
-      btn.style.color = "#155724";
-    }
-  });
-
-  if (selected === correct) {
-    feedbackEl.textContent = "Correct.";
-  } else {
-    button.classList.add("wrong");
-    button.style.backgroundColor = "#f8d7da";
-    button.style.borderColor = "#dc3545";
-    button.style.color = "#721c24";
-    feedbackEl.textContent = `Wrong. The correct answer is ${correct}.`;
-  }
-
-  explanationEl.textContent = explanation;
-};
-
