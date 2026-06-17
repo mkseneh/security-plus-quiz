@@ -6,13 +6,7 @@ if (!(Test-Path $tsvPath)) {
     exit 1
 }
 
-$rows = Import-Csv -Path $tsvPath -Delimiter "`t"
-
-if ($rows.Count -eq 0) {
-    Write-Error "questions.tsv has no questions"
-    exit 1
-}
-
+$rows = @(Import-Csv -Path $tsvPath -Delimiter "`t")
 $ids = @{}
 $questions = @()
 
