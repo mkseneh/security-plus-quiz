@@ -1,1 +1,1952 @@
-﻿[]
+[
+  {
+    "id": 1,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Felicia wants to deploy an encryption solution that will protect files in motion as they are copied between file shares as well as at rest, and also needs it to support granular, per-user security. What type of solution should she select?",
+    "options": {
+      "A": "Partition encryption",
+      "B": "File encryption",
+      "C": "Full-disk encryption",
+      "D": "Record-level encryption"
+    },
+    "answer": "B",
+    "explanation": "File encryption protects individual files at rest and can continue protecting them when they are copied, while also supporting granular per-user access."
+  },
+  {
+    "id": 2,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Valerie wants to use a certificate to handle multiple subdomains for her website, including the sales.example.com and support.example.com subdomains. What type of certificate should she use?",
+    "options": {
+      "A": "A self-signed certificate",
+      "B": "A root of trust certificate",
+      "C": "A CRL certificate",
+      "D": "A wildcard certificate"
+    },
+    "answer": "D",
+    "explanation": "A wildcard certificate such as *.example.com can cover multiple subdomains under the same parent domain."
+  },
+  {
+    "id": 3,
+    "domain": "Change management",
+    "question": "What information is analyzed during a gap analysis?",
+    "options": {
+      "A": "Control objectives and controls intended to meet the objectives",
+      "B": "Physically separate networks and their potential connection points",
+      "C": "Compensating controls and the controls they are replacing",
+      "D": "Security procedures and the policies they are designed to support"
+    },
+    "answer": "A",
+    "explanation": "Gap analysis compares the control objectives with the controls currently intended to meet those objectives."
+  },
+  {
+    "id": 4,
+    "domain": "Security+ mixed practice",
+    "question": "Susan's team has recommended an application restart for a production, customer-facing application as part of an urgent patch due to a security update. What technical implication is the most common concern when conducting an application restart?",
+    "options": {
+      "A": "Application configuration changes caused by the restart",
+      "B": "Whether the patch will properly apply",
+      "C": "Lack of security controls during the restart",
+      "D": "The downtime during the restart"
+    },
+    "answer": "D",
+    "explanation": "The usual technical concern with restarting a production application is downtime or service interruption."
+  },
+  {
+    "id": 5,
+    "domain": "Change management",
+    "question": "Using a tool like git is most frequently associated with what critical change management process?",
+    "options": {
+      "A": "Having a backout plan",
+      "B": "Stakeholder analysis",
+      "C": "Version control",
+      "D": "Standard operating procedures (SOPs)"
+    },
+    "answer": "C",
+    "explanation": "Git is a version control tool because it tracks file versions, changes, and history."
+  },
+  {
+    "id": 6,
+    "domain": "Security+ mixed practice",
+    "question": "Jacob is concerned that the password used for one of his organization's services is weak, and he wants to make it harder to crack by making it harder to test possible keys during a brute-force attack. What is this technique called?",
+    "options": {
+      "A": "Master keying",
+      "B": "Key stretching",
+      "C": "Key rotation",
+      "D": "Passphrase armoring"
+    },
+    "answer": "B",
+    "explanation": "Key stretching makes brute-force attempts slower by increasing the work needed to test each possible password or key."
+  },
+  {
+    "id": 7,
+    "domain": "Security controls and operations",
+    "question": "Log monitoring is an example of what control category?",
+    "options": {
+      "A": "Technical",
+      "B": "Managerial",
+      "C": "Operational",
+      "D": "Physical"
+    },
+    "answer": "A",
+    "explanation": "Log monitoring is normally implemented with technical systems such as logging platforms, SIEM tools, and automated alerts."
+  },
+  {
+    "id": 8,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Rick wants to make offline brute-force attacks against his password file very difficult for attackers. Which of the following is not a common technique to make passwords harder to crack?",
+    "options": {
+      "A": "Use of a salt",
+      "B": "Use of a pepper",
+      "C": "Use of a purpose-built password hashing algorithm",
+      "D": "Encrypting password plain text using symmetric encryption"
+    },
+    "answer": "D",
+    "explanation": "Passwords should normally be hashed with salts and strong password-hashing methods, not stored as encrypted plaintext."
+  },
+  {
+    "id": 9,
+    "domain": "Change management",
+    "question": "Diffie-Hellman and RSA are both examples of what important encryption-related solution?",
+    "options": {
+      "A": "Rekeying",
+      "B": "Certificate revocation protocols",
+      "C": "Key exchange algorithms",
+      "D": "Key generation algorithms"
+    },
+    "answer": "C",
+    "explanation": "Diffie-Hellman and RSA can be used as key exchange mechanisms to help parties establish encryption keys."
+  },
+  {
+    "id": 10,
+    "domain": "Change management",
+    "question": "Sally wants to ensure that her change management process includes a procedure for what to do if the change fails. What should she create to handle this possibility?",
+    "options": {
+      "A": "An impact analysis",
+      "B": "A backout plan",
+      "C": "A regression test",
+      "D": "A maintenance window"
+    },
+    "answer": "B",
+    "explanation": "A backout plan explains how to reverse or recover from a failed change."
+  },
+  {
+    "id": 11,
+    "domain": "Change management",
+    "question": "Theresa is concerned that her scheduled maintenance window may extend beyond the allocated time due to an unexpected issue. What element from the CIA triad is she concerned about?",
+    "options": {
+      "A": "Criticality",
+      "B": "Accessibility",
+      "C": "Integrity",
+      "D": "Availability"
+    },
+    "answer": "D",
+    "explanation": "Unexpectedly extended downtime affects availability, the CIA triad element concerned with access to systems and services."
+  },
+  {
+    "id": 12,
+    "domain": "Physical security and controls",
+    "question": "Alaina is concerned about vehicles that might impact her organization's backup generator. What should she install to prevent both inadvertent and purposeful vehicle impacts on a generator installed outside her building near a parking lot?",
+    "options": {
+      "A": "A speed bump",
+      "B": "An access control vestibule",
+      "C": "Bollards",
+      "D": "A chain-link fence"
+    },
+    "answer": "C",
+    "explanation": "Bollards are physical barriers used to stop vehicles from striking protected equipment or buildings."
+  },
+  {
+    "id": 13,
+    "domain": "Security controls and operations",
+    "question": "Ben has deployed a data loss prevention (DLP) tool that inspects data and flags specific data types for review before emails containing it are sent outside the organization. What control type best describes this type of solution?",
+    "options": {
+      "A": "Managerial",
+      "B": "Detective",
+      "C": "Corrective",
+      "D": "Preventive"
+    },
+    "answer": "D",
+    "explanation": "A DLP rule that checks and holds outbound email before release is preventive because it can stop data from leaving."
+  },
+  {
+    "id": 14,
+    "domain": "Security controls and operations",
+    "question": "What type of control is a policy or procedure?",
+    "options": {
+      "A": "Directive",
+      "B": "Corrective",
+      "C": "Detective",
+      "D": "Preventive"
+    },
+    "answer": "A",
+    "explanation": "Policies and procedures are directive controls because they tell people what must or should be done."
+  },
+  {
+    "id": 15,
+    "domain": "Security controls and operations",
+    "question": "Murali has deployed a file integrity monitoring tool and has configured alerts to notify him if files are modified. What control type best describes this solution?",
+    "options": {
+      "A": "Preventive",
+      "B": "Deterrent",
+      "C": "Directive",
+      "D": "Detective"
+    },
+    "answer": "D",
+    "explanation": "File integrity monitoring that alerts on changes is detective because it identifies that a change occurred."
+  },
+  {
+    "id": 16,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Charles wants to reduce the threat scope of compromised credentials. What type of the following security controls is best suited to meeting this need?",
+    "options": {
+      "A": "Single sign-on",
+      "B": "Federation",
+      "C": "Zero trust",
+      "D": "Multifactor authentication (MFA)"
+    },
+    "answer": "C",
+    "explanation": "Zero trust reduces the scope of damage from compromised credentials by limiting implicit trust and continuously evaluating access."
+  },
+  {
+    "id": 17,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Carol wants to obfuscate data that is contained in her database. She wants to be able to refer to the data elements without having the actual data exposed. What type of obfuscation option should she select?",
+    "options": {
+      "A": "Tokenization",
+      "B": "Encryption",
+      "C": "Data masking",
+      "D": "Data randomization"
+    },
+    "answer": "A",
+    "explanation": "Tokenization replaces sensitive values with tokens that can be referenced without exposing the original data."
+  },
+  {
+    "id": 18,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What key is used to decrypt information sent by another individual between two people using public key encryption?",
+    "options": {
+      "A": "The recipient's private key",
+      "B": "The recipient's public key",
+      "C": "The sender's private key",
+      "D": "The sender's public key"
+    },
+    "answer": "A",
+    "explanation": "When data is encrypted to a recipient with public key encryption, the recipient uses their private key to decrypt it."
+  },
+  {
+    "id": 19,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Selah's organization has recently experienced a breach and the private keys for her organization's certificates were exposed. What should she immediately do?",
+    "options": {
+      "A": "Reissue the certificates with changed hostnames and other details.",
+      "B": "Replace the certificates with self-signed certificates until they can be replaced by the vendor.",
+      "C": "Revoke the certificates and place them on a certificate revocation list.",
+      "D": "Replace the certificates with wildcard certificates."
+    },
+    "answer": "C",
+    "explanation": "Exposed certificate private keys require revocation so systems stop trusting the affected certificates."
+  },
+  {
+    "id": 20,
+    "domain": "Security+ mixed practice",
+    "question": "Which of the following is not a major concern related to downtime caused by patching and system updates?",
+    "options": {
+      "A": "Attackers compromising the system or service while it is offline",
+      "B": "Security systems or functions being offline during restart or shutdown processes",
+      "C": "Unexpected extended downtime",
+      "D": "Dependencies between systems or services related to downtime"
+    },
+    "answer": "A",
+    "explanation": "A system being offline is less likely to be compromised directly while offline; the other choices are common downtime concerns."
+  },
+  {
+    "id": 21,
+    "domain": "Change management",
+    "question": "Joanna wants to ensure that the most current version of each component in her application is deployed. What change management process will help the most with this requirement?",
+    "options": {
+      "A": "Dependency mapping",
+      "B": "Version control",
+      "C": "Impact analysis",
+      "D": "Allow and deny lists"
+    },
+    "answer": "B",
+    "explanation": "Version control helps ensure the correct and current component versions are tracked and deployed."
+  },
+  {
+    "id": 22,
+    "domain": "Change management",
+    "question": "Greg wants to implement a version control system to ensure that changes are made in ways that will not cause problems for his organization's critical software. Which of the following is not a common feature of version control systems designed for software source code?",
+    "options": {
+      "A": "Atomic operations",
+      "B": "File locking",
+      "C": "Regression testing",
+      "D": "Tagging and labeling"
+    },
+    "answer": "C",
+    "explanation": "Regression testing may integrate with development workflows, but it is not itself a core version control feature."
+  },
+  {
+    "id": 23,
+    "domain": "Physical security and controls",
+    "question": "Christina wants to implement a physical security control that has the greatest flexibility in how it is applied because she knows that exceptions to security practices may be required at times. Which of the following solutions has the greatest flexibility?",
+    "options": {
+      "A": "Video surveillance",
+      "B": "Security guards",
+      "C": "Access badges",
+      "D": "Access control vestibules"
+    },
+    "answer": "B",
+    "explanation": "Security guards are the most flexible because humans can judge exceptions and unusual situations."
+  },
+  {
+    "id": 24,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Lisa wants to ensure that theft of a device will not lead to exposure of the data contained on the device if the device is locked or turned off. What type of encryption should she select to best ensure this?",
+    "options": {
+      "A": "Volume-level encryption",
+      "B": "Full-disk encryption",
+      "C": "File-level encryption",
+      "D": "Partition-level encryption"
+    },
+    "answer": "B",
+    "explanation": "Full-disk encryption protects the data on a lost or stolen device when the system is off or locked."
+  },
+  {
+    "id": 25,
+    "domain": "Security+ mixed practice",
+    "question": "Mahmoud has been asked to implement an allow list for websites that users at his company can visit. What concern should he bring up to management due to this request?",
+    "options": {
+      "A": "Allow lists cannot be used for websites.",
+      "B": "Allow lists are overly permissive and are likely to allow unwanted sites to be visited.",
+      "C": "Using an allow list for websites will take a lot of time to maintain.",
+      "D": "Using an allow list for websites is easily bypassed."
+    },
+    "answer": "C",
+    "explanation": "Website allow lists can require significant ongoing maintenance because needed sites and services change frequently."
+  },
+  {
+    "id": 26,
+    "domain": "Change management",
+    "question": "Which of the following change management processes does not commonly directly involve stakeholders outside of the IT organization?",
+    "options": {
+      "A": "Impact analysis",
+      "B": "Building the backout plan",
+      "C": "The change approval process",
+      "D": "Determining the maintenance window"
+    },
+    "answer": "B",
+    "explanation": "The technical backout plan is usually built inside IT, while impact, approval, and maintenance timing often involve wider stakeholders."
+  },
+  {
+    "id": 27,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What hardware component is used to generate, store, and manage cryptographic keys?",
+    "options": {
+      "A": "A CPU",
+      "B": "A NSA",
+      "C": "A TPM",
+      "D": "A CCA"
+    },
+    "answer": "C",
+    "explanation": "A TPM is hardware used to protect and manage cryptographic keys on a system."
+  },
+  {
+    "id": 28,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Chris wants to check to see if a certificate has been revoked. What protocol can he use to validate the current status of a certificate?",
+    "options": {
+      "A": "TLS",
+      "B": "OCRS",
+      "C": "SSL",
+      "D": "OCSP"
+    },
+    "answer": "D",
+    "explanation": "OCSP is used to check the current revocation status of a certificate."
+  },
+  {
+    "id": 29,
+    "domain": "Security+ mixed practice",
+    "question": "Brian's organization uses a process where a secure module boots systems, then monitors them as each boot stage proceeds. It validates each signed boot stage and reports on whether the boot process was correct or not when complete. What is the secure module used to verify these stages called?",
+    "options": {
+      "A": "A secure initiation manager",
+      "B": "A root of trust",
+      "C": "A boot hash",
+      "D": "A cryptographic boot manager"
+    },
+    "answer": "B",
+    "explanation": "A root of trust is the trusted starting point used to validate secure boot stages."
+  },
+  {
+    "id": 30,
+    "domain": "Security controls and operations",
+    "question": "A vulnerability scan shows that an embedded device that Alice is responsible for has a vulnerability. She knows the vendor is no longer in business and that there is no updated firmware or software update for the device. To resolve the issue, Alice places a firewall between the device and the rest of the network and creates rules that prevent the vulnerable service from being available to other devices. What type of control has Alice deployed?",
+    "options": {
+      "A": "A directive control",
+      "B": "A compensating control",
+      "C": "A detective control",
+      "D": "A procedural control"
+    },
+    "answer": "B",
+    "explanation": "A compensating control is used when the preferred fix is unavailable and another control reduces the risk."
+  },
+  {
+    "id": 31,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Jason knows that his Apple system uses a separate portion of its SoC (system on chip) to store keys and biometric information. What is this specialized component called?",
+    "options": {
+      "A": "A TPM",
+      "B": "A HSM",
+      "C": "A secure enclave",
+      "D": "A screened subnet"
+    },
+    "answer": "C",
+    "explanation": "Apple uses a Secure Enclave to protect keys and biometric data on supported devices."
+  },
+  {
+    "id": 32,
+    "domain": "Change management",
+    "question": "What change management term is used to describe the processes that an organization uses for each change that is made to ensure that a consistent process is used?",
+    "options": {
+      "A": "Standard operating procedures",
+      "B": "A change plan",
+      "C": "Fixed operating procedures",
+      "D": "A backout plan"
+    },
+    "answer": "A",
+    "explanation": "Standard operating procedures describe consistent processes used to perform work, including repeated change processes."
+  },
+  {
+    "id": 33,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Jack knows that there are three common types of database encryption. Which of the following is not a common type of database encryption?",
+    "options": {
+      "A": "Sensitivity-based encryption",
+      "B": "Transparent data encryption",
+      "C": "Field-level encryption",
+      "D": "Column-level encryption"
+    },
+    "answer": "A",
+    "explanation": "Transparent, field-level, and column-level encryption are common database encryption approaches; sensitivity-based encryption is not a standard type."
+  },
+  {
+    "id": 34,
+    "domain": "Change management",
+    "question": "Ujamaa wants to conduct a gap analysis as part of his security efforts. Which of the following best describes what he will analyze?",
+    "options": {
+      "A": "Which services are not configured properly",
+      "B": "Whether current patches are installed on all systems",
+      "C": "The security program as implemented versus best practices",
+      "D": "Legal requirements versus the security program"
+    },
+    "answer": "C",
+    "explanation": "Gap analysis compares the current security program with a desired state such as best practices or requirements."
+  },
+  {
+    "id": 35,
+    "domain": "Physical security and controls",
+    "question": "Brandon wants to deploy a detective control that will help him with physical security threats. Which of the following fits his needs?",
+    "options": {
+      "A": "Fencing",
+      "B": "Lighting",
+      "C": "Video surveillance",
+      "D": "Bollards"
+    },
+    "answer": "C",
+    "explanation": "Video surveillance is detective because it can record or reveal physical security events."
+  },
+  {
+    "id": 36,
+    "domain": "Security controls and operations",
+    "question": "Jack has deployed a system that appears to attackers to be a vulnerable system. The system is specifically designed to capture information and data from attacks to allow for later analysis. What type of tool has Jack deployed?",
+    "options": {
+      "A": "A tarpit",
+      "B": "A honeypot",
+      "C": "A beehive",
+      "D": "An intrusion detection system"
+    },
+    "answer": "B",
+    "explanation": "A honeypot is a decoy system designed to attract attackers and collect information about their activity."
+  },
+  {
+    "id": 37,
+    "domain": "Change management",
+    "question": "Renee wants to ensure that her logs support nonrepudiation. What should she do to ensure this?",
+    "options": {
+      "A": "Encrypt, then hash the logs.",
+      "B": "Hash the logs and then digitally sign them.",
+      "C": "Digitally sign the log file, then encrypt it.",
+      "D": "Hash, then encrypt the logs."
+    },
+    "answer": "B",
+    "explanation": "Hashing provides integrity, and digitally signing the hash supports nonrepudiation."
+  },
+  {
+    "id": 38,
+    "domain": "Physical security and controls",
+    "question": "Isaac wants to deploy sensors to detect intruders in a facility, but he is concerned about the sensors being overly sensitive. What type of sensor is best suited to detecting intruders in an open office environment without significant expense or issues with sensitivity?",
+    "options": {
+      "A": "Infrared",
+      "B": "Pressure",
+      "C": "Microwave",
+      "D": "Ultrasonic"
+    },
+    "answer": "A",
+    "explanation": "Infrared sensors are common, low-cost motion sensors for spaces such as offices."
+  },
+  {
+    "id": 39,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Wayne wants to allow systems to claim identities as part of his AAA process. Which of the following is most commonly used to identify both individuals and systems?",
+    "options": {
+      "A": "Tokens",
+      "B": "Smartcards",
+      "C": "Certificates",
+      "D": "Usernames"
+    },
+    "answer": "C",
+    "explanation": "Certificates are commonly used to identify both users and systems in authentication processes."
+  },
+  {
+    "id": 40,
+    "domain": "Change management",
+    "question": "What are considerations like database and network connectivity, authentication system access, and network time availability considered in the context of change management processes?",
+    "options": {
+      "A": "Allowed services",
+      "B": "Standard operating procedures",
+      "C": "Denied services",
+      "D": "Dependencies"
+    },
+    "answer": "D",
+    "explanation": "Connectivity, authentication services, and time services are dependencies because other systems rely on them."
+  },
+  {
+    "id": 41,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "What role does the policy engine play in a zero-trust environment?",
+    "options": {
+      "A": "It creates new administrative policies based on user behavior.",
+      "B": "It grants access based on policies created by administrators and based on security systems data.",
+      "C": "It enforces policies by monitoring connections between clients and servers.",
+      "D": "It suggests new administrative policies based on usage patterns for adoption by the organization."
+    },
+    "answer": "B",
+    "explanation": "The policy engine makes access decisions using administrator policy and security-system data."
+  },
+  {
+    "id": 42,
+    "domain": "Change management",
+    "question": "Which of the following is not a common post-change activity found in change management practices?",
+    "options": {
+      "A": "Updating diagrams",
+      "B": "Updating procedures",
+      "C": "Updating policies",
+      "D": "Updating contracts"
+    },
+    "answer": "D",
+    "explanation": "Diagrams, procedures, and policies are commonly updated after changes; contracts are not normally a routine post-change item."
+  },
+  {
+    "id": 43,
+    "domain": "Change management",
+    "question": "Which of the following activities should Alaina not restrict as part of her preparation for a change window?",
+    "options": {
+      "A": "Patching",
+      "B": "Scaling clustered systems up or down",
+      "C": "Changing hostnames",
+      "D": "Modifying database configurations"
+    },
+    "answer": "B",
+    "explanation": "Scaling clustered systems may be needed to maintain capacity during a change window, while other configuration changes are normally restricted."
+  },
+  {
+    "id": 44,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What two key features define blockchain ledgers?",
+    "options": {
+      "A": "They are immutable and nontransferable.",
+      "B": "They are shared and can be modified by a vote among all participants.",
+      "C": "They are unique to each participant and are atomic.",
+      "D": "They are shared and immutable."
+    },
+    "answer": "D",
+    "explanation": "Blockchain ledgers are shared among participants and designed to be immutable after entries are added."
+  },
+  {
+    "id": 45,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Damian issues the following command on his Linux server: openssl req -new -newkey rsa:2048 -nodes \\ -keyout exampleserver.key \\ -out exampleserver.csr What has he done?",
+    "options": {
+      "A": "Created a certificate signing request",
+      "B": "Created a certificate revocation request",
+      "C": "Signed a certificate signing request",
+      "D": "Updated the OCSP record for a certificate"
+    },
+    "answer": "A",
+    "explanation": "The openssl req command shown creates a certificate signing request and key material."
+  },
+  {
+    "id": 46,
+    "domain": "Change management",
+    "question": "Nick's organization sets aside Saturday nights from 2 a.m. to 4 a.m. for scheduled maintenance. What is this type of reserved time typically called?",
+    "options": {
+      "A": "Allocated downtime",
+      "B": "A maintenance window",
+      "C": "An unscheduled outage",
+      "D": "An allowed outage"
+    },
+    "answer": "B",
+    "explanation": "A reserved period for planned maintenance is called a maintenance window."
+  },
+  {
+    "id": 47,
+    "domain": "Change management",
+    "question": "Megan wants to assess the impact of a change as part of her change management process. Which of the following is most likely to help her assess impact?",
+    "options": {
+      "A": "A backout plan",
+      "B": "An estimate of the downtime expected",
+      "C": "A list of stakeholders",
+      "D": "A list of dependencies for impacted systems"
+    },
+    "answer": "D",
+    "explanation": "A dependency list helps identify which systems, services, and users may be affected by a change."
+  },
+  {
+    "id": 48,
+    "domain": "Change management",
+    "question": "Jared wants to estimate the downtime that will result as part of a planned change. Which of the following methods will most effectively help him estimate downtime?",
+    "options": {
+      "A": "Average the downtime from other recent changes.",
+      "B": "Contact the vendor for time estimates for the change.",
+      "C": "Perform the change in a test environment.",
+      "D": "Use a fixed maintenance window."
+    },
+    "answer": "C",
+    "explanation": "Testing the change in a test environment gives the best estimate of likely downtime."
+  },
+  {
+    "id": 49,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "An encryption method in which all participants have the same key is known as which of the following types of encryption?",
+    "options": {
+      "A": "Shared hashing",
+      "B": "Asymmetric encryption",
+      "C": "Symmetric encryption",
+      "D": "Universal encryption"
+    },
+    "answer": "C",
+    "explanation": "Symmetric encryption uses the same shared key for encryption and decryption."
+  },
+  {
+    "id": 50,
+    "domain": "Change management",
+    "question": "What important encryption challenge does asymmetric encryption help with by using public keys?",
+    "options": {
+      "A": "Evil twins",
+      "B": "Collision resistance",
+      "C": "Key length",
+      "D": "Key exchange"
+    },
+    "answer": "D",
+    "explanation": "Asymmetric encryption helps solve key exchange by allowing public keys to be shared openly."
+  },
+  {
+    "id": 51,
+    "domain": "Security+ mixed practice",
+    "question": "Rick's cloud provider offers a dedicated hardware security module. Which of the following capabilities is it unlikely to offer?",
+    "options": {
+      "A": "Validating secure boot processes",
+      "B": "Key generation",
+      "C": "Encrypting and decrypting data",
+      "D": "Creating digital signatures"
+    },
+    "answer": "A",
+    "explanation": "HSMs are designed for key operations, not normally for validating secure boot processes."
+  },
+  {
+    "id": 52,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Michelle believes that an image she has discovered in an attacker's directory of files contains additional information that has been hidden in it. What is this type of obfuscation called?",
+    "options": {
+      "A": "Steganography",
+      "B": "Image hashing",
+      "C": "PNG warping",
+      "D": "Image blocking"
+    },
+    "answer": "A",
+    "explanation": "Steganography hides information inside another file, such as an image."
+  },
+  {
+    "id": 53,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Which of the following is not a common transport encryption protocol?",
+    "options": {
+      "A": "TLS",
+      "B": "IPSec",
+      "C": "SAML",
+      "D": "SSH"
+    },
+    "answer": "C",
+    "explanation": "SAML is an authentication and authorization assertion standard, not a transport encryption protocol."
+  },
+  {
+    "id": 54,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "What technology is record-level encryption most commonly associated with?",
+    "options": {
+      "A": "Stored audio files",
+      "B": "Databases",
+      "C": "Physical disks",
+      "D": "Removable storage"
+    },
+    "answer": "B",
+    "explanation": "Record-level encryption is most commonly associated with databases."
+  },
+  {
+    "id": 55,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Yasmine submits the Windows BitLocker key to a central repository after she encrypts the machine. The central repository allows files to be uploaded, but not read, and is protected with access requiring special permissions. What type of solution is Yasmine's company using?",
+    "options": {
+      "A": "A hardware security module",
+      "B": "Perfect forward secrecy",
+      "C": "Key escrow",
+      "D": "Private keys"
+    },
+    "answer": "C",
+    "explanation": "Key escrow stores recovery keys in a protected location for authorized future access."
+  },
+  {
+    "id": 56,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Valerie wants to authenticate her systems using her AAA system. Which of the following options is best suited to system authentication?",
+    "options": {
+      "A": "Asymmetric authentication",
+      "B": "Certificate-based authentication",
+      "C": "Symmetric authentication",
+      "D": "PIN-based authentication"
+    },
+    "answer": "B",
+    "explanation": "Certificates are well suited for authenticating systems because they can identify machines and services."
+  },
+  {
+    "id": 57,
+    "domain": "Security controls and operations",
+    "question": "Valentine wants to detect if an intruder has accessed a secured file server. Which of the following techniques will work best with a data loss prevention tool to identify data exfiltration?",
+    "options": {
+      "A": "A honeypot",
+      "B": "A honeynet",
+      "C": "A honeyfile",
+      "D": "A honeytoken"
+    },
+    "answer": "C",
+    "explanation": "A honeyfile is a decoy file monitored to detect unauthorized access or exfiltration."
+  },
+  {
+    "id": 58,
+    "domain": "Physical security and controls",
+    "question": "Jason has recommended that additional lighting be put in place on the exterior of his building as part of a security upgrade. What type of control is lighting?",
+    "options": {
+      "A": "Operational",
+      "B": "Deterrent",
+      "C": "Corrective",
+      "D": "Technical"
+    },
+    "answer": "B",
+    "explanation": "Lighting is a deterrent control because it discourages physical attacks by increasing visibility."
+  },
+  {
+    "id": 59,
+    "domain": "Physical security and controls",
+    "question": "Which of the following controls is typically the most expensive to implement?",
+    "options": {
+      "A": "Bollards",
+      "B": "Access control vestibules",
+      "C": "Security guards",
+      "D": "Access badges"
+    },
+    "answer": "C",
+    "explanation": "Security guards usually create the highest ongoing cost because they require staffing."
+  },
+  {
+    "id": 60,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Frankie wants to validate the integrity of a file by comparing it against an original copy. Which of the following solutions both fulfills this requirement and avoids known security issues?",
+    "options": {
+      "A": "Hash the original file and the current file using MD5 and compare the hashes.",
+      "B": "Hash the original file and the current file using SHA-1 and compare the hashes.",
+      "C": "Hash the original file and the current file using SHA-256 and compare the hashes.",
+      "D": "Hash the original file and the current file using AES and compare the hashes."
+    },
+    "answer": "C",
+    "explanation": "SHA-256 is a modern hash algorithm suitable for comparing file integrity."
+  },
+  {
+    "id": 61,
+    "domain": "Security controls and operations",
+    "question": "Joanna's organization has a policy that requires a user's password to be immediately reset to lock accounts if the account is determined to have been successfully phished. What type of control is this?",
+    "options": {
+      "A": "A detective control",
+      "B": "A directive control",
+      "C": "A compensating control",
+      "D": "A preventive control"
+    },
+    "answer": "B",
+    "explanation": "A policy that tells staff what to do after a phishing disclosure is a directive control."
+  },
+  {
+    "id": 62,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Jackie wants to implement an AAA system for her network. What AAA protocol is commonly used for network devices?",
+    "options": {
+      "A": "OpenID",
+      "B": "SAML",
+      "C": "RADIUS",
+      "D": "TANGENT"
+    },
+    "answer": "C",
+    "explanation": "RADIUS is commonly used for network AAA, especially for network access and devices."
+  },
+  {
+    "id": 63,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Scott wants to automate policy creation in his zero-trust environment's policy engine. Which of the following is not a typical component for automated data and event-driven policy management?",
+    "options": {
+      "A": "A SIEM",
+      "B": "Threat feeds",
+      "C": "Infrared sensor data",
+      "D": "EDR tools"
+    },
+    "answer": "C",
+    "explanation": "SIEM, threat feeds, and EDR are common policy inputs; infrared sensor data is not a typical zero-trust policy source."
+  },
+  {
+    "id": 64,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Valerie's organization has deployed a zero-trust solution, and Valerie receives an authentication prompt when she is attempting to access a file server. What component of the zero-trust architecture is she interacting with?",
+    "options": {
+      "A": "A policy enforcement point",
+      "B": "A policy administrator",
+      "C": "The policy engine",
+      "D": "The trust manager"
+    },
+    "answer": "A",
+    "explanation": "The policy enforcement point is the component the user interacts with when access is challenged or enforced."
+  },
+  {
+    "id": 65,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Matt is assessing his organization's zero-trust model against the NIST Zero Trust Maturity Model. Which of the following is not a common element of zero-trust systems that would be assessed as part of the model?",
+    "options": {
+      "A": "Identity",
+      "B": "Business model",
+      "C": "Networks",
+      "D": "Devices"
+    },
+    "answer": "B",
+    "explanation": "Identity, networks, and devices are zero-trust maturity elements; business model is not one of the common assessed pillars."
+  },
+  {
+    "id": 66,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Quentin wants to deploy a single sign-on system to allow his users to log in to cloud services. Which of the following technologies is he most likely to deploy?",
+    "options": {
+      "A": "OpenID",
+      "B": "Kerberos",
+      "C": "LDAP",
+      "D": "TACACS+"
+    },
+    "answer": "A",
+    "explanation": "OpenID Connect is commonly used for cloud single sign-on and identity federation."
+  },
+  {
+    "id": 67,
+    "domain": "Security controls and operations",
+    "question": "Marty wants to deploy a corrective control to deal with a recently compromised system. Which of the following would be considered a corrective control?",
+    "options": {
+      "A": "Patching the vulnerability that allowed the compromise to occur",
+      "B": "Deploying full-disk encryption",
+      "C": "Deploying an endpoint detection and response (EDR) tool",
+      "D": "Enabling logging and sending logs to a SIEM"
+    },
+    "answer": "A",
+    "explanation": "Patching the vulnerability after compromise corrects the weakness that allowed the incident."
+  },
+  {
+    "id": 68,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What important encryption feature is not supported by symmetric encryption?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Nonrepudiation",
+      "D": "Authentication"
+    },
+    "answer": "C",
+    "explanation": "Because symmetric encryption uses a shared key, it does not provide strong nonrepudiation."
+  },
+  {
+    "id": 69,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Theresa wants to use a cloud-hosted security solution that will allow her to safely store and manage secrets. What type of solution should she select?",
+    "options": {
+      "A": "A TPM",
+      "B": "A CA",
+      "C": "A KMS",
+      "D": "A CSR"
+    },
+    "answer": "C",
+    "explanation": "A cloud key management service is used to store and manage secrets and cryptographic keys."
+  },
+  {
+    "id": 70,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Joanna is reviewing her account information on an e-commerce website and sees her credit card number displayed as XXXX-XXXX-XXXX-1234. What type of data obfuscation is in use?",
+    "options": {
+      "A": "Hashing",
+      "B": "Data masking",
+      "C": "Field encryption",
+      "D": "Tokenization"
+    },
+    "answer": "B",
+    "explanation": "Showing only the last four digits is data masking."
+  },
+  {
+    "id": 71,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Amanda's organization wants to use a decentralized blockchain to store data. Which of the following is true about a decentralized blockchain?",
+    "options": {
+      "A": "No individual or group controls the blockchain.",
+      "B": "Only cryptocurrency-related data can be stored in a blockchain.",
+      "C": "Blockchain data can be changed after being stored by the original submitter.",
+      "D": "Blockchain ledgers are stored on central servers chosen by regular elections among blockchain participants."
+    },
+    "answer": "A",
+    "explanation": "A decentralized blockchain has no single controlling individual or group."
+  },
+  {
+    "id": 72,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What role does a subordinate CA have in a CA hierarchy?",
+    "options": {
+      "A": "Subordinate CAs issue certificates based on subdomains.",
+      "B": "Subordinate CAs provide control over certificate issuance while avoiding the cost of being a root CA.",
+      "C": "Subordinate CAs validate root CA activities to ensure auditability.",
+      "D": "Subordinate CAs review certificate signing requests before forwarding them to the root CA."
+    },
+    "answer": "B",
+    "explanation": "A subordinate CA can issue certificates under a CA hierarchy without being the root CA."
+  },
+  {
+    "id": 73,
+    "domain": "Physical security and controls",
+    "question": "Which of the following sensor types is commonly used to detect footsteps?",
+    "options": {
+      "A": "Infrared",
+      "B": "Pressure",
+      "C": "Microwave",
+      "D": "Ultrasonic"
+    },
+    "answer": "B",
+    "explanation": "Pressure sensors can detect footsteps or weight on a surface."
+  },
+  {
+    "id": 74,
+    "domain": "Security controls and operations",
+    "question": "Which of the following is not a managerial control?",
+    "options": {
+      "A": "Risk assessments",
+      "B": "Including security in change management processes",
+      "C": "Security planning exercises",
+      "D": "Implementing firewalls"
+    },
+    "answer": "D",
+    "explanation": "Firewalls are technical controls, not managerial controls."
+  },
+  {
+    "id": 75,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What purpose do third-party certificates serve for customers of cloud services?",
+    "options": {
+      "A": "They reduce costs by using bring-your-own certificates.",
+      "B": "They allow certificates for domains other than the service provider's domain.",
+      "C": "They provide control over cryptographic security for the customer.",
+      "D": "They allow more flexibility in TLS version selection."
+    },
+    "answer": "B",
+    "explanation": "Third-party certificates let cloud customers use certificates for their own domains rather than only the provider domain."
+  },
+  {
+    "id": 76,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Which of the following is not a common control focused on availability?",
+    "options": {
+      "A": "Uninterruptible power systems",
+      "B": "Redundant Internet connectivity",
+      "C": "Disk encryption",
+      "D": "Load balancers"
+    },
+    "answer": "C",
+    "explanation": "Disk encryption protects confidentiality, not availability."
+  },
+  {
+    "id": 77,
+    "domain": "Security controls and operations",
+    "question": "What term describes a collection of honeypots on a network intended to capture information about cybersecurity threats?",
+    "options": {
+      "A": "A honeyfarm",
+      "B": "A honeynet",
+      "C": "A honeycluster",
+      "D": "A darknet"
+    },
+    "answer": "B",
+    "explanation": "A honeynet is a network of honeypots used to study attacker behavior."
+  },
+  {
+    "id": 78,
+    "domain": "Physical security and controls",
+    "question": "Skip wants to implement a deterrent control to prevent physical security issues for his organization. Which of the following controls should he select?",
+    "options": {
+      "A": "A fence",
+      "B": "A generator",
+      "C": "Access badges",
+      "D": "A camera system"
+    },
+    "answer": "A",
+    "explanation": "A fence is a physical deterrent because it discourages or delays unauthorized entry."
+  },
+  {
+    "id": 79,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What holds the position of the root of trust in a certificate chain?",
+    "options": {
+      "A": "A hardened hardware device",
+      "B": "A TPM",
+      "C": "A root certificate",
+      "D": "A wildcard certificate"
+    },
+    "answer": "C",
+    "explanation": "In a certificate chain, the root certificate is the trusted anchor."
+  },
+  {
+    "id": 80,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Jill needs to explain the concept of open public ledgers to her organization as management wants to adopt a blockchain-based system. What should she tell them about access to the ledger?",
+    "options": {
+      "A": "Members must be added by a vote of all current members.",
+      "B": "Anyone can join at any time.",
+      "C": "Members must be added by a vote of more than 51 percent of current members.",
+      "D": "Ledgers are public but membership is private and controlled by the creator of the ledger."
+    },
+    "answer": "B",
+    "explanation": "An open public ledger allows anyone to participate or join."
+  },
+  {
+    "id": 81,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Olivia wants to use a self-signed certificate in her test environment for her organization's services to save money on commercial certificates. What warning should her team give her about the use of self-signed certificates in a test environment?",
+    "options": {
+      "A": "Certificate root of trust validation attempts will fail if implemented.",
+      "B": "Self-signed certificates cannot be used for external users to support SSL.",
+      "C": "Self-signed certificates cannot be used for internal users to support SSL.",
+      "D": "Browsers will not allow self-signed certificates to be used when browsing sites."
+    },
+    "answer": "A",
+    "explanation": "Self-signed certificates are not chained to a trusted root, so normal trust validation fails unless they are manually trusted."
+  },
+  {
+    "id": 82,
+    "domain": "Change management",
+    "question": "Amanda is concerned about issues with dependencies that may be found during her pending change. What practice should she implement to help ensure unexpected dependency issues are not encountered?",
+    "options": {
+      "A": "Update organizational policies and procedures before the change.",
+      "B": "Update functional diagrams before the change.",
+      "C": "Validate the change in a test environment.",
+      "D": "Document legacy applications that may create dependencies."
+    },
+    "answer": "C",
+    "explanation": "Testing in a representative environment helps discover dependency problems before production change."
+  },
+  {
+    "id": 83,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Lucca has implemented an authentication scheme that relies on ticket-granting tickets as part of the authentication process. What common authentication service has he implemented?",
+    "options": {
+      "A": "TACACS+",
+      "B": "Kerberos",
+      "C": "MS-CHAP",
+      "D": "EAP"
+    },
+    "answer": "B",
+    "explanation": "Kerberos uses ticket-granting tickets as part of its authentication process."
+  },
+  {
+    "id": 84,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Jocelyn wants to select a modern encryption algorithm for use in her organization. Which of the following is a currently recommended encryption algorithm?",
+    "options": {
+      "A": "AES-256",
+      "B": "SHA1",
+      "C": "DES",
+      "D": "Blowfish"
+    },
+    "answer": "A",
+    "explanation": "AES-256 is a modern recommended symmetric encryption algorithm."
+  },
+  {
+    "id": 85,
+    "domain": "Physical security and controls",
+    "question": "Elizabeth wants to classify the following controls by their category. What category best describes lighting, fences, bollards, and access control vestibules?",
+    "options": {
+      "A": "Technical",
+      "B": "Managerial",
+      "C": "Operational",
+      "D": "Physical"
+    },
+    "answer": "D",
+    "explanation": "Lighting, fences, bollards, and vestibules are physical controls."
+  },
+  {
+    "id": 86,
+    "domain": "Change management",
+    "question": "Jack wants to ensure the integrity of a file that he is sending to a third party via email. How can he provide the integrity of a file to an organization that he has not done business with before?",
+    "options": {
+      "A": "Encrypt the file and send it to them.",
+      "B": "Digitally sign the file.",
+      "C": "Send a hash of the file in a separate email.",
+      "D": "Email the file size and original name in a separate email."
+    },
+    "answer": "B",
+    "explanation": "A digital signature provides integrity and proves the file was signed by the holder of the private key."
+  },
+  {
+    "id": 87,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Annie notices that her browser shows that the certificate for the site she is visiting is not valid. After performing some checks, she sees that the certificate is on the CA's certificate revocation list. Which of the following is not a reason for a certificate to be on a CRL?",
+    "options": {
+      "A": "The CA is compromised.",
+      "B": "The certificate's private key was compromised.",
+      "C": "The certificate was signed with a stolen key.",
+      "D": "The certificate expired."
+    },
+    "answer": "D",
+    "explanation": "Expired certificates are normally invalid because of expiration, not because they need to be placed on a CRL."
+  },
+  {
+    "id": 88,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Mohinder wants to use modern, secure hashing algorithms to validate files against known good originals. Which of the following hashing algorithms should he select?",
+    "options": {
+      "A": "MD5",
+      "B": "SHA-1",
+      "C": "AES-256",
+      "D": "SHA-256"
+    },
+    "answer": "D",
+    "explanation": "SHA-256 is a modern secure hashing algorithm for file integrity checks."
+  },
+  {
+    "id": 89,
+    "domain": "Change management",
+    "question": "Derrick wants to validate an encrypted and digitally signed message sent using asymmetric encryption. What does he need from the sender to validate the message?",
+    "options": {
+      "A": "The sender's private key",
+      "B": "Derrick's private key",
+      "C": "The sender's public key",
+      "D": "Derrick's public key"
+    },
+    "answer": "C",
+    "explanation": "A sender’s public key is used to validate a digital signature created with the sender’s private key."
+  },
+  {
+    "id": 90,
+    "domain": "Change management",
+    "question": "The major patch release that Susan's team installed has failed, resulting in a nonworking service. What should her team do according to change management best practices?",
+    "options": {
+      "A": "Declare an outage.",
+      "B": "Follow the documented backout plan.",
+      "C": "Restore from backups to the previous version.",
+      "D": "Uninstall the patch and validate service function."
+    },
+    "answer": "B",
+    "explanation": "Change management best practice is to follow the documented backout plan when a change fails."
+  },
+  {
+    "id": 91,
+    "domain": "Change management",
+    "question": "The web server that Angela's organization manages was recently compromised and the SSL certificate's private key was accessed by attackers. Angela's team has completed remediation and has created a new CSR, including a new private key that they have secured. What type of control best describes the creation of a new key and certificate in this circumstance?",
+    "options": {
+      "A": "Corrective",
+      "B": "Compensating",
+      "C": "Deterrent",
+      "D": "Detective"
+    },
+    "answer": "A",
+    "explanation": "Replacing compromised key material and certificates after an incident is a corrective action."
+  },
+  {
+    "id": 92,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Mikayla's zero-trust system has received a request for access with an identity, and the basic criteria for access have been met. What should the system do next before providing access to the resource requested?",
+    "options": {
+      "A": "Check the remote system's security status.",
+      "B": "Require reauthentication using MFA.",
+      "C": "Check the user's rights to ensure they can access the resource.",
+      "D": "Determine its level of confidence in the request."
+    },
+    "answer": "D",
+    "explanation": "Zero-trust systems evaluate confidence in the request before granting access."
+  },
+  {
+    "id": 93,
+    "domain": "Security controls and operations",
+    "question": "Charles sets up an RDP server on an isolated network segment and places a file on it called passwords.xlsx. He then configures his IPS and DLP systems to monitor for that file exiting the network segment. What type of tool has Charles deployed?",
+    "options": {
+      "A": "A honeyfile",
+      "B": "A SQL trap",
+      "C": "A red flag",
+      "D": "A trigger file"
+    },
+    "answer": "A",
+    "explanation": "A honeyfile is a decoy file used to detect unauthorized access or movement."
+  },
+  {
+    "id": 94,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Lucca is using precomputed rainbow tables to attempt to crack hashed passwords from a data breach. He knows that two users have the same password, but the hashes do not match. What password hash security technique has Lucca most likely encountered?",
+    "options": {
+      "A": "Password encryption",
+      "B": "Salting",
+      "C": "Hash rotation",
+      "D": "Password mismatching"
+    },
+    "answer": "B",
+    "explanation": "Salting causes identical passwords to produce different hashes."
+  },
+  {
+    "id": 95,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "What operating system is commonly associated with secure enclaves?",
+    "options": {
+      "A": "Windows",
+      "B": "iOS",
+      "C": "Linux",
+      "D": "Android"
+    },
+    "answer": "B",
+    "explanation": "Secure Enclave is strongly associated with Apple devices, including iOS devices."
+  },
+  {
+    "id": 96,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Isaac is concerned that the passwords that his users are creating are too short and can be easily brute-forced if their hashes were compromised. Rather than make his users remember longer passwords, he would like to implement a technical solution to help make the hashes more resistant to cracking. What solution can he use to help with this?",
+    "options": {
+      "A": "Implement pass-the-hash algorithms.",
+      "B": "Use a collision-resistant hashing algorithm.",
+      "C": "Implement key stretching techniques.",
+      "D": "Encrypt passwords rather than hashing them."
+    },
+    "answer": "C",
+    "explanation": "Key stretching makes password hashes more resistant to brute-force cracking."
+  },
+  {
+    "id": 97,
+    "domain": "Physical security and controls",
+    "question": "Christina wants to implement access badges printed with picture IDs for her organization, but she wants to use a wireless reader. What access badge technology is commonly implemented in scenarios like this?",
+    "options": {
+      "A": "Wi-Fi-enabled access badges",
+      "B": "RFID access badges",
+      "C": "Bluetooth-enabled access badges",
+      "D": "NFC access badges"
+    },
+    "answer": "B",
+    "explanation": "RFID is commonly used for wireless access badge readers."
+  },
+  {
+    "id": 98,
+    "domain": "Security controls and operations",
+    "question": "Kendra's vulnerability management team has discovered that Internet of Things (IoT) devices deployed a few years ago to monitor temperatures for critical refrigerated equipment are vulnerable to a new attack. After reviewing the issue, her team has discovered the devices are no longer supported and that the manufacturer has gone out of business. They suggest moving the devices to an isolated network to help protect them. What type of control has Kendra's team suggested?",
+    "options": {
+      "A": "A corrective control",
+      "B": "A compensating control",
+      "C": "A confidentiality control",
+      "D": "A coordinated control"
+    },
+    "answer": "B",
+    "explanation": "Network isolation can act as a compensating control when vulnerable unsupported devices cannot be patched."
+  },
+  {
+    "id": 99,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Which of the following is not a common factor in adaptive authentication for zero trust?",
+    "options": {
+      "A": "Where the user is logging in from",
+      "B": "Whether the user has logged in recently from another device",
+      "C": "What device the user is logging in from",
+      "D": "If the device is configured correctly"
+    },
+    "answer": "B",
+    "explanation": "Location, device, and device health are common adaptive factors; recent login from another device is less commonly treated as a primary factor in this list."
+  },
+  {
+    "id": 100,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Juan's organization is designing their zero-trust model. Which of the following statements is true for network security zones?",
+    "options": {
+      "A": "All communication is secured, regardless of the network security zone it occurs in.",
+      "B": "Communication receives additional security in low-trust zones.",
+      "C": "Communication receives less security in high-trust zones.",
+      "D": "All zero-trust networks are considered secured zones."
+    },
+    "answer": "A",
+    "explanation": "Zero trust does not rely on a trusted network zone; communication should be secured regardless of zone."
+  },
+  {
+    "id": 101,
+    "domain": "Physical security and controls",
+    "question": "What advantage do microwave sensors have over infrared sensors?",
+    "options": {
+      "A": "They can detect heat signatures.",
+      "B": "They are cheaper than infrared sensors.",
+      "C": "They can penetrate some types of walls.",
+      "D": "They do not interfere with sensitive equipment."
+    },
+    "answer": "C",
+    "explanation": "Microwave sensors can penetrate some walls or barriers, unlike many infrared sensors."
+  },
+  {
+    "id": 102,
+    "domain": "Physical security and controls",
+    "question": "Isaac is conducting a physical penetration test and wants to bypass an access control vestibule. What must he accomplish?",
+    "options": {
+      "A": "He needs to persuade an individual to allow him to follow them through a single door.",
+      "B": "He needs to acquire an individual's access card.",
+      "C": "He needs to persuade an individual to allow him to follow them through two doors in a row.",
+      "D": "He needs to acquire the individual's access PIN."
+    },
+    "answer": "C",
+    "explanation": "An access control vestibule uses two doors, so tailgating requires getting through both."
+  },
+  {
+    "id": 103,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Rachel wants to select an obfuscation method that will allow her customer service representatives to validate customer identities without providing full access to customer data. What should she select?",
+    "options": {
+      "A": "Tokenization",
+      "B": "Data masking",
+      "C": "Steganography",
+      "D": "Hashing"
+    },
+    "answer": "B",
+    "explanation": "Data masking hides part of the real data so staff can validate identity without seeing the full value."
+  },
+  {
+    "id": 104,
+    "domain": "Change management",
+    "question": "Valerie's manager has informed her that version control must be implemented for her development team's work. Which of the following is not a common, security-related reason for version control?",
+    "options": {
+      "A": "To help with patching",
+      "B": "To track each contributor's workload",
+      "C": "To ensure the proper version is deployed",
+      "D": "To help with change management"
+    },
+    "answer": "B",
+    "explanation": "Version control is used for deployment correctness, patching, and change management, not primarily to track workload."
+  },
+  {
+    "id": 105,
+    "domain": "Change management",
+    "question": "Jackie's change management process involves reporting functional validation test results to stakeholders. Which of the following is not a common stakeholder or stakeholder group for an application upgrade?",
+    "options": {
+      "A": "Application administrators",
+      "B": "Service owners",
+      "C": "System administrators",
+      "D": "Auditors"
+    },
+    "answer": "D",
+    "explanation": "Auditors may review evidence later, but they are not normally a core stakeholder group for functional validation results."
+  },
+  {
+    "id": 106,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "How many keypairs are required for four individuals to communicate securely using asymmetric encryption?",
+    "options": {
+      "A": "1",
+      "B": "4",
+      "C": "8",
+      "D": "12"
+    },
+    "answer": "B",
+    "explanation": "Each individual needs one public/private keypair, so four people require four keypairs."
+  },
+  {
+    "id": 107,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Michelle wants to store secrets for her organization in a cloud service. She wants to ensure the greatest level of security for her organization, and she is willing to spend more money to provide that security. What solution should she look for?",
+    "options": {
+      "A": "A shared cloud TPM",
+      "B": "A shared cloud HSM",
+      "C": "A dedicated hardware cloud TPM",
+      "D": "A dedicated hardware cloud HSM"
+    },
+    "answer": "D",
+    "explanation": "A dedicated cloud HSM provides the strongest cloud-based protection among these options."
+  },
+  {
+    "id": 108,
+    "domain": "Change management",
+    "question": "Murali wants to digitally sign a file. What key does he need to sign it?",
+    "options": {
+      "A": "The recipient’s private key",
+      "B": "His private key",
+      "C": "The recipient’s public key",
+      "D": "His public key"
+    },
+    "answer": "B",
+    "explanation": "A digital signature is created with the signer’s private key."
+  },
+  {
+    "id": 109,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What information is necessary for a certificate to be identified properly in an OCSP request?",
+    "options": {
+      "A": "The domain name",
+      "B": "The original requestor’s name",
+      "C": "The certificate’s serial number",
+      "D": "The identifier for the open public ledger entry"
+    },
+    "answer": "C",
+    "explanation": "OCSP identifies the certificate being checked using information including the certificate serial number."
+  },
+  {
+    "id": 110,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Rick checks the certificate for the site he is viewing and sees that it reads *.example.com. What type of certificate is this, and why is it in use?",
+    "options": {
+      "A": "It is a self-signed certificate, and it is used for testing purposes.",
+      "B": "It is a wildcard certificate and is used for testing purposes.",
+      "C": "It is a wildcard certificate and is used for multiple subdomains.",
+      "D": "It is a self-signed certificate and is used for multiple subdomains."
+    },
+    "answer": "C",
+    "explanation": "A certificate named *.example.com is a wildcard certificate used for multiple subdomains."
+  },
+  {
+    "id": 111,
+    "domain": "Security controls and operations",
+    "question": "John wants to write a procedure that addresses what to do if an employee inadvertently discloses their password due to a phishing attempt. What type of control is John considering?",
+    "options": {
+      "A": "A directive control",
+      "B": "A proactive control",
+      "C": "A deterrent control",
+      "D": "A preventive control"
+    },
+    "answer": "A",
+    "explanation": "A procedure telling employees what to do is a directive control."
+  },
+  {
+    "id": 112,
+    "domain": "Security+ mixed practice",
+    "question": "Adam has been asked to implement an allow list for websites that his servers can visit. What concern should he raise about the implementation of allow lists?",
+    "options": {
+      "A": "Allow lists can be difficult to manage and cause failures if sites that are needed are not added.",
+      "B": "Allow lists do not prevent sites from being visited if they are not on the allow list.",
+      "C": "Allow lists cannot be configured to allow entire domains to be visited, creating significant overhead.",
+      "D": "Allow lists are prone to error, allowing unwanted sites to be added."
+    },
+    "answer": "A",
+    "explanation": "Allow lists can be hard to maintain because required websites or services must be added or access may fail."
+  },
+  {
+    "id": 113,
+    "domain": "Security+ mixed practice",
+    "question": "Jim wants to implement an authentication framework for his wireless network. Which of the following is most commonly used for wireless network authentication?",
+    "options": {
+      "A": "EAP",
+      "B": "MS-CHAP",
+      "C": "Kerberos",
+      "D": "LDAP"
+    },
+    "answer": "A",
+    "explanation": "EAP is commonly used as an authentication framework for wireless networks."
+  },
+  {
+    "id": 114,
+    "domain": "Change management",
+    "question": "Gary is preparing change management documentation for an application restart after patching. What step should immediately follow the application restart?",
+    "options": {
+      "A": "Validation testing",
+      "B": "Documenting the change occurred",
+      "C": "Updating version control",
+      "D": "Vulnerability scanning"
+    },
+    "answer": "A",
+    "explanation": "After restarting an application, validation testing confirms the service works correctly."
+  },
+  {
+    "id": 115,
+    "domain": "Physical security and controls",
+    "question": "Anna has been told that her organization has deployed microwave sensors in the organization’s warehouses. What are microwave sensors most frequently used to detect?",
+    "options": {
+      "A": "Motion",
+      "B": "Glass break",
+      "C": "Heat signatures",
+      "D": "Pressure"
+    },
+    "answer": "A",
+    "explanation": "Microwave sensors are commonly used to detect motion."
+  },
+  {
+    "id": 116,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "When is data on a drive that uses full-disk encryption at the greatest risk?",
+    "options": {
+      "A": "During the system boot process",
+      "B": "When the system is off",
+      "C": "When the system is logged in and in use",
+      "D": "When the system is being shut down"
+    },
+    "answer": "C",
+    "explanation": "Full-disk encryption offers least protection after the user logs in and the disk is unlocked for use."
+  },
+  {
+    "id": 117,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Alex has configured full-disk encryption for laptops that his organization issues to employees. What cybersecurity objective does this primarily support?",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Availability",
+      "C": "Authenticity",
+      "D": "Integrity"
+    },
+    "answer": "A",
+    "explanation": "Full-disk encryption primarily protects confidentiality of data on lost or stolen devices."
+  },
+  {
+    "id": 118,
+    "domain": "Change management",
+    "question": "What process reviews control objectives for an organization, system, or service to determine if controls do not meet the control objectives?",
+    "options": {
+      "A": "A penetration test",
+      "B": "A gap analysis",
+      "C": "A Boolean analysis",
+      "D": "A risk analysis"
+    },
+    "answer": "B",
+    "explanation": "Gap analysis identifies where controls do not meet objectives or requirements."
+  },
+  {
+    "id": 119,
+    "domain": "Security+ mixed practice",
+    "question": "Frank configures an access control list to ensure that only specific IP addresses are able to connect to a service. What type of control has he deployed?",
+    "options": {
+      "A": "Managerial",
+      "B": "Physical",
+      "C": "Technical",
+      "D": "Operational"
+    },
+    "answer": "C",
+    "explanation": "An ACL that permits only certain IP addresses is a technical control."
+  },
+  {
+    "id": 120,
+    "domain": "Physical security and controls",
+    "question": "Annie has recently implemented a video surveillance system for her organization. What is the largest driver for new ongoing costs for an unmonitored video surveillance system?",
+    "options": {
+      "A": "Camera maintenance",
+      "B": "The ongoing cost of storage",
+      "C": "Security guards",
+      "D": "Licensing"
+    },
+    "answer": "B",
+    "explanation": "Unmonitored video systems still create ongoing storage costs for recorded footage."
+  },
+  {
+    "id": 121,
+    "domain": "Security controls and operations",
+    "question": "Henry's organization has recently experienced a ransomware attack and is restoring backups from a secure backup system. What type of security control is Henry using?",
+    "options": {
+      "A": "A preventive control",
+      "B": "A directive control",
+      "C": "A compensating control",
+      "D": "A corrective control"
+    },
+    "answer": "D",
+    "explanation": "Restoring from backup after ransomware is corrective because it helps recover from the incident."
+  },
+  {
+    "id": 122,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What data obfuscation technique relies on a lookup table that allows you to match the data you want to secure to a randomly generated value to ensure that the actual value is not easily accessible?",
+    "options": {
+      "A": "Hashing",
+      "B": "Tokenization",
+      "C": "Randomization",
+      "D": "Masking"
+    },
+    "answer": "B",
+    "explanation": "Tokenization maps real values to replacement tokens, often through a lookup table."
+  },
+  {
+    "id": 123,
+    "domain": "Change management",
+    "question": "What challenge drives the need for key exchange mechanisms?",
+    "options": {
+      "A": "The number of keys required for symmetric encryption",
+      "B": "The need to determine if a key is public",
+      "C": "The need to exchange keys in a way that prevents others from obtaining a copy",
+      "D": "The need to securely return keys to their owner after they are traded"
+    },
+    "answer": "C",
+    "explanation": "Key exchange is needed to share or agree on keys without exposing them to attackers."
+  },
+  {
+    "id": 124,
+    "domain": "Change management",
+    "question": "Jackie is performing an impact analysis prior to a large-scale change her team is preparing to implement. Which of the following groups is not typically part of the impact analysis?",
+    "options": {
+      "A": "Stakeholders",
+      "B": "System administrators",
+      "C": "Service owners",
+      "D": "Legal counsel"
+    },
+    "answer": "D",
+    "explanation": "Stakeholders, administrators, and service owners are common impact-analysis participants; legal counsel is less typical."
+  },
+  {
+    "id": 125,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Ilya wants to create a certificate signing request. Which of the following is not a typical part of a CSR?",
+    "options": {
+      "A": "The common name of the server",
+      "B": "The organization's legal name",
+      "C": "A contact email address",
+      "D": "The organization's phone number"
+    },
+    "answer": "D",
+    "explanation": "A phone number is not normally a required or typical CSR field."
+  },
+  {
+    "id": 126,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Before Tony stores a password hash, he appends a string of characters that is unique to each password generated using an algorithm he created. What technique is Tony using to help protect his password hashes?",
+    "options": {
+      "A": "Tokenization",
+      "B": "Steganography",
+      "C": "Salting",
+      "D": "Key stretching"
+    },
+    "answer": "C",
+    "explanation": "Adding a unique value before hashing a password is salting."
+  },
+  {
+    "id": 127,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Which of the following is not a step taken when a transaction is entered in a blockchain?",
+    "options": {
+      "A": "The value of the block is determined.",
+      "B": "The transaction is sent to a peer-to-peer network of computers.",
+      "C": "The transaction is validated using equations.",
+      "D": "A transaction history is maintained as part of the blockchain."
+    },
+    "answer": "A",
+    "explanation": "Blockchain processing does not normally include determining a separate value of the block as a transaction step."
+  },
+  {
+    "id": 128,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Kent wants to encrypt network traffic in transit. What cryptographic protocol is most frequently used to add encryption to existing protocols?",
+    "options": {
+      "A": "S/MIME",
+      "B": "TLS",
+      "C": "MPLS",
+      "D": "SSH"
+    },
+    "answer": "B",
+    "explanation": "TLS is the common protocol used to add encryption to many existing network protocols."
+  },
+  {
+    "id": 129,
+    "domain": "Change management",
+    "question": "Which of the following is not a common concern in change management processes related to legacy applications?",
+    "options": {
+      "A": "Lack of vendor support",
+      "B": "Lack of patches and updates",
+      "C": "Ongoing licensing costs",
+      "D": "Availability of third-party or consultant expertise"
+    },
+    "answer": "C",
+    "explanation": "Legacy application security concerns commonly include support, patches, and expertise; licensing cost is not usually the main security concern."
+  },
+  {
+    "id": 130,
+    "domain": "Change management",
+    "question": "Elaine wants to document the technical concerns that dependencies create as part of her change management process. Which of the following concerns is the most common when dependencies are encountered as part of change management?",
+    "options": {
+      "A": "Documenting the dependencies to ensure they are addressed",
+      "B": "Removing the dependencies as part of the change",
+      "C": "Patching the dependencies in addition to the main application",
+      "D": "Updating diagrams related to the dependencies"
+    },
+    "answer": "A",
+    "explanation": "Dependencies must be documented so they can be considered and addressed during the change."
+  },
+  {
+    "id": 131,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Gary has implemented record-level encryption for his database. How many keys will he use in a typical implementation of record-level encryption?",
+    "options": {
+      "A": "One key per record",
+      "B": "One key per column",
+      "C": "One key per table",
+      "D": "One key per database"
+    },
+    "answer": "A",
+    "explanation": "Record-level encryption typically uses a separate key per record."
+  },
+  {
+    "id": 132,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Justin's laptop is part of his organization's zero-trust architecture. What term is used to refer to a device like a laptop, desktop, or mobile device in a zero-trust design?",
+    "options": {
+      "A": "A subject",
+      "B": "A policy engine",
+      "C": "A service provider",
+      "D": "A policy application point"
+    },
+    "answer": "A",
+    "explanation": "In zero-trust terminology, a subject can be a user, service, or device requesting access."
+  },
+  {
+    "id": 133,
+    "domain": "Zero trust, IAM and AAA",
+    "question": "Susan's organization has deployed a zero-trust architecture. Which of the following zero-trust control plane components uses rules to determine who can access a service based on the security status of their system, threat data, and similar information?",
+    "options": {
+      "A": "Adaptive authorization",
+      "B": "Threat scope reduction",
+      "C": "Policy-driven access control",
+      "D": "Secured zones"
+    },
+    "answer": "C",
+    "explanation": "Policy-driven access control uses rules and context such as device security and threat data to decide access."
+  },
+  {
+    "id": 134,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Scott wants to implement OCSP as part of an application he is creating. What will he implement?",
+    "options": {
+      "A": "A corrective control security process",
+      "B": "Certificate status checking",
+      "C": "Transport encryption",
+      "D": "Full-disk encryption"
+    },
+    "answer": "B",
+    "explanation": "OCSP provides certificate revocation/status checking."
+  },
+  {
+    "id": 135,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Which of the following is not a common reason to implement key escrow?",
+    "options": {
+      "A": "Regulatory compliance",
+      "B": "Providing access to encrypted data for administrative reasons",
+      "C": "Providing access to encrypted data in emergencies",
+      "D": "Preventing the need for key rotation after a user leaves"
+    },
+    "answer": "D",
+    "explanation": "Key escrow does not remove the need to rotate keys after users leave or keys become exposed."
+  },
+  {
+    "id": 136,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Yariv discovers that he has exposed his private key to other users in his organization by sending it via email instead of his public key. What should he do?",
+    "options": {
+      "A": "Ask the other users to delete any copies of his private key that they may have.",
+      "B": "Immediately add his key to a CRL and reissue the key.",
+      "C": "Create a new keypair and notify others that he has replaced his keypair.",
+      "D": "Continue to operate as normal as long as the private key was not used maliciously."
+    },
+    "answer": "C",
+    "explanation": "If a private key is exposed, the safe response is to generate a new keypair and notify affected parties."
+  },
+  {
+    "id": 137,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What happens if a mistake is made and an incorrect transaction is entered into the open public ledger in a blockchain?",
+    "options": {
+      "A": "The transaction is reversed once it is discovered, and the original transaction is removed from the record.",
+      "B": "A new transaction must be processed, and both transactions remain in the record.",
+      "C": "The original transaction is updated and becomes the new record.",
+      "D": "An error block must be mined and labeled with the transaction number and error details."
+    },
+    "answer": "B",
+    "explanation": "Blockchain records are immutable, so an error is corrected by adding a new transaction while the original remains."
+  },
+  {
+    "id": 138,
+    "domain": "Security+ mixed practice",
+    "question": "Which of the following activities will not typically result in a need to update policies and procedures?",
+    "options": {
+      "A": "Deploying a new application",
+      "B": "Installing patches for an existing application",
+      "C": "Conducting a lessons learned exercise after an incident",
+      "D": "Changes in regulations"
+    },
+    "answer": "B",
+    "explanation": "Routine patching of an existing application does not usually require policy and procedure updates."
+  },
+  {
+    "id": 139,
+    "domain": "Physical security and controls",
+    "question": "Hrant's organization wants to ensure that staff members use both something they know and something they have as part of their physical access control scheme. Which of the following solutions meets that requirement?",
+    "options": {
+      "A": "Security guards and access badges",
+      "B": "Keys and access control vestibules",
+      "C": "Access badges and PINs",
+      "D": "Security guards and access control vestibules"
+    },
+    "answer": "C",
+    "explanation": "A badge is something you have, and a PIN is something you know."
+  },
+  {
+    "id": 140,
+    "domain": "Physical security and controls",
+    "question": "Julia wants to detect if an intruder enters a space using a sensor system. Which of the following is not typically used to detect intruders?",
+    "options": {
+      "A": "Infrared sensors",
+      "B": "Pressure sensors",
+      "C": "Microwave sensors",
+      "D": "Ultrasonic sensors"
+    },
+    "answer": "B",
+    "explanation": "Pressure sensors are less commonly used for general space-intrusion detection than infrared, microwave, or ultrasonic motion sensors."
+  },
+  {
+    "id": 141,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Which of the following is not true for a secure cryptographic hash system?",
+    "options": {
+      "A": "Hashes are a one-way function.",
+      "B": "Hashes generate a fixed length output.",
+      "C": "Hashes may generate the same output for multiple inputs.",
+      "D": "Hashes are commonly used to verify the integrity of files."
+    },
+    "answer": "C",
+    "explanation": "Secure hashes are designed to make collisions impractical, so saying they may generate the same output for multiple inputs is not true in the security sense tested here."
+  },
+  {
+    "id": 142,
+    "domain": "Physical security and controls",
+    "question": "Casey wants to prevent tailgating attacks on her datacenter. What type of physical security solution should she put in place?",
+    "options": {
+      "A": "Video surveillance",
+      "B": "Bollards",
+      "C": "An access control vestibule",
+      "D": "Access badges"
+    },
+    "answer": "C",
+    "explanation": "An access control vestibule helps prevent tailgating by allowing only one person through controlled doors at a time."
+  },
+  {
+    "id": 143,
+    "domain": "Physical security and controls",
+    "question": "As Casey continues to work to secure her datacenter, she decides to deploy access badges. What technique will provide the greatest assurance that a stolen or cloned access badge will not allow an attacker access?",
+    "options": {
+      "A": "Use barcode-based badges.",
+      "B": "Require a PIN along with the badge.",
+      "C": "Use RFID-based badges.",
+      "D": "Include a picture of the user on the badge."
+    },
+    "answer": "B",
+    "explanation": "Requiring a PIN with the badge adds a second factor and reduces risk from stolen or cloned badges."
+  },
+  {
+    "id": 144,
+    "domain": "Change management",
+    "question": "What term describes the function of digital signatures related to proving that the signature was provided by the owner of a given private key?",
+    "options": {
+      "A": "Ledger-based validation",
+      "B": "Nonrepudiation",
+      "C": "Key stretching",
+      "D": "Authentication"
+    },
+    "answer": "B",
+    "explanation": "Nonrepudiation means the signer cannot credibly deny signing with their private key."
+  },
+  {
+    "id": 145,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "John wants to send his public key to another user. What steps are necessary to do so?",
+    "options": {
+      "A": "The key must be sent using Diffie-Hellman.",
+      "B": "The key can simply be sent via email or other means.",
+      "C": "The key must be sent using RSA.",
+      "D": "The key must be signed, then sent via email or other means."
+    },
+    "answer": "B",
+    "explanation": "A public key is not secret and can be sent by email or another ordinary method, though authenticity should still be verified in real deployments."
+  },
+  {
+    "id": 146,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "Tracy wants to use the most secure salting solution she can. Which of the following options will provide the most secure salt?",
+    "options": {
+      "A": "Set a salt value and store it in a database.",
+      "B": "Set a salt value and store it in the program code.",
+      "C": "Generate a unique salt for each hashed entry.",
+      "D": "Generate a unique salt value every time a value is used."
+    },
+    "answer": "C",
+    "explanation": "The standard strong approach is to generate a unique salt for each hashed entry."
+  },
+  {
+    "id": 147,
+    "domain": "Security controls and operations",
+    "question": "Bob conducts a periodic risk assessment of his organization. What category of security control is this?",
+    "options": {
+      "A": "Technical",
+      "B": "Managerial",
+      "C": "Operational",
+      "D": "Physical"
+    },
+    "answer": "B",
+    "explanation": "Risk assessments are managerial controls because they are governance and risk management activities."
+  },
+  {
+    "id": 148,
+    "domain": "Security controls and operations",
+    "question": "After a breach, Jackie removes malicious software from a server that she is responsible for. What control type should she classify this as?",
+    "options": {
+      "A": "Preventive",
+      "B": "Corrective",
+      "C": "Compensating",
+      "D": "Deterrent"
+    },
+    "answer": "B",
+    "explanation": "Removing malware after a breach is corrective because it remediates the problem."
+  },
+  {
+    "id": 149,
+    "domain": "Cryptography, PKI and data protection",
+    "question": "What can a root SSL (TLS) certificate do?",
+    "options": {
+      "A": "Remove a certificate from a CRL",
+      "B": "Generate a signing key and use it to sign a new certificate",
+      "C": "Authorize new CA users",
+      "D": "Allow key stretching"
+    },
+    "answer": "B",
+    "explanation": "A root CA uses its root certificate and signing key to sign or validate subordinate certificates in the trust chain."
+  },
+  {
+    "id": 150,
+    "domain": "Security+ mixed practice",
+    "question": "Christina wants to authenticate individuals as part of her AAA implementation. What will she need to do to authenticate users?",
+    "options": {
+      "A": "Match users to roles and ensure that rights are assigned.",
+      "B": "Conduct biometric enrollments for every user.",
+      "C": "Use identity proofing for each user she creates.",
+      "D": "Ensure that users provide an identity and one or more authentication factors."
+    },
+    "answer": "D",
+    "explanation": "Authentication requires the user to present an identity and one or more authentication factors."
+  }
+]
