@@ -156,7 +156,7 @@ function applyAnswerStyle(element, isCorrect) {
 function checkAnswer(selectedOption, selected, correct, explanation, questionId) {
   if (answered) return;
 
-  answered = true; nextBtn.disabled = false; skipBtn.disabled = true;
+  answered = true; nextBtn.disabled = false; skipBtn.disabled = false;
 
   const allOptions = document.querySelectorAll(".option");
 
@@ -192,9 +192,6 @@ nextBtn.addEventListener("click", () => {
 
   showQuestion();
 });
-
-skipBtn.addEventListener("click", () => { currentIndex++; if (!reviewMode) { localStorage.setItem("securityPlusQuestionIndex", currentIndex); } showQuestion(); });
-
 resetBtn.addEventListener("click", () => {
   reviewMode = false;
   activeQuestions = questions;
@@ -218,4 +215,11 @@ clearMistakesBtn.addEventListener("click", () => {
   if (reviewMode) {
     setMistakeMode();
   }
+});
+skipBtn.addEventListener("click", () => {
+  currentIndex++;
+  if (!reviewMode) {
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  }
+  showQuestion();
 });
