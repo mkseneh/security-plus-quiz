@@ -297,17 +297,15 @@ function renderDetailedExplanation(q, selected) {
 
   addHeading(explanationEl, "Key clue phrase", 2);
   addParagraph(explanationEl, "The key clue phrase is:", "clue-intro");
-  addParagraph(explanationEl, "“" + clue + "”", "key-clue-box");
+  addParagraph(explanationEl, "â€œ" + clue + "â€", "key-clue-box");
 
-  addHeading(explanationEl, "Describe all answer options first", 2);
 
   for (const [letter, text] of Object.entries(q.options || {})) {
     addHeading(explanationEl, "Option " + letter + ": " + text, 3);
     addParagraph(explanationEl, getOptionExplanation(q, letter, text), "option-explanation-text");
   }
 
-  addHeading(explanationEl, "Compare the options against the clue", 2);
-  addParagraph(explanationEl, getCompareText(q), "compare-box");
+
 
   addHeading(explanationEl, "Final answer", 2);
 
