@@ -4,32 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CompTIA Security+ Practice Quiz</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=phrase1" />
 </head>
 <body>
-  <main class="quiz-container">
+  <main class="container">
     <h1>CompTIA Security+ Practice Quiz</h1>
+
     <div class="top-bar">
       <p id="progress">Loading...</p>
-      <button id="resetBtn">Reset Progress</button>
+      <button id="resetBtn" type="button">Reset Progress</button>
     </div>
-    <div class="mode-row">
+
+    <div class="mode-bar">
       <button id="allBtn" type="button">All Questions</button>
       <button id="mistakesBtn" type="button">Review Mistakes (<span id="mistakeCount">0</span>)</button>
-      <button id="clearMistakesBtn" type="button">Clear Mistakes</button>
+      <button id="clearMistakesBtn" type="button" class="danger">Clear Mistakes</button>
     </div>
+
     <section class="card">
-      <p id="domain"></p>
-      <h2 id="question">Loading questions...</h2>
+      <p id="domain" class="domain"></p>
+      <h2 id="question"></h2>
       <div id="options"></div>
       <div id="feedback"></div>
       <div id="explanation"></div>
       <div class="button-row">
         <button id="skipBtn" type="button">Skip Question</button>
-        <button id="nextBtn" disabled>Next Question</button>
+        <button id="nextBtn" type="button" disabled>Next Question</button>
       </div>
     </section>
   </main>
-  <script src="app.js?v=human2"></script>
+
+  <script src="app.js?v=phrase1"></script>
 </body>
 </html>

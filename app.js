@@ -36,11 +36,8 @@ fetch("questions.json?v=" + Date.now())
   });
 
 function getMistakeIds() {
-  try {
-    return JSON.parse(localStorage.getItem("securityPlusMistakeIds")) || [];
-  } catch {
-    return [];
-  }
+  try { return JSON.parse(localStorage.getItem("securityPlusMistakeIds")) || []; }
+  catch { return []; }
 }
 
 function saveMistakeIds(ids) {
@@ -59,14 +56,11 @@ function addMistake(id) {
 
 function removeMistake(id) {
   const idText = String(id);
-  const ids = getMistakeIds().filter(existingId => existingId !== idText);
-  saveMistakeIds(ids);
+  saveMistakeIds(getMistakeIds().filter(existingId => existingId !== idText));
 }
 
 function updateMistakeCount() {
-  if (mistakeCountEl) {
-    mistakeCountEl.textContent = getMistakeIds().length;
-  }
+  if (mistakeCountEl) mistakeCountEl.textContent = getMistakeIds().length;
 }
 
 function hideFeedbackAreas() {
@@ -80,9 +74,7 @@ function setAllMode() {
   reviewMode = false;
   activeQuestions = questions;
   currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
-  if (currentIndex >= activeQuestions.length) {
-    currentIndex = 0;
-  }
+  if (currentIndex >= activeQuestions.length) currentIndex = 0;
   showQuestion();
 }
 
@@ -155,15 +147,19 @@ function applyAnswerStyle(element, isCorrect) {
 
 function addParagraph(parent, htmlOrText, isHtml = false, className = "") {
   const p = document.createElement("p");
-  p.style.whiteSpace = "pre-line";
   if (className) p.className = className;
-  if (isHtml) {
-    p.innerHTML = htmlOrText;
-  } else {
-    p.textContent = htmlOrText;
-  }
+  p.style.whiteSpace = "pre-line";
+  if (isHtml) p.innerHTML = htmlOrText;
+  else p.textContent = htmlOrText;
   parent.appendChild(p);
   return p;
+}
+
+function addHeading(parent, text, level = 3) {
+  const h = document.createElement("h" + level);
+  h.textContent = text;
+  parent.appendChild(h);
+  return h;
 }
 
 function checkAnswer(selectedOption, selected, q) {
@@ -180,9 +176,7 @@ function checkAnswer(selectedOption, selected, q) {
   const allOptions = document.querySelectorAll(".option");
   allOptions.forEach(option => {
     option.style.pointerEvents = "none";
-    if (option.textContent.startsWith(correct + ".")) {
-      applyAnswerStyle(option, true);
-    }
+    if (option.textContent.startsWith(correct + ".")) applyAnswerStyle(option, true);
   });
 
   feedbackEl.style.display = "block";
@@ -196,12 +190,30 @@ function checkAnswer(selectedOption, selected, q) {
   } else {
     applyAnswerStyle(selectedOption, false);
     addMistake(questionId);
-    addParagraph(feedbackEl, "Not quite. Read the explanation and then try to connect the clue to the term.", false, "result-line wrong-text");
+    addParagraph(feedbackEl, "Not quite. Read the breakdown and focus on the clue words.", false, "result-line wrong-text");
   }
 
   addParagraph(feedbackEl, `<strong>The correct answer is ${correct}. ${correctText}.</strong>`, true, "answer-line");
-  addParagraph(feedbackEl, "<strong>In Simple Words: What is this asking?</strong>", true, "section-heading");
-  addParagraph(feedbackEl, q.simpleExplanation || q.explanation || "Review the clue in the question and match it to the correct Security+ term.");
+  addParagraph(feedbackEl, "Let's break this question down piece by piece so it makes perfect sense.", false, "breakdown-intro");
+
+  addHeading(feedbackEl, "1. Phrase-by-Phrase Breakdown", 3);
+  const list = document.createElement("div");
+  list.className = "phrase-list";
+  const breakdown = q.phraseBreakdown || [];
+  if (breakdown.length === 0) {
+    addParagraph(list, "The question is asking which Security+ term best matches the scenario.");
+  } else {
+    breakdown.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "phrase-row";
+      row.innerHTML = `<strong>${item.phrase}:</strong> ${item.meaning}`;
+      list.appendChild(row);
+    });
+  }
+  feedbackEl.appendChild(list);
+
+  addHeading(feedbackEl, "The \"10-Year-Old\" Summary", 3);
+  addParagraph(feedbackEl, q.tenYearOldSummary || q.simpleExplanation || q.explanation || "Pick the term that matches the story.", false, "simple-summary");
 
   const moreBtn = document.createElement("button");
   moreBtn.type = "button";
@@ -212,22 +224,22 @@ function checkAnswer(selectedOption, selected, q) {
   const detailBox = document.createElement("div");
   detailBox.className = "detail-explanation";
 
-  addParagraph(detailBox, "<strong>Why this answer is correct:</strong>", true, "section-heading");
-  addParagraph(detailBox, q.whyCorrect || q.explanation || `${correctText} is the best match for the scenario.`);
+  addHeading(detailBox, `2. The Winner: Why ${correct} (${correctText}) is Correct`, 3);
+  addParagraph(detailBox, q.winnerExplanation || q.whyCorrect || q.explanation || `${correctText} best matches the clue in the question.`);
 
-  if (q.examTip) {
-    addParagraph(detailBox, "<strong>Exam memory tip:</strong>", true, "section-heading");
-    addParagraph(detailBox, q.examTip);
-  }
-
-  addParagraph(detailBox, "<strong>Why the other options are incorrect:</strong>", true, "section-heading");
+  addHeading(detailBox, "3. Why the Other Answers Are Wrong", 3);
   for (const [letter, text] of Object.entries(q.options)) {
     if (letter !== correct) {
       const reason = q.whyIncorrect && q.whyIncorrect[letter]
         ? q.whyIncorrect[letter]
-        : `${text} is related to security, but it does not match the exact clue in this question.`;
-      addParagraph(detailBox, `<strong>${letter}. ${text}:</strong> ${reason}`, true);
+        : "This is a real security idea, but it does not solve the exact problem described in this question.";
+      addParagraph(detailBox, `<strong>${letter}. ${text}:</strong> ${reason}`, true, "wrong-explanation");
     }
+  }
+
+  if (q.examTip) {
+    addHeading(detailBox, "Exam Tip", 3);
+    addParagraph(detailBox, q.examTip, false, "exam-tip");
   }
 
   explanationEl.appendChild(detailBox);
@@ -241,17 +253,13 @@ function checkAnswer(selectedOption, selected, q) {
 
 nextBtn.addEventListener("click", () => {
   currentIndex++;
-  if (!reviewMode) {
-    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  }
+  if (!reviewMode) localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
 
 skipBtn.addEventListener("click", () => {
   currentIndex++;
-  if (!reviewMode) {
-    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  }
+  if (!reviewMode) localStorage.setItem("securityPlusQuestionIndex", currentIndex);
   showQuestion();
 });
 
@@ -263,24 +271,12 @@ resetBtn.addEventListener("click", () => {
   showQuestion();
 });
 
-if (allBtn) {
-  allBtn.addEventListener("click", () => {
-    setAllMode();
-  });
-}
-
-if (mistakesBtn) {
-  mistakesBtn.addEventListener("click", () => {
-    setMistakeMode();
-  });
-}
-
+if (allBtn) allBtn.addEventListener("click", () => setAllMode());
+if (mistakesBtn) mistakesBtn.addEventListener("click", () => setMistakeMode());
 if (clearMistakesBtn) {
   clearMistakesBtn.addEventListener("click", () => {
     localStorage.removeItem("securityPlusMistakeIds");
     updateMistakeCount();
-    if (reviewMode) {
-      setMistakeMode();
-    }
+    if (reviewMode) setMistakeMode();
   });
 }
