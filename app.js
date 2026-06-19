@@ -64,7 +64,9 @@ function removeMistake(id) {
 }
 
 function updateMistakeCount() {
-  mistakeCountEl.textContent = getMistakeIds().length;
+  if (mistakeCountEl) {
+    mistakeCountEl.textContent = getMistakeIds().length;
+  }
 }
 
 function hideFeedbackAreas() {
@@ -151,9 +153,10 @@ function applyAnswerStyle(element, isCorrect) {
   element.style.setProperty("color", isCorrect ? "#155724" : "#721c24", "important");
 }
 
-function addParagraph(parent, htmlOrText, isHtml = false) {
+function addParagraph(parent, htmlOrText, isHtml = false, className = "") {
   const p = document.createElement("p");
   p.style.whiteSpace = "pre-line";
+  if (className) p.className = className;
   if (isHtml) {
     p.innerHTML = htmlOrText;
   } else {
@@ -167,7 +170,7 @@ function checkAnswer(selectedOption, selected, q) {
   if (answered) return;
 
   const correct = q.answer;
-  const correctText = q.options[correct];
+  const correctText = q.answerText || q.options[correct];
   const questionId = q.id;
 
   answered = true;
@@ -189,14 +192,16 @@ function checkAnswer(selectedOption, selected, q) {
 
   if (selected === correct) {
     removeMistake(questionId);
+    addParagraph(feedbackEl, "Correct.", false, "result-line correct-text");
   } else {
     applyAnswerStyle(selectedOption, false);
     addMistake(questionId);
+    addParagraph(feedbackEl, "Not quite. Read the explanation and then try to connect the clue to the term.", false, "result-line wrong-text");
   }
 
-  addParagraph(feedbackEl, `<strong>The correct answer is ${correct}. ${correctText}.</strong>`, true);
-  addParagraph(feedbackEl, "<strong>In Simple Words: What is this asking?</strong>", true);
-  addParagraph(feedbackEl, q.simpleExplanation || q.explanation || "Review the key clue in the question and match it to the correct Security+ term.");
+  addParagraph(feedbackEl, `<strong>The correct answer is ${correct}. ${correctText}.</strong>`, true, "answer-line");
+  addParagraph(feedbackEl, "<strong>In Simple Words: What is this asking?</strong>", true, "section-heading");
+  addParagraph(feedbackEl, q.simpleExplanation || q.explanation || "Review the clue in the question and match it to the correct Security+ term.");
 
   const moreBtn = document.createElement("button");
   moreBtn.type = "button";
@@ -207,15 +212,20 @@ function checkAnswer(selectedOption, selected, q) {
   const detailBox = document.createElement("div");
   detailBox.className = "detail-explanation";
 
-  addParagraph(detailBox, "<strong>Why this answer is correct:</strong>", true);
+  addParagraph(detailBox, "<strong>Why this answer is correct:</strong>", true, "section-heading");
   addParagraph(detailBox, q.whyCorrect || q.explanation || `${correctText} is the best match for the scenario.`);
 
-  addParagraph(detailBox, "<strong>Why the other options are incorrect:</strong>", true);
+  if (q.examTip) {
+    addParagraph(detailBox, "<strong>Exam memory tip:</strong>", true, "section-heading");
+    addParagraph(detailBox, q.examTip);
+  }
+
+  addParagraph(detailBox, "<strong>Why the other options are incorrect:</strong>", true, "section-heading");
   for (const [letter, text] of Object.entries(q.options)) {
     if (letter !== correct) {
       const reason = q.whyIncorrect && q.whyIncorrect[letter]
         ? q.whyIncorrect[letter]
-        : `This is not the best answer here because the question is specifically asking for ${correctText}.`;
+        : `${text} is related to security, but it does not match the exact clue in this question.`;
       addParagraph(detailBox, `<strong>${letter}. ${text}:</strong> ${reason}`, true);
     }
   }
@@ -253,18 +263,24 @@ resetBtn.addEventListener("click", () => {
   showQuestion();
 });
 
-allBtn.addEventListener("click", () => {
-  setAllMode();
-});
+if (allBtn) {
+  allBtn.addEventListener("click", () => {
+    setAllMode();
+  });
+}
 
-mistakesBtn.addEventListener("click", () => {
-  setMistakeMode();
-});
-
-clearMistakesBtn.addEventListener("click", () => {
-  localStorage.setItem("securityPlusMistakeIds", JSON.stringify([]));
-  updateMistakeCount();
-  if (reviewMode) {
+if (mistakesBtn) {
+  mistakesBtn.addEventListener("click", () => {
     setMistakeMode();
-  }
-});
+  });
+}
+
+if (clearMistakesBtn) {
+  clearMistakesBtn.addEventListener("click", () => {
+    localStorage.removeItem("securityPlusMistakeIds");
+    updateMistakeCount();
+    if (reviewMode) {
+      setMistakeMode();
+    }
+  });
+}
