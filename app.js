@@ -180,7 +180,54 @@ function checkAnswer(selectedOption, selected, correct, explanation, questionId)
     addMistake(questionId);
   }
 
-  explanationEl.textContent = explanation;
+  const q = questions[currentIndex];
+const correctText = q.options[correct];
+
+feedbackEl.innerHTML = "";
+
+const answerLine = document.createElement("p");
+answerLine.innerHTML = `<strong>The correct answer is ${correct}. ${correctText}.</strong>`;
+feedbackEl.appendChild(answerLine);
+
+const simpleHeading = document.createElement("p");
+simpleHeading.innerHTML = "<strong>In Simple Words: What is this asking?</strong>";
+feedbackEl.appendChild(simpleHeading);
+
+const shortExplain = document.createElement("p");
+shortExplain.textContent = explanation;
+feedbackEl.appendChild(shortExplain);
+
+const moreBtn = document.createElement("button");
+moreBtn.type = "button";
+moreBtn.textContent = "More...";
+moreBtn.className = "moreBtn";
+feedbackEl.appendChild(moreBtn);
+
+explanationEl.style.display = "none";
+explanationEl.innerHTML = "";
+
+const detailBox = document.createElement("div");
+detailBox.className = "detail-explanation";
+
+const whyHeading = document.createElement("p");
+whyHeading.innerHTML = "<strong>Why the other options are incorrect:</strong>";
+detailBox.appendChild(whyHeading);
+
+for (const [letter, text] of Object.entries(q.options)) {
+  if (letter !== correct) {
+    const p = document.createElement("p");
+    p.innerHTML = `<strong>${letter}. ${text}:</strong> This is not the best answer here because it does not directly describe what the question is asking for. The question is asking for ${correctText}.`;
+    detailBox.appendChild(p);
+  }
+}
+
+explanationEl.appendChild(detailBox);
+
+moreBtn.addEventListener("click", () => {
+  const hidden = explanationEl.style.display === "none";
+  explanationEl.style.display = hidden ? "block" : "none";
+  moreBtn.textContent = hidden ? "Less..." : "More...";
+});
 }
 
 nextBtn.addEventListener("click", () => {
