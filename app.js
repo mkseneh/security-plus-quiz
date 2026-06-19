@@ -10,7 +10,7 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
-const nextBtn = document.getElementById("nextBtn");
+const nextBtn = document.getElementById("nextBtn"); const prevBtn = document.getElementById("prevBtn");
 const skipBtn = document.getElementById("skipBtn");
 const resetBtn = document.getElementById("resetBtn");
 const allBtn = document.getElementById("allBtn");
@@ -87,6 +87,7 @@ function setMistakeMode() {
 }
 
 function showQuestion() {
+  if (prevBtn) { prevBtn.disabled = currentIndex <= 0; }
   answered = false;
   nextBtn.disabled = true;
   skipBtn.disabled = false;
@@ -280,3 +281,17 @@ if (clearMistakesBtn) {
     if (reviewMode) setMistakeMode();
   });
 }
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex <= 0) {
+    return;
+  }
+
+  currentIndex--;
+
+  if (!reviewMode) {
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  }
+
+  showQuestion();
+});
