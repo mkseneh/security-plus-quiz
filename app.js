@@ -297,7 +297,7 @@ function renderDetailedExplanation(q, selected) {
 
   addHeading(explanationEl, "Key clue phrase", 2);
   addParagraph(explanationEl, "The key clue phrase is:", "clue-intro");
-  addParagraph(explanationEl, "â€œ" + clue + "â€", "key-clue-box");
+  addParagraph(explanationEl, clue, "key-clue-box");
 
 
   for (const [letter, text] of Object.entries(q.options || {})) {
