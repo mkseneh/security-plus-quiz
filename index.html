@@ -3,35 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Security+ Practice Quiz</title>
-  <link rel="stylesheet" href="style.css?v=mistakes-20260617" />
+  <title>CompTIA Security+ Practice Quiz</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="quiz-container">
     <h1>CompTIA Security+ Practice Quiz</h1>
-
     <div class="top-bar">
       <p id="progress">Loading...</p>
       <button id="resetBtn">Reset Progress</button>
     </div>
-
-    <div class="mode-bar">
-      <button id="allBtn" class="secondary-btn">All Questions</button>
-      <button id="mistakesBtn" class="secondary-btn">Review Mistakes (<span id="mistakeCount">0</span>)</button>
-      <button id="clearMistakesBtn" class="secondary-btn danger-btn">Clear Mistakes</button>
+    <div class="mode-row">
+      <button id="allBtn" type="button">All Questions</button>
+      <button id="mistakesBtn" type="button">Review Mistakes (<span id="mistakeCount">0</span>)</button>
+      <button id="clearMistakesBtn" type="button">Clear Mistakes</button>
     </div>
-
     <section class="card">
       <p id="domain"></p>
-      <h2 id="question">Loading question...</h2>
+      <h2 id="question">Loading questions...</h2>
       <div id="options"></div>
-      <p id="feedback"></p>
-      <p id="explanation"></p>
-      <button id="skipBtn" type="button">Skip Question</button>
-    <button id="nextBtn" disabled>Next Question</button>
+      <div id="feedback"></div>
+      <div id="explanation"></div>
+      <div class="button-row">
+        <button id="skipBtn" type="button">Skip Question</button>
+        <button id="nextBtn" disabled>Next Question</button>
+      </div>
     </section>
   </main>
-
-  <script src="app.js?v=more1"></script>
+  <script src="app.js?v=human2"></script>
 </body>
 </html>
