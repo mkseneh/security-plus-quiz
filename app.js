@@ -1,4 +1,4 @@
-﻿let questions = [];
+let questions = [];
 let activeQuestions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 let answered = false;
@@ -10,7 +10,7 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
-const nextBtn = document.getElementById("nextBtn");
+const nextBtn = document.getElementById("nextBtn"); const skipBtn = document.getElementById("skipBtn");
 const resetBtn = document.getElementById("resetBtn");
 const allBtn = document.getElementById("allBtn");
 const mistakesBtn = document.getElementById("mistakesBtn");
@@ -97,8 +97,7 @@ function setMistakeMode() {
 }
 
 function showQuestion() {
-  answered = false;
-  nextBtn.disabled = true;
+  answered = false; nextBtn.disabled = true; skipBtn.disabled = false; skipBtn.style.display = "inline-block";
   nextBtn.style.display = "inline-block";
   hideFeedbackAreas();
   optionsEl.innerHTML = "";
@@ -157,8 +156,7 @@ function applyAnswerStyle(element, isCorrect) {
 function checkAnswer(selectedOption, selected, correct, explanation, questionId) {
   if (answered) return;
 
-  answered = true;
-  nextBtn.disabled = false;
+  answered = true; nextBtn.disabled = false; skipBtn.disabled = true;
 
   const allOptions = document.querySelectorAll(".option");
 
@@ -194,6 +192,8 @@ nextBtn.addEventListener("click", () => {
 
   showQuestion();
 });
+
+skipBtn.addEventListener("click", () => { currentIndex++; if (!reviewMode) { localStorage.setItem("securityPlusQuestionIndex", currentIndex); } showQuestion(); });
 
 resetBtn.addEventListener("click", () => {
   reviewMode = false;
