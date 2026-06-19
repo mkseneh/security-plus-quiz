@@ -10,7 +10,9 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
-const nextBtn = document.getElementById("nextBtn"); const prevBtn = document.getElementById("prevBtn");
+
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 const skipBtn = document.getElementById("skipBtn");
 const resetBtn = document.getElementById("resetBtn");
 const allBtn = document.getElementById("allBtn");
@@ -23,10 +25,12 @@ fetch("questions.json?v=" + Date.now())
   .then(data => {
     questions = data;
     activeQuestions = questions;
+
     if (currentIndex >= activeQuestions.length) {
       currentIndex = 0;
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
+
     updateMistakeCount();
     showQuestion();
   })
@@ -36,8 +40,11 @@ fetch("questions.json?v=" + Date.now())
   });
 
 function getMistakeIds() {
-  try { return JSON.parse(localStorage.getItem("securityPlusMistakeIds")) || []; }
-  catch { return []; }
+  try {
+    return JSON.parse(localStorage.getItem("securityPlusMistakeIds")) || [];
+  } catch {
+    return [];
+  }
 }
 
 function saveMistakeIds(ids) {
@@ -48,6 +55,7 @@ function saveMistakeIds(ids) {
 function addMistake(id) {
   const ids = getMistakeIds();
   const idText = String(id);
+
   if (!ids.includes(idText)) {
     ids.push(idText);
     saveMistakeIds(ids);
@@ -60,7 +68,9 @@ function removeMistake(id) {
 }
 
 function updateMistakeCount() {
-  if (mistakeCountEl) mistakeCountEl.textContent = getMistakeIds().length;
+  if (mistakeCountEl) {
+    mistakeCountEl.textContent = getMistakeIds().length;
+  }
 }
 
 function hideFeedbackAreas() {
@@ -74,7 +84,11 @@ function setAllMode() {
   reviewMode = false;
   activeQuestions = questions;
   currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
-  if (currentIndex >= activeQuestions.length) currentIndex = 0;
+
+  if (currentIndex >= activeQuestions.length) {
+    currentIndex = 0;
+  }
+
   showQuestion();
 }
 
@@ -87,12 +101,22 @@ function setMistakeMode() {
 }
 
 function showQuestion() {
-  if (prevBtn) { prevBtn.disabled = currentIndex <= 0; }
+  if (prevBtn) {
+    prevBtn.disabled = currentIndex <= 0;
+  }
+
   answered = false;
-  nextBtn.disabled = true;
-  skipBtn.disabled = false;
-  skipBtn.style.display = "inline-block";
-  nextBtn.style.display = "inline-block";
+
+  if (nextBtn) {
+    nextBtn.disabled = true;
+    nextBtn.style.display = "inline-block";
+  }
+
+  if (skipBtn) {
+    skipBtn.disabled = false;
+    skipBtn.style.display = "inline-block";
+  }
+
   hideFeedbackAreas();
   optionsEl.innerHTML = "";
 
@@ -100,8 +124,10 @@ function showQuestion() {
     questionEl.textContent = "No questions found.";
     domainEl.textContent = "";
     progressEl.textContent = "No questions loaded";
-    nextBtn.style.display = "none";
-    skipBtn.style.display = "none";
+
+    if (nextBtn) nextBtn.style.display = "none";
+    if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
@@ -109,112 +135,223 @@ function showQuestion() {
     questionEl.textContent = "You have no mistakes to review.";
     domainEl.textContent = "";
     progressEl.textContent = "Review Mistakes";
-    nextBtn.style.display = "none";
-    skipBtn.style.display = "none";
+
+    if (nextBtn) nextBtn.style.display = "none";
+    if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
   if (currentIndex >= activeQuestions.length) {
-    questionEl.textContent = reviewMode ? "You have reviewed all missed questions." : "You have completed all questions.";
+    questionEl.textContent = reviewMode
+      ? "You have reviewed all missed questions."
+      : "You have completed all questions.";
+
     domainEl.textContent = "";
-    progressEl.textContent = reviewMode ? "Completed mistake review" : "Completed " + activeQuestions.length + " questions";
-    nextBtn.style.display = "none";
-    skipBtn.style.display = "none";
+    progressEl.textContent = reviewMode
+      ? "Completed mistake review"
+      : "Completed " + activeQuestions.length + " questions";
+
+    if (nextBtn) nextBtn.style.display = "none";
+    if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
   const q = activeQuestions[currentIndex];
+
   progressEl.textContent = reviewMode
     ? "Review Mistakes: Question " + (currentIndex + 1) + " of " + activeQuestions.length
     : "Question " + (currentIndex + 1) + " of " + activeQuestions.length;
-  domainEl.textContent = q.domain;
-  questionEl.textContent = q.question;
 
-  for (const [letter, text] of Object.entries(q.options)) {
+  domainEl.textContent = q.domain || "";
+  questionEl.textContent = q.question || "";
+
+  for (const [letter, text] of Object.entries(q.options || {})) {
     const option = document.createElement("div");
     option.className = "option";
     option.textContent = letter + ". " + text;
-    option.addEventListener("click", () => checkAnswer(option, letter, q));
+
+    option.addEventListener("click", () => {
+      checkAnswer(option, letter, q);
+    });
+
     optionsEl.appendChild(option);
   }
 }
 
-function applyAnswerStyle(element, isCorrect) {
-  element.classList.add(isCorrect ? "correct" : "wrong");
-  element.style.setProperty("background-color", isCorrect ? "#d4edda" : "#f8d7da", "important");
-  element.style.setProperty("border-color", isCorrect ? "#28a745" : "#dc3545", "important");
-  element.style.setProperty("color", isCorrect ? "#155724" : "#721c24", "important");
-}
-
-function addParagraph(parent, htmlOrText, isHtml = false, className = "") {
+function addParagraph(parent, text, className = "") {
   const p = document.createElement("p");
-  if (className) p.className = className;
+
+  if (className) {
+    p.className = className;
+  }
+
   p.style.whiteSpace = "pre-line";
-  if (isHtml) p.innerHTML = htmlOrText;
-  else p.textContent = htmlOrText;
+  p.textContent = text || "";
   parent.appendChild(p);
+
   return p;
 }
 
-function addHeading(parent, text, level = 3) {
+function addHeading(parent, text, level = 2) {
   const h = document.createElement("h" + level);
   h.textContent = text;
   parent.appendChild(h);
   return h;
 }
 
+function getCorrectText(q) {
+  return q.answerText || (q.options && q.options[q.answer]) || "";
+}
+
+function getTeachingData(q) {
+  return q.teachingExplanation || {};
+}
+
+function getQuestionAskingText(q) {
+  const teaching = getTeachingData(q);
+
+  if (teaching.whatQuestionIsAsking) {
+    return teaching.whatQuestionIsAsking;
+  }
+
+  if (q.whatQuestionIsAsking) {
+    return q.whatQuestionIsAsking;
+  }
+
+  if (q.simpleExplanation) {
+    return q.simpleExplanation;
+  }
+
+  return "This question is asking you to choose the answer that best matches the exact scenario. Do not just pick a term because it sounds familiar. Look at what the question is actually asking you to do.";
+}
+
+function getKeyCluePhrase(q) {
+  const teaching = getTeachingData(q);
+
+  if (teaching.keyCluePhrase) {
+    return teaching.keyCluePhrase;
+  }
+
+  if (q.keyCluePhrase) {
+    return q.keyCluePhrase;
+  }
+
+  if (Array.isArray(q.phraseBreakdown) && q.phraseBreakdown.length > 0) {
+    const usefulPhrase = q.phraseBreakdown.find(item => {
+      return item && item.phrase && !item.phrase.toLowerCase().startsWith("correct concept");
+    });
+
+    if (usefulPhrase) {
+      return usefulPhrase.phrase;
+    }
+  }
+
+  return q.question || "the exact wording of the question";
+}
+
+function getOptionExplanation(q, letter, text) {
+  const teaching = getTeachingData(q);
+
+  if (teaching.optionExplanations && teaching.optionExplanations[letter]) {
+    return teaching.optionExplanations[letter];
+  }
+
+  if (teaching.options && teaching.options[letter]) {
+    return teaching.options[letter];
+  }
+
+  if (q.optionExplanations && q.optionExplanations[letter]) {
+    return q.optionExplanations[letter];
+  }
+
+  return text + " is one of the possible answer choices. Before choosing it, ask whether it matches the exact clue phrase in the question. In Security+ questions, an answer can be a real technical term but still be the wrong answer if it does not solve the exact problem being described.";
+}
+
+function getCompareText(q) {
+  const teaching = getTeachingData(q);
+
+  if (teaching.compareOptionsAgainstClue) {
+    return teaching.compareOptionsAgainstClue;
+  }
+
+  if (q.compareOptionsAgainstClue) {
+    return q.compareOptionsAgainstClue;
+  }
+
+  const clue = getKeyCluePhrase(q);
+
+  return "Compare each option against the clue phrase: \"" + clue + "\". The right answer is the one that directly matches that clue. The wrong answers may still be real Security+ terms, but they do not answer the exact thing the question is asking.";
+}
+
+function renderDetailedExplanation(q, selected) {
+  explanationEl.innerHTML = "";
+
+  const correct = q.answer;
+  const correctText = getCorrectText(q);
+  const clue = getKeyCluePhrase(q);
+
+  addHeading(explanationEl, "What the question is asking", 2);
+  addParagraph(explanationEl, getQuestionAskingText(q));
+
+  addHeading(explanationEl, "Key clue phrase", 2);
+  addParagraph(explanationEl, "The key clue phrase is:", "clue-intro");
+  addParagraph(explanationEl, "“" + clue + "”", "key-clue-box");
+
+  addHeading(explanationEl, "Describe all answer options first", 2);
+
+  for (const [letter, text] of Object.entries(q.options || {})) {
+    addHeading(explanationEl, "Option " + letter + ": " + text, 3);
+    addParagraph(explanationEl, getOptionExplanation(q, letter, text), "option-explanation-text");
+  }
+
+  addHeading(explanationEl, "Compare the options against the clue", 2);
+  addParagraph(explanationEl, getCompareText(q), "compare-box");
+
+  addHeading(explanationEl, "Final answer", 2);
+
+  if (selected === correct) {
+    addParagraph(explanationEl, "You selected " + selected + ". That matches the correct answer.", "selected-result correct-text");
+  } else {
+    addParagraph(explanationEl, "You selected " + selected + ". The correct answer is different.", "selected-result wrong-text");
+  }
+
+  addParagraph(explanationEl, "The correct answer is: " + correct + ". " + correctText, "final-answer-box");
+}
+
 function checkAnswer(selectedOption, selected, q) {
   if (answered) return;
 
-  const correct = q.answer;
-  const correctText = q.answerText || q.options[correct];
-  const questionId = q.id;
-
   answered = true;
-  nextBtn.disabled = false;
-  skipBtn.disabled = false;
+
+  if (nextBtn) nextBtn.disabled = false;
+  if (skipBtn) skipBtn.disabled = false;
 
   const allOptions = document.querySelectorAll(".option");
+
   allOptions.forEach(option => {
     option.style.pointerEvents = "none";
-    if (option.textContent.startsWith(correct + ".")) applyAnswerStyle(option, true);
   });
+
+  selectedOption.classList.add("selected-option");
+
+  if (selected === q.answer) {
+    removeMistake(q.id);
+  } else {
+    addMistake(q.id);
+  }
 
   feedbackEl.style.display = "block";
   explanationEl.style.display = "none";
   feedbackEl.innerHTML = "";
   explanationEl.innerHTML = "";
 
-  if (selected === correct) {
-    removeMistake(questionId);
-    addParagraph(feedbackEl, "Correct.", false, "result-line correct-text");
-  } else {
-    applyAnswerStyle(selectedOption, false);
-    addMistake(questionId);
-    addParagraph(feedbackEl, "Not quite. Read the breakdown and focus on the clue words.", false, "result-line wrong-text");
-  }
-
-  addParagraph(feedbackEl, `<strong>The correct answer is ${correct}. ${correctText}.</strong>`, true, "answer-line");
-  addParagraph(feedbackEl, "Let's break this question down piece by piece so it makes perfect sense.", false, "breakdown-intro");
-
-  addHeading(feedbackEl, "1. Phrase-by-Phrase Breakdown", 3);
-  const list = document.createElement("div");
-  list.className = "phrase-list";
-  const breakdown = q.phraseBreakdown || [];
-  if (breakdown.length === 0) {
-    addParagraph(list, "The question is asking which Security+ term best matches the scenario.");
-  } else {
-    breakdown.forEach(item => {
-      const row = document.createElement("div");
-      row.className = "phrase-row";
-      row.innerHTML = `<strong>${item.phrase}:</strong> ${item.meaning}`;
-      list.appendChild(row);
-    });
-  }
-  feedbackEl.appendChild(list);
-
-  addHeading(feedbackEl, "The \"10-Year-Old\" Summary", 3);
-  addParagraph(feedbackEl, q.tenYearOldSummary || q.simpleExplanation || q.explanation || "Pick the term that matches the story.", false, "simple-summary");
+  addParagraph(
+    feedbackEl,
+    "You selected " + selected + ". Click More to see the full explanation.",
+    "result-line"
+  );
 
   const moreBtn = document.createElement("button");
   moreBtn.type = "button";
@@ -222,76 +359,81 @@ function checkAnswer(selectedOption, selected, q) {
   moreBtn.className = "moreBtn";
   feedbackEl.appendChild(moreBtn);
 
-  const detailBox = document.createElement("div");
-  detailBox.className = "detail-explanation";
-
-  addHeading(detailBox, `2. The Winner: Why ${correct} (${correctText}) is Correct`, 3);
-  addParagraph(detailBox, q.winnerExplanation || q.whyCorrect || q.explanation || `${correctText} best matches the clue in the question.`);
-
-  addHeading(detailBox, "3. Why the Other Answers Are Wrong", 3);
-  for (const [letter, text] of Object.entries(q.options)) {
-    if (letter !== correct) {
-      const reason = q.whyIncorrect && q.whyIncorrect[letter]
-        ? q.whyIncorrect[letter]
-        : "This is a real security idea, but it does not solve the exact problem described in this question.";
-      addParagraph(detailBox, `<strong>${letter}. ${text}:</strong> ${reason}`, true, "wrong-explanation");
-    }
-  }
-
-  if (q.examTip) {
-    addHeading(detailBox, "Exam Tip", 3);
-    addParagraph(detailBox, q.examTip, false, "exam-tip");
-  }
-
-  explanationEl.appendChild(detailBox);
-
   moreBtn.addEventListener("click", () => {
-    const hidden = explanationEl.style.display === "none";
-    explanationEl.style.display = hidden ? "block" : "none";
-    moreBtn.textContent = hidden ? "Less..." : "More...";
+    const isHidden = explanationEl.style.display === "none";
+
+    if (isHidden && explanationEl.innerHTML.trim() === "") {
+      renderDetailedExplanation(q, selected);
+    }
+
+    explanationEl.style.display = isHidden ? "block" : "none";
+    moreBtn.textContent = isHidden ? "Less..." : "More...";
   });
 }
 
-nextBtn.addEventListener("click", () => {
-  currentIndex++;
-  if (!reviewMode) localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  showQuestion();
-});
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
 
-skipBtn.addEventListener("click", () => {
-  currentIndex++;
-  if (!reviewMode) localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  showQuestion();
-});
+    if (!reviewMode) {
+      localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    }
 
-resetBtn.addEventListener("click", () => {
-  reviewMode = false;
-  activeQuestions = questions;
-  currentIndex = 0;
-  localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  showQuestion();
-});
+    showQuestion();
+  });
+}
 
-if (allBtn) allBtn.addEventListener("click", () => setAllMode());
-if (mistakesBtn) mistakesBtn.addEventListener("click", () => setMistakeMode());
+if (skipBtn) {
+  skipBtn.addEventListener("click", () => {
+    currentIndex++;
+
+    if (!reviewMode) {
+      localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    }
+
+    showQuestion();
+  });
+}
+
+if (resetBtn) {
+  resetBtn.addEventListener("click", () => {
+    reviewMode = false;
+    activeQuestions = questions;
+    currentIndex = 0;
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    showQuestion();
+  });
+}
+
+if (allBtn) {
+  allBtn.addEventListener("click", () => setAllMode());
+}
+
+if (mistakesBtn) {
+  mistakesBtn.addEventListener("click", () => setMistakeMode());
+}
+
 if (clearMistakesBtn) {
   clearMistakesBtn.addEventListener("click", () => {
     localStorage.removeItem("securityPlusMistakeIds");
     updateMistakeCount();
-    if (reviewMode) setMistakeMode();
+
+    if (reviewMode) {
+      setMistakeMode();
+    }
   });
 }
 
-prevBtn.addEventListener("click", () => {
-  if (currentIndex <= 0) {
-    return;
-  }
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex <= 0) return;
 
-  currentIndex--;
+    currentIndex--;
 
-  if (!reviewMode) {
-    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-  }
+    if (!reviewMode) {
+      localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    }
 
-  showQuestion();
-});
+    showQuestion();
+  });
+}
