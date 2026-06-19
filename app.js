@@ -216,15 +216,7 @@ function getQuestionAskingText(q) {
     return teaching.whatQuestionIsAsking;
   }
 
-  if (q.whatQuestionIsAsking) {
-    return q.whatQuestionIsAsking;
-  }
-
-  if (q.simpleExplanation) {
-    return q.simpleExplanation;
-  }
-
-  return "This question is asking you to choose the answer that best matches the exact scenario. Do not just pick a term because it sounds familiar. Look at what the question is actually asking you to do.";
+  return "This question is asking you to match the scenario to the best Security+ concept. Focus on the wording in the question, then compare the options carefully.";
 }
 
 function getKeyCluePhrase(q) {
@@ -232,20 +224,6 @@ function getKeyCluePhrase(q) {
 
   if (teaching.keyCluePhrase) {
     return teaching.keyCluePhrase;
-  }
-
-  if (q.keyCluePhrase) {
-    return q.keyCluePhrase;
-  }
-
-  if (Array.isArray(q.phraseBreakdown) && q.phraseBreakdown.length > 0) {
-    const usefulPhrase = q.phraseBreakdown.find(item => {
-      return item && item.phrase && !item.phrase.toLowerCase().startsWith("correct concept");
-    });
-
-    if (usefulPhrase) {
-      return usefulPhrase.phrase;
-    }
   }
 
   return q.question || "the exact wording of the question";
@@ -258,15 +236,7 @@ function getOptionExplanation(q, letter, text) {
     return teaching.optionExplanations[letter];
   }
 
-  if (teaching.options && teaching.options[letter]) {
-    return teaching.options[letter];
-  }
-
-  if (q.optionExplanations && q.optionExplanations[letter]) {
-    return q.optionExplanations[letter];
-  }
-
-  return text + " is one of the possible answer choices. Before choosing it, ask whether it matches the exact clue phrase in the question. In Security+ questions, an answer can be a real technical term but still be the wrong answer if it does not solve the exact problem being described.";
+  return text + " is one of the possible choices. Check whether it matches the exact clue phrase in the question.";
 }
 
 function getCompareText(q) {
@@ -276,46 +246,59 @@ function getCompareText(q) {
     return teaching.compareOptionsAgainstClue;
   }
 
-  if (q.compareOptionsAgainstClue) {
-    return q.compareOptionsAgainstClue;
+  const clue = getKeyCluePhrase(q);
+  return "Compare each option against the clue phrase: " + clue + ". The right answer is the one that directly matches that clue.";
+}
+
+function getFinalAnswerExplanation(q) {
+  const teaching = getTeachingData(q);
+  const correct = q.answer;
+  const correctText = getCorrectText(q);
+
+  if (teaching.finalAnswerExplanation) {
+    return teaching.finalAnswerExplanation;
   }
 
-  const clue = getKeyCluePhrase(q);
-
-  return "Compare each option against the clue phrase: \"" + clue + "\". The right answer is the one that directly matches that clue. The wrong answers may still be real Security+ terms, but they do not answer the exact thing the question is asking.";
+  const correctExplanation = getOptionExplanation(q, correct, correctText);
+  return "The correct answer is " + correct + ". " + correctText + ".\n\nThis is the answer because: " + correctExplanation;
 }
 
 function renderDetailedExplanation(q, selected) {
   explanationEl.innerHTML = "";
 
-  const correct = q.answer;
-  const correctText = getCorrectText(q);
   const clue = getKeyCluePhrase(q);
+  const teaching = getTeachingData(q);
 
   addHeading(explanationEl, "What the question is asking", 2);
   addParagraph(explanationEl, getQuestionAskingText(q));
 
+  if (Array.isArray(teaching.questionBreakdown) && teaching.questionBreakdown.length > 0) {
+    addHeading(explanationEl, "Breaking down the question", 2);
+    teaching.questionBreakdown.forEach(item => addParagraph(explanationEl, item));
+  }
+
   addHeading(explanationEl, "Key clue phrase", 2);
-  addParagraph(explanationEl, "The key clue phrase is:", "clue-intro");
   addParagraph(explanationEl, clue, "key-clue-box");
 
+  addHeading(explanationEl, "Answer options explained", 2);
 
   for (const [letter, text] of Object.entries(q.options || {})) {
     addHeading(explanationEl, "Option " + letter + ": " + text, 3);
     addParagraph(explanationEl, getOptionExplanation(q, letter, text), "option-explanation-text");
   }
 
-
+  addHeading(explanationEl, "Compare the options against the clue", 2);
+  addParagraph(explanationEl, getCompareText(q), "compare-box");
 
   addHeading(explanationEl, "Final answer", 2);
 
-  if (selected === correct) {
+  if (selected === q.answer) {
     addParagraph(explanationEl, "You selected " + selected + ". That matches the correct answer.", "selected-result correct-text");
   } else {
     addParagraph(explanationEl, "You selected " + selected + ". The correct answer is different.", "selected-result wrong-text");
   }
 
-  addParagraph(explanationEl, "The correct answer is: " + correct + ". " + correctText, "final-answer-box");
+  addParagraph(explanationEl, getFinalAnswerExplanation(q), "final-answer-box");
 }
 
 function checkAnswer(selectedOption, selected, q) {
