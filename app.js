@@ -2,6 +2,8 @@ let questions = [];
 let activeQuestions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 let answered = false;
+let selectedLetter = null;
+let selectedOption = null;
 let reviewMode = false;
 
 const progressEl = document.getElementById("progress");
@@ -101,6 +103,8 @@ function showQuestion() {
   }
 
   answered = false;
+  selectedLetter = null;
+  selectedOption = null;
 
   if (nextBtn) {
     nextBtn.disabled = true;
@@ -162,10 +166,37 @@ function showQuestion() {
     option.className = "option";
     option.textContent = letter + ". " + text;
     option.addEventListener("click", () => {
-      checkAnswer(option, letter, q);
+      selectOption(option, letter);
     });
     optionsEl.appendChild(option);
   }
+
+  const checkBtn = document.createElement("button");
+  checkBtn.type = "button";
+  checkBtn.id = "checkAnswerBtn";
+  checkBtn.textContent = "Check Answer";
+  checkBtn.className = "checkBtn";
+  checkBtn.disabled = true;
+  checkBtn.addEventListener("click", () => {
+    if (!selectedOption || !selectedLetter) return;
+    checkAnswer(selectedOption, selectedLetter, q);
+  });
+  optionsEl.appendChild(checkBtn);
+}
+
+function selectOption(option, letter) {
+  if (answered) return;
+
+  document.querySelectorAll(".option").forEach(item => {
+    item.classList.remove("selected-option");
+  });
+
+  selectedOption = option;
+  selectedLetter = letter;
+  option.classList.add("selected-option");
+
+  const checkBtn = document.getElementById("checkAnswerBtn");
+  if (checkBtn) checkBtn.disabled = false;
 }
 
 function renderPlainMore(q, selected) {
@@ -190,6 +221,9 @@ function checkAnswer(selectedOption, selected, q) {
 
   if (nextBtn) nextBtn.disabled = false;
   if (skipBtn) skipBtn.disabled = false;
+
+  const checkBtn = document.getElementById("checkAnswerBtn");
+  if (checkBtn) checkBtn.disabled = true;
 
   const allOptions = document.querySelectorAll(".option");
   allOptions.forEach(option => {
