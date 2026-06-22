@@ -10,7 +10,6 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
-
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const skipBtn = document.getElementById("skipBtn");
@@ -80,24 +79,20 @@ function hideFeedbackAreas() {
   explanationEl.style.display = "none";
 }
 
-function setAllMode() {
-  reviewMode = false;
-  activeQuestions = questions;
-  currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
-
-  if (currentIndex >= activeQuestions.length) {
-    currentIndex = 0;
-  }
-
-  showQuestion();
+function getCorrectText(q) {
+  return q.answerText || (q.options && q.options[q.answer]) || "";
 }
 
-function setMistakeMode() {
-  reviewMode = true;
-  const mistakeIds = getMistakeIds();
-  activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
-  currentIndex = 0;
-  showQuestion();
+function getMoreText(q) {
+  if (q.moreText) return q.moreText;
+  if (q.more) return q.more;
+  if (q.explanation) return q.explanation;
+
+  if (q.teachingExplanation && q.teachingExplanation.finalAnswerExplanation) {
+    return q.teachingExplanation.finalAnswerExplanation;
+  }
+
+  return "No More text has been added for this question yet.";
 }
 
 function showQuestion() {
@@ -124,10 +119,8 @@ function showQuestion() {
     questionEl.textContent = "No questions found.";
     domainEl.textContent = "";
     progressEl.textContent = "No questions loaded";
-
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
-
     return;
   }
 
@@ -135,10 +128,8 @@ function showQuestion() {
     questionEl.textContent = "You have no mistakes to review.";
     domainEl.textContent = "";
     progressEl.textContent = "Review Mistakes";
-
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
-
     return;
   }
 
@@ -154,7 +145,6 @@ function showQuestion() {
 
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
-
     return;
   }
 
@@ -171,134 +161,26 @@ function showQuestion() {
     const option = document.createElement("div");
     option.className = "option";
     option.textContent = letter + ". " + text;
-
     option.addEventListener("click", () => {
       checkAnswer(option, letter, q);
     });
-
     optionsEl.appendChild(option);
   }
 }
 
-function addParagraph(parent, text, className = "") {
-  const p = document.createElement("p");
-
-  if (className) {
-    p.className = className;
-  }
-
-  p.style.whiteSpace = "pre-line";
-  p.textContent = text || "";
-  parent.appendChild(p);
-
-  return p;
-}
-
-function addHeading(parent, text, level = 2) {
-  const h = document.createElement("h" + level);
-  h.textContent = text;
-  parent.appendChild(h);
-  return h;
-}
-
-function getCorrectText(q) {
-  return q.answerText || (q.options && q.options[q.answer]) || "";
-}
-
-function getTeachingData(q) {
-  return q.teachingExplanation || {};
-}
-
-function getQuestionAskingText(q) {
-  const teaching = getTeachingData(q);
-
-  if (teaching.whatQuestionIsAsking) {
-    return teaching.whatQuestionIsAsking;
-  }
-
-  return "This question is asking you to match the scenario to the best Security+ concept. Focus on the wording in the question, then compare the options carefully.";
-}
-
-function getKeyCluePhrase(q) {
-  const teaching = getTeachingData(q);
-
-  if (teaching.keyCluePhrase) {
-    return teaching.keyCluePhrase;
-  }
-
-  return q.question || "the exact wording of the question";
-}
-
-function getOptionExplanation(q, letter, text) {
-  const teaching = getTeachingData(q);
-
-  if (teaching.optionExplanations && teaching.optionExplanations[letter]) {
-    return teaching.optionExplanations[letter];
-  }
-
-  return text + " is one of the possible choices. Check whether it matches the exact clue phrase in the question.";
-}
-
-function getCompareText(q) {
-  const teaching = getTeachingData(q);
-
-  if (teaching.compareOptionsAgainstClue) {
-    return teaching.compareOptionsAgainstClue;
-  }
-
-  const clue = getKeyCluePhrase(q);
-  return "Compare each option against the clue phrase: " + clue + ". The right answer is the one that directly matches that clue.";
-}
-
-function getFinalAnswerExplanation(q) {
-  const teaching = getTeachingData(q);
-  const correct = q.answer;
-  const correctText = getCorrectText(q);
-
-  if (teaching.finalAnswerExplanation) {
-    return teaching.finalAnswerExplanation;
-  }
-
-  const correctExplanation = getOptionExplanation(q, correct, correctText);
-  return "The correct answer is " + correct + ". " + correctText + ".\n\nThis is the answer because: " + correctExplanation;
-}
-
-function renderDetailedExplanation(q, selected) {
+function renderPlainMore(q, selected) {
   explanationEl.innerHTML = "";
 
-  const clue = getKeyCluePhrase(q);
-  const teaching = getTeachingData(q);
+  const box = document.createElement("div");
+  box.style.whiteSpace = "pre-wrap";
+  box.style.lineHeight = "1.6";
+  box.style.padding = "14px";
+  box.style.border = "1px solid #d0d7de";
+  box.style.borderRadius = "8px";
+  box.style.background = "#ffffff";
+  box.textContent = getMoreText(q);
 
-  addHeading(explanationEl, "What the question is asking", 2);
-  addParagraph(explanationEl, getQuestionAskingText(q));
-
-  if (Array.isArray(teaching.questionBreakdown) && teaching.questionBreakdown.length > 0) {
-    addHeading(explanationEl, "Breaking down the question", 2);
-    teaching.questionBreakdown.forEach(item => addParagraph(explanationEl, item));
-  }
-
-  addHeading(explanationEl, "Key clue phrase", 2);
-  addParagraph(explanationEl, clue, "key-clue-box");
-
-  addHeading(explanationEl, "Answer options explained", 2);
-
-  for (const [letter, text] of Object.entries(q.options || {})) {
-    addHeading(explanationEl, "Option " + letter + ": " + text, 3);
-    addParagraph(explanationEl, getOptionExplanation(q, letter, text), "option-explanation-text");
-  }
-
-  addHeading(explanationEl, "Compare the options against the clue", 2);
-  addParagraph(explanationEl, getCompareText(q), "compare-box");
-
-  addHeading(explanationEl, "Final answer", 2);
-
-  if (selected === q.answer) {
-    addParagraph(explanationEl, "You selected " + selected + ". That matches the correct answer.", "selected-result correct-text");
-  } else {
-    addParagraph(explanationEl, "You selected " + selected + ". The correct answer is different.", "selected-result wrong-text");
-  }
-
-  addParagraph(explanationEl, getFinalAnswerExplanation(q), "final-answer-box");
+  explanationEl.appendChild(box);
 }
 
 function checkAnswer(selectedOption, selected, q) {
@@ -310,7 +192,6 @@ function checkAnswer(selectedOption, selected, q) {
   if (skipBtn) skipBtn.disabled = false;
 
   const allOptions = document.querySelectorAll(".option");
-
   allOptions.forEach(option => {
     option.style.pointerEvents = "none";
   });
@@ -328,11 +209,13 @@ function checkAnswer(selectedOption, selected, q) {
   feedbackEl.innerHTML = "";
   explanationEl.innerHTML = "";
 
-  addParagraph(
-    feedbackEl,
-    "You selected " + selected + ". Click More to see the full explanation.",
-    "result-line"
-  );
+  const result = document.createElement("p");
+  result.className = selected === q.answer ? "correct-text" : "wrong-text";
+  result.textContent = selected === q.answer
+    ? "You selected " + selected + ". Correct."
+    : "You selected " + selected + ". Correct answer: " + q.answer + ". " + getCorrectText(q);
+
+  feedbackEl.appendChild(result);
 
   const moreBtn = document.createElement("button");
   moreBtn.type = "button";
@@ -344,7 +227,7 @@ function checkAnswer(selectedOption, selected, q) {
     const isHidden = explanationEl.style.display === "none";
 
     if (isHidden && explanationEl.innerHTML.trim() === "") {
-      renderDetailedExplanation(q, selected);
+      renderPlainMore(q, selected);
     }
 
     explanationEl.style.display = isHidden ? "block" : "none";
@@ -387,11 +270,27 @@ if (resetBtn) {
 }
 
 if (allBtn) {
-  allBtn.addEventListener("click", () => setAllMode());
+  allBtn.addEventListener("click", () => {
+    reviewMode = false;
+    activeQuestions = questions;
+    currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
+
+    if (currentIndex >= activeQuestions.length) {
+      currentIndex = 0;
+    }
+
+    showQuestion();
+  });
 }
 
 if (mistakesBtn) {
-  mistakesBtn.addEventListener("click", () => setMistakeMode());
+  mistakesBtn.addEventListener("click", () => {
+    reviewMode = true;
+    const mistakeIds = getMistakeIds();
+    activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
+    currentIndex = 0;
+    showQuestion();
+  });
 }
 
 if (clearMistakesBtn) {
@@ -400,7 +299,10 @@ if (clearMistakesBtn) {
     updateMistakeCount();
 
     if (reviewMode) {
-      setMistakeMode();
+      const mistakeIds = getMistakeIds();
+      activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
+      currentIndex = 0;
+      showQuestion();
     }
   });
 }
