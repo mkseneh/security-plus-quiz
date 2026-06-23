@@ -1959,8 +1959,8 @@
       "C": "Installing the most current patch level for the OS",
       "D": "Enabling SNMP-based logging"
     },
-    "answer": "B",
-    "answerText": "Disabling unnecessary services",
+    "answer": "A",
+    "answerText": "Moving their administrative interfaces to a protected VLAN",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 1
   },
