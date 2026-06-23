@@ -1,6 +1,7 @@
 let questions = [];
 let activeQuestions = [];
 let currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
+
 let answered = false;
 let selectedLetter = null;
 let selectedOption = null;
@@ -12,6 +13,7 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const feedbackEl = document.getElementById("feedback");
 const explanationEl = document.getElementById("explanation");
+
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const skipBtn = document.getElementById("skipBtn");
@@ -85,7 +87,7 @@ function getCorrectText(q) {
   return q.answerText || (q.options && q.options[q.answer]) || "";
 }
 
-function getMoreText(q) {
+function getExplanationText(q) {
   if (q.moreText) return q.moreText;
   if (q.more) return q.more;
   if (q.explanation) return q.explanation;
@@ -94,7 +96,7 @@ function getMoreText(q) {
     return q.teachingExplanation.finalAnswerExplanation;
   }
 
-  return "No More text has been added for this question yet.";
+  return "No explanation has been added for this question yet.";
 }
 
 function showQuestion() {
@@ -123,8 +125,10 @@ function showQuestion() {
     questionEl.textContent = "No questions found.";
     domainEl.textContent = "";
     progressEl.textContent = "No questions loaded";
+
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
@@ -132,8 +136,10 @@ function showQuestion() {
     questionEl.textContent = "You have no mistakes to review.";
     domainEl.textContent = "";
     progressEl.textContent = "Review Mistakes";
+
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
@@ -149,6 +155,7 @@ function showQuestion() {
 
     if (nextBtn) nextBtn.style.display = "none";
     if (skipBtn) skipBtn.style.display = "none";
+
     return;
   }
 
@@ -165,9 +172,11 @@ function showQuestion() {
     const option = document.createElement("div");
     option.className = "option";
     option.textContent = letter + ". " + text;
+
     option.addEventListener("click", () => {
       selectOption(option, letter);
     });
+
     optionsEl.appendChild(option);
   }
 
@@ -177,10 +186,12 @@ function showQuestion() {
   checkBtn.textContent = "Check Answer";
   checkBtn.className = "checkBtn";
   checkBtn.disabled = true;
+
   checkBtn.addEventListener("click", () => {
     if (!selectedOption || !selectedLetter) return;
     checkAnswer(selectedOption, selectedLetter, q);
   });
+
   optionsEl.appendChild(checkBtn);
 }
 
@@ -196,22 +207,21 @@ function selectOption(option, letter) {
   option.classList.add("selected-option");
 
   const checkBtn = document.getElementById("checkAnswerBtn");
-  if (checkBtn) checkBtn.disabled = false;
+
+  if (checkBtn) {
+    checkBtn.disabled = false;
+  }
 }
 
-function renderPlainMore(q, selected) {
+function renderExplanation(q) {
   explanationEl.innerHTML = "";
 
   const box = document.createElement("div");
-  box.style.whiteSpace = "pre-wrap";
-  box.style.lineHeight = "1.6";
-  box.style.padding = "14px";
-  box.style.border = "1px solid #d0d7de";
-  box.style.borderRadius = "8px";
-  box.style.background = "#ffffff";
-  box.textContent = getMoreText(q);
+  box.className = "explanation-box";
+  box.textContent = getExplanationText(q);
 
   explanationEl.appendChild(box);
+  explanationEl.style.display = "block";
 }
 
 function checkAnswer(selectedOption, selected, q) {
@@ -223,9 +233,13 @@ function checkAnswer(selectedOption, selected, q) {
   if (skipBtn) skipBtn.disabled = false;
 
   const checkBtn = document.getElementById("checkAnswerBtn");
-  if (checkBtn) checkBtn.disabled = true;
+
+  if (checkBtn) {
+    checkBtn.disabled = true;
+  }
 
   const allOptions = document.querySelectorAll(".option");
+
   allOptions.forEach(option => {
     option.style.pointerEvents = "none";
   });
@@ -239,34 +253,19 @@ function checkAnswer(selectedOption, selected, q) {
   }
 
   feedbackEl.style.display = "block";
-  explanationEl.style.display = "none";
   feedbackEl.innerHTML = "";
   explanationEl.innerHTML = "";
 
   const result = document.createElement("p");
   result.className = selected === q.answer ? "correct-text" : "wrong-text";
+
   result.textContent = selected === q.answer
     ? "You selected " + selected + ". Correct."
     : "You selected " + selected + ". Correct answer: " + q.answer + ". " + getCorrectText(q);
 
   feedbackEl.appendChild(result);
 
-  const moreBtn = document.createElement("button");
-  moreBtn.type = "button";
-  moreBtn.textContent = "More...";
-  moreBtn.className = "moreBtn";
-  feedbackEl.appendChild(moreBtn);
-
-  moreBtn.addEventListener("click", () => {
-    const isHidden = explanationEl.style.display === "none";
-
-    if (isHidden && explanationEl.innerHTML.trim() === "") {
-      renderPlainMore(q, selected);
-    }
-
-    explanationEl.style.display = isHidden ? "block" : "none";
-    moreBtn.textContent = isHidden ? "Less..." : "More...";
-  });
+  renderExplanation(q);
 }
 
 if (nextBtn) {
