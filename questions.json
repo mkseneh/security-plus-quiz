@@ -1951,8 +1951,7 @@
   },
   {
     "id": 151,
-    "sourceQuestionNumber": 1,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "John wants to harden his organization’s routers. If there are no currently known vulnerabilities or issues with the device, which of the following hardening options will provide the biggest benefit?",
     "options": {
       "A": "Moving their administrative interfaces to a protected VLAN",
@@ -1961,12 +1960,13 @@
       "D": "Enabling SNMP-based logging"
     },
     "answer": "B",
-    "answerText": "Disabling unnecessary services"
+    "answerText": "Disabling unnecessary services",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 1
   },
   {
     "id": 152,
-    "sourceQuestionNumber": 2,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Jackson is reviewing his organization’s logs and discovers multiple new user accounts created after business hours using administrative credentials. What term describes searching for potential issues like this?",
     "options": {
       "A": "IoC creation",
@@ -1975,12 +1975,13 @@
       "D": "Eradication"
     },
     "answer": "B",
-    "answerText": "Threat hunting"
+    "answerText": "Threat hunting",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 2
   },
   {
     "id": 153,
-    "sourceQuestionNumber": 3,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Cynthia is concerned about attacks against an application programming interface (API) that her company provides for its customers. What should she recommend to ensure that the API is only used by customers who have paid for the service?",
     "options": {
       "A": "Require authentication.",
@@ -1989,12 +1990,13 @@
       "D": "Install and use an IPS."
     },
     "answer": "A",
-    "answerText": "Require authentication."
+    "answerText": "Require authentication.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 3
   },
   {
     "id": 154,
-    "sourceQuestionNumber": 4,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Greg wants to gain admission to a network which is protected by a network access control (NAC) system that recognized the hardware address of systems. How can he bypass this protection?",
     "options": {
       "A": "Spoof a legitimate IP address.",
@@ -2003,12 +2005,13 @@
       "D": "None of the above."
     },
     "answer": "C",
-    "answerText": "Use MAC cloning to clone a legitimate MAC address."
+    "answerText": "Use MAC cloning to clone a legitimate MAC address.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 4
   },
   {
     "id": 155,
-    "sourceQuestionNumber": 5,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Melissa’s organization has deployed a firewall that uses three interfaces to provide services. The first interface connects to the Internet, the second to a network where the organization’s web servers reside, and the third to a secured network where the organization’s workstations are connected. What type of firewall architecture has Melissa’s organization deployed?",
     "options": {
       "A": "An ACL",
@@ -2017,12 +2020,13 @@
       "D": "A multihomed, multiroute NGFW"
     },
     "answer": "B",
-    "answerText": "A screened subnet"
+    "answerText": "A screened subnet",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 5
   },
   {
     "id": 156,
-    "sourceQuestionNumber": 6,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "CVE is an example of what type of feed?",
     "options": {
       "A": "A threat intelligence feed",
@@ -2031,12 +2035,13 @@
       "D": "A critical virtualization exploits feed"
     },
     "answer": "B",
-    "answerText": "A vulnerability feed"
+    "answerText": "A vulnerability feed",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 6
   },
   {
     "id": 157,
-    "sourceQuestionNumber": 7,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Amanda scans a Red Hat Linux server that she believes is fully patched and discovers that the Apache version on the server is reported as vulnerable to an exploit from a few months ago. When she checks to see if she is missing patches, Apache is fully patched. What has occurred?",
     "options": {
       "A": "A false positive",
@@ -2045,12 +2050,13 @@
       "D": "An Apache version mismatch"
     },
     "answer": "A",
-    "answerText": "A false positive"
+    "answerText": "A false positive",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 7
   },
   {
     "id": 158,
-    "sourceQuestionNumber": 8,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Telnet, RSH, and FTP are all examples of what?",
     "options": {
       "A": "File transfer protocols",
@@ -2059,12 +2065,13 @@
       "D": "Open ports"
     },
     "answer": "B",
-    "answerText": "Unsecure protocols"
+    "answerText": "Unsecure protocols",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 8
   },
   {
     "id": 159,
-    "sourceQuestionNumber": 9,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "What term describes data that is collected from publicly available sources that can be used in an intelligence context?",
     "options": {
       "A": "OPSEC",
@@ -2073,12 +2080,13 @@
       "D": "IntCon"
     },
     "answer": "B",
-    "answerText": "OSINT"
+    "answerText": "OSINT",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 9
   },
   {
     "id": 160,
-    "sourceQuestionNumber": 10,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Patrick has subscribed to a commercial threat intelligence feed that is only provided to subscribers who have been vetted and who pay a monthly fee. What industry term is used to refer to this type of threat intelligence?",
     "options": {
       "A": "Proprietary threat intelligence",
@@ -2087,12 +2095,13 @@
       "D": "Corporate threat intelligence"
     },
     "answer": "A",
-    "answerText": "Proprietary threat intelligence"
+    "answerText": "Proprietary threat intelligence",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 10
   },
   {
     "id": 161,
-    "sourceQuestionNumber": 11,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Susan receives $10,000 for reporting a vulnerability to a vendor who participates in a program to identify issues. What term is commonly used to describe this type of payment?",
     "options": {
       "A": "A ransom",
@@ -2101,12 +2110,13 @@
       "D": "A payday"
     },
     "answer": "C",
-    "answerText": "A bug bounty"
+    "answerText": "A bug bounty",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 11
   },
   {
     "id": 162,
-    "sourceQuestionNumber": 12,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Ben runs a vulnerability scan using up-to-date definitions for a system that he knows has a vulnerability in the version the web server is running. The vulnerability scan does not show that issue when he reviews the report. What has Ben encountered?",
     "options": {
       "A": "A silent patch",
@@ -2115,12 +2125,13 @@
       "D": "A false positive"
     },
     "answer": "C",
-    "answerText": "A false negative"
+    "answerText": "A false negative",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 12
   },
   {
     "id": 163,
-    "sourceQuestionNumber": 13,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Angela reviews bulletins and advisories to determine what threats her organization is likely to face. What type of activity is this associated with?",
     "options": {
       "A": "Incident response",
@@ -2129,12 +2140,13 @@
       "D": "Vulnerability scanning"
     },
     "answer": "B",
-    "answerText": "Threat hunting"
+    "answerText": "Threat hunting",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 13
   },
   {
     "id": 164,
-    "sourceQuestionNumber": 14,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Frank is using the cloud hosting service’s web publishing service rather than running his own web servers. Where will Frank need to look to review his logs to see what types of traffic his application is creating?",
     "options": {
       "A": "Syslog",
@@ -2143,12 +2155,13 @@
       "D": "None of the above"
     },
     "answer": "C",
-    "answerText": "The cloud service’s web logs"
+    "answerText": "The cloud service’s web logs",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 14
   },
   {
     "id": 165,
-    "sourceQuestionNumber": 15,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "The following graphic shows a report from an OpenVAS vulnerability scan. What should Charles do first to determine the best fix for the vulnerability shown?",
     "options": {
       "A": "Disable PHP-CGI.",
@@ -2158,13 +2171,12 @@
     },
     "answer": "C",
     "answerText": "Review the vulnerability descriptions in the CVEs listed.",
-    "imageNeeded": true,
-    "imageNote": "This question in the source references an image. Add an image field later if you have the screenshot."
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 15
   },
   {
     "id": 166,
-    "sourceQuestionNumber": 16,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Ian runs a vulnerability scan, which notes that a service is running on TCP port 8080. What type of service is most likely running on that port?",
     "options": {
       "A": "SSH",
@@ -2173,12 +2185,13 @@
       "D": "HTTP"
     },
     "answer": "D",
-    "answerText": "HTTP"
+    "answerText": "HTTP",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 16
   },
   {
     "id": 167,
-    "sourceQuestionNumber": 17,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Carolyn runs a vulnerability scan of a network device and discovers that the device is running services on TCP ports 22 and 443. What services has she most likely discovered?",
     "options": {
       "A": "Telnet and a web server",
@@ -2187,12 +2200,13 @@
       "D": "SSH and a Windows file share"
     },
     "answer": "C",
-    "answerText": "SSH and a web server"
+    "answerText": "SSH and a web server",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 17
   },
   {
     "id": 168,
-    "sourceQuestionNumber": 18,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Susan is responsible for application development in her company. She wants to have all web applications tested before they are deployed live. She wants to use a test system that is identical to the live server. What is this called?",
     "options": {
       "A": "A production server",
@@ -2201,12 +2215,13 @@
       "D": "A predeployment server"
     },
     "answer": "C",
-    "answerText": "A test server"
+    "answerText": "A test server",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 18
   },
   {
     "id": 169,
-    "sourceQuestionNumber": 19,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Alexandra is preparing to run automated security tests against the code that developers in her organization have completed. Which environment is she most likely to run them in if the next step is to deploy the code to production?",
     "options": {
       "A": "Development",
@@ -2215,12 +2230,13 @@
       "D": "Production"
     },
     "answer": "C",
-    "answerText": "Staging"
+    "answerText": "Staging",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 19
   },
   {
     "id": 170,
-    "sourceQuestionNumber": 20,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Chris wants to limit who can use an API that his company provides and be able to log usage of the API uniquely to each organization that they provide access to. What solution is most often used to do this?",
     "options": {
       "A": "Firewalls with rules for each company’s public IP address",
@@ -2229,12 +2245,13 @@
       "D": "API passwords"
     },
     "answer": "C",
-    "answerText": "API keys"
+    "answerText": "API keys",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 20
   },
   {
     "id": 171,
-    "sourceQuestionNumber": 21,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Angela wants to ensure that IoT devices in her organization have a secure configuration when they are deployed and that they are ready for further configuration for their specific purposes. What term is used to describe these standard configurations used as part of her configuration management program?",
     "options": {
       "A": "A baseline configuration",
@@ -2243,12 +2260,13 @@
       "D": "A setup guide"
     },
     "answer": "A",
-    "answerText": "A baseline configuration"
+    "answerText": "A baseline configuration",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 21
   },
   {
     "id": 172,
-    "sourceQuestionNumber": 22,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Chris is following the CIS Windows Server 2022 benchmark and notices that it recommends that:\n\nComputer Configuration\\Policies\\Administrative Templates\\Windows Components\\Search\\Allow indexing of encrypted files\n\nis set to disabled. What potential issue would this help to prevent?",
     "options": {
       "A": "Data leakage",
@@ -2257,12 +2275,13 @@
       "D": "Dark web access"
     },
     "answer": "A",
-    "answerText": "Data leakage"
+    "answerText": "Data leakage",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 22
   },
   {
     "id": 173,
-    "sourceQuestionNumber": 23,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Elizabeth wants to implement a cloud-based authorization system. Which of the following protocols is she most likely to use for that purpose?",
     "options": {
       "A": "OpenID",
@@ -2271,12 +2290,13 @@
       "D": "OAuth"
     },
     "answer": "D",
-    "answerText": "OAuth"
+    "answerText": "OAuth",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 23
   },
   {
     "id": 174,
-    "sourceQuestionNumber": 24,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Tony wants to implement a biometric system for entry access in his organization. Which of the following systems is likely to be most accepted by members of his organization’s staff?",
     "options": {
       "A": "Fingerprint",
@@ -2285,12 +2305,13 @@
       "D": "Voice"
     },
     "answer": "A",
-    "answerText": "Fingerprint"
+    "answerText": "Fingerprint",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 24
   },
   {
     "id": 175,
-    "sourceQuestionNumber": 25,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What is the primary threat model against static codes used for multifactor authentication?",
     "options": {
       "A": "Brute force",
@@ -2299,12 +2320,13 @@
       "D": "Clock mismatch"
     },
     "answer": "C",
-    "answerText": "Theft"
+    "answerText": "Theft",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 25
   },
   {
     "id": 176,
-    "sourceQuestionNumber": 26,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Nadine’s organization stores and uses sensitive information, including Social Security numbers. After a recent compromise, she has been asked to implement technology that can help prevent this sensitive data from leaving the company’s systems and networks. What type of technology should Nadine implement?",
     "options": {
       "A": "Stateful firewalls",
@@ -2313,12 +2335,13 @@
       "D": "SIEM"
     },
     "answer": "C",
-    "answerText": "DLP"
+    "answerText": "DLP",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 26
   },
   {
     "id": 177,
-    "sourceQuestionNumber": 27,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Social login, the ability to use an existing identity from a site like Google, Facebook, or a Microsoft account, is an example of which of the following concepts?",
     "options": {
       "A": "Federation",
@@ -2327,12 +2350,13 @@
       "D": "Identity and access management"
     },
     "answer": "A",
-    "answerText": "Federation"
+    "answerText": "Federation",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 27
   },
   {
     "id": 178,
-    "sourceQuestionNumber": 28,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Charles has configured his multifactor system to require both a PIN and a password. How many effective factors does he have in place once he presents both of these and his username?",
     "options": {
       "A": "One",
@@ -2341,12 +2365,13 @@
       "D": "Four"
     },
     "answer": "A",
-    "answerText": "One"
+    "answerText": "One",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 28
   },
   {
     "id": 179,
-    "sourceQuestionNumber": 29,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Naomi is designing her organization’s wireless network and wants to ensure that the design places access points in areas where they will provide optimum coverage. She also wants to plan for any sources of RF interference as part of her design. What should Naomi do first?",
     "options": {
       "A": "Contact the FCC for a wireless map.",
@@ -2355,12 +2380,13 @@
       "D": "Conduct a port scan to find all existing access points."
     },
     "answer": "B",
-    "answerText": "Conduct a site survey."
+    "answerText": "Conduct a site survey.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 29
   },
   {
     "id": 180,
-    "sourceQuestionNumber": 30,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Charlene wants to provision her organization’s standard set of marketing information to mobile devices throughout her organization. What MDM feature is best suited to this task?",
     "options": {
       "A": "Application management",
@@ -2369,12 +2395,13 @@
       "D": "Push notifications"
     },
     "answer": "C",
-    "answerText": "Content management"
+    "answerText": "Content management",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 30
   },
   {
     "id": 181,
-    "sourceQuestionNumber": 31,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Denny wants to deploy antivirus for his organization and wants to ensure that it will stop the most malware. What deployment model should Denny select?",
     "options": {
       "A": "Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security.",
@@ -2383,12 +2410,13 @@
       "D": "Install antivirus only on workstations to avoid potential issues with server performance."
     },
     "answer": "A",
-    "answerText": "Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security."
+    "answerText": "Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 31
   },
   {
     "id": 182,
-    "sourceQuestionNumber": 32,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Madhuri’s web application converts numbers that are input into fields by specifically typing them and then applies strict exception handling. It also sets a minimum and maximum length for the inputs that it allows and uses predefined arrays of allowed values for inputs like months or dates. What term describes the actions that Madhuri’s application is performing?",
     "options": {
       "A": "Buffer overflow prevention",
@@ -2397,12 +2425,13 @@
       "D": "Schema validation"
     },
     "answer": "C",
-    "answerText": "Input validation"
+    "answerText": "Input validation",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 32
   },
   {
     "id": 183,
-    "sourceQuestionNumber": 33,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "You’re outlining your plans for implementing a wireless network to upper management. What wireless security standard should you adopt if you don’t want to use enterprise authentication but want to provide secure authentication for users that doesn’t require a shared password or passphrase?",
     "options": {
       "A": "WPA3",
@@ -2411,12 +2440,13 @@
       "D": "WEP"
     },
     "answer": "A",
-    "answerText": "WPA3"
+    "answerText": "WPA3",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 33
   },
   {
     "id": 184,
-    "sourceQuestionNumber": 34,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "You are the chief security officer (CSO) for a large company. You have discovered malware on one of the workstations. You are concerned that the malware might have multiple functions and might have caused more security issues with the computer than you can currently detect. What is the best way to test this malware?",
     "options": {
       "A": "Leave the malware on that workstation until it is tested.",
@@ -2425,12 +2455,13 @@
       "D": "Place the malware on a honeypot for testing."
     },
     "answer": "B",
-    "answerText": "Place the malware in a sandbox environment for testing."
+    "answerText": "Place the malware in a sandbox environment for testing.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 34
   },
   {
     "id": 185,
-    "sourceQuestionNumber": 35,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Isaac is reviewing his organization’s secure coding practices document for customer-facing web applications and wants to ensure that their input validation recommendations are appropriate. Which of the following is not a common best practice for input validation?",
     "options": {
       "A": "Ensure validation occurs on a trusted server.",
@@ -2439,12 +2470,13 @@
       "D": "Ensure validation occurs on a trusted client."
     },
     "answer": "D",
-    "answerText": "Ensure validation occurs on a trusted client."
+    "answerText": "Ensure validation occurs on a trusted client.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 35
   },
   {
     "id": 186,
-    "sourceQuestionNumber": 36,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Isaac wants to prevent corporate mobile devices from being used outside of his company’s buildings and corporate campus. What mobile device management (MDM) capability should he use to allow this?",
     "options": {
       "A": "Patch management",
@@ -2453,12 +2485,13 @@
       "D": "Network restrictions"
     },
     "answer": "C",
-    "answerText": "Geofencing"
+    "answerText": "Geofencing",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 36
   },
   {
     "id": 187,
-    "sourceQuestionNumber": 37,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Sophia wants to test her company’s web application to see if it is handling business logic properly. Which testing method would be most effective for this?",
     "options": {
       "A": "Static code analysis",
@@ -2466,13 +2499,14 @@
       "C": "Baselining",
       "D": "Version control"
     },
-    "answer": "B",
-    "answerText": "Fuzzing"
+    "answer": "A",
+    "answerText": "Static code analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 37
   },
   {
     "id": 188,
-    "sourceQuestionNumber": 38,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Endpoint detection and response has three major components that make up its ability to provide visibility into endpoints. Which of the following is not one of those three parts?",
     "options": {
       "A": "Data search",
@@ -2481,12 +2515,13 @@
       "D": "Suspicious activity detection"
     },
     "answer": "B",
-    "answerText": "Malware analysis"
+    "answerText": "Malware analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 38
   },
   {
     "id": 189,
-    "sourceQuestionNumber": 39,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Carl has been asked to set up access control for a server. The requirements state that users at a lower privilege level should not be able to see or access files or data at a higher privilege level. What access control model would best fit these requirements?",
     "options": {
       "A": "MAC",
@@ -2495,12 +2530,13 @@
       "D": "SAML"
     },
     "answer": "A",
-    "answerText": "MAC"
+    "answerText": "MAC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 39
   },
   {
     "id": 190,
-    "sourceQuestionNumber": 40,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Jack wants to deploy a network access control (NAC) system that will stop systems that are not fully patched from connecting to his network. If he wants to have full details of system configuration, antivirus version, and patch level, what type of NAC deployment is most likely to meet his needs?",
     "options": {
       "A": "Agentless, preadmission",
@@ -2509,12 +2545,13 @@
       "D": "Agent-based, postadmission"
     },
     "answer": "B",
-    "answerText": "Agent-based, preadmission"
+    "answerText": "Agent-based, preadmission",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 40
   },
   {
     "id": 191,
-    "sourceQuestionNumber": 41,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Eric wants to provide company-purchased devices, but his organization prefers to provide end users with choices among devices that can be managed and maintained centrally. What mobile device deployment model best fits this need?",
     "options": {
       "A": "BYOD",
@@ -2523,12 +2560,13 @@
       "D": "VDI"
     },
     "answer": "C",
-    "answerText": "CYOD"
+    "answerText": "CYOD",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 41
   },
   {
     "id": 192,
-    "sourceQuestionNumber": 42,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Claire is concerned about an attacker getting information regarding network devices and their configuration in her company. Which protocol should she implement that would be most helpful in mitigating this risk while providing management and reporting about network devices?",
     "options": {
       "A": "RADIUS",
@@ -2537,12 +2575,13 @@
       "D": "SFTP"
     },
     "answer": "C",
-    "answerText": "SNMPv3"
+    "answerText": "SNMPv3",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 42
   },
   {
     "id": 193,
-    "sourceQuestionNumber": 43,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Eric is responsible for his organization’s mobile device security. They use a modern mobile device management (MDM) tool to manage a BYOD mobile device environment. Eric needs to ensure that the applications and data that his organization provides to users of those mobile devices remain as secure as possible. Which of the following technologies will provide him with the best security?",
     "options": {
       "A": "Storage segmentation",
@@ -2551,12 +2590,13 @@
       "D": "Remote wipe"
     },
     "answer": "B",
-    "answerText": "Containerization"
+    "answerText": "Containerization",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 43
   },
   {
     "id": 194,
-    "sourceQuestionNumber": 44,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Tara is concerned about staff in her organization sending email with sensitive information like customer Social Security numbers (SSNs) included in it. What type of solution can she implement to help prevent inadvertent exposures of this type of sensitive data?",
     "options": {
       "A": "FDE",
@@ -2565,12 +2605,13 @@
       "D": "POP3S"
     },
     "answer": "B",
-    "answerText": "DLP"
+    "answerText": "DLP",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 44
   },
   {
     "id": 195,
-    "sourceQuestionNumber": 45,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Mason is responsible for security at a company that has traveling salespeople. The company has been using ABAC for access control to the network. Which of the following is an issue that is specific to ABAC and might cause it to incorrectly reject logins?",
     "options": {
       "A": "Geographic location.",
@@ -2579,12 +2620,13 @@
       "D": "Firewalls usually block ABAC."
     },
     "answer": "A",
-    "answerText": "Geographic location."
+    "answerText": "Geographic location.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 45
   },
   {
     "id": 196,
-    "sourceQuestionNumber": 46,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Darrell is concerned that users on his network have too many passwords to remember and might write down their passwords, thus creating a significant security risk. Which of the following would be most helpful in mitigating this issue?",
     "options": {
       "A": "Multifactor authentication",
@@ -2593,12 +2635,13 @@
       "D": "LDAP"
     },
     "answer": "B",
-    "answerText": "SSO"
+    "answerText": "SSO",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 46
   },
   {
     "id": 197,
-    "sourceQuestionNumber": 47,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Frank is a security administrator for a large company. Occasionally, a user needs to access a specific resource that they don’t have permission to access. Which access control methodology would be most helpful in this situation?",
     "options": {
       "A": "Mandatory access control (MAC)",
@@ -2607,12 +2650,13 @@
       "D": "Rule-based access control"
     },
     "answer": "B",
-    "answerText": "Discretionary access control (DAC)"
+    "answerText": "Discretionary access control (DAC)",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 47
   },
   {
     "id": 198,
-    "sourceQuestionNumber": 48,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Oliver needs to explain the access control scheme used by both the Windows and Linux file systems. What access control scheme do they implement by default?",
     "options": {
       "A": "Role-based access control",
@@ -2621,12 +2665,13 @@
       "D": "Discretionary access control"
     },
     "answer": "D",
-    "answerText": "Discretionary access control"
+    "answerText": "Discretionary access control",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 48
   },
   {
     "id": 199,
-    "sourceQuestionNumber": 49,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Stefan just became the new security officer for a university. He is concerned that student workers who work late on campus could try to log in with faculty credentials. Which of the following would be most effective in preventing this?",
     "options": {
       "A": "Time-of-day restrictions",
@@ -2635,12 +2680,13 @@
       "D": "Credential management"
     },
     "answer": "A",
-    "answerText": "Time-of-day restrictions"
+    "answerText": "Time-of-day restrictions",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 49
   },
   {
     "id": 200,
-    "sourceQuestionNumber": 50,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Chloe has noticed that users on her company’s network frequently have simple passwords made up of common words. Thus, they have weak passwords. How could Chloe best mitigate this issue?",
     "options": {
       "A": "Increase minimum password length.",
@@ -2648,13 +2694,14 @@
       "C": "Require password complexity.",
       "D": "Implement single sign-on (SSO)."
     },
-    "answer": "C",
-    "answerText": "Require password complexity."
+    "answer": "A",
+    "answerText": "Increase minimum password length.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 50
   },
   {
     "id": 201,
-    "sourceQuestionNumber": 51,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "A companywide policy is being created to define various security levels. Which of the following systems of access control would use documented security levels like Confidential or Secret for information?",
     "options": {
       "A": "RBAC",
@@ -2663,12 +2710,13 @@
       "D": "BAC"
     },
     "answer": "B",
-    "answerText": "MAC"
+    "answerText": "MAC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 51
   },
   {
     "id": 202,
-    "sourceQuestionNumber": 52,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Users in your network are able to assign permissions to their own shared resources. Which of the following access control models is used in your network?",
     "options": {
       "A": "DAC",
@@ -2677,12 +2725,13 @@
       "D": "ABAC"
     },
     "answer": "A",
-    "answerText": "DAC"
+    "answerText": "DAC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 52
   },
   {
     "id": 203,
-    "sourceQuestionNumber": 53,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Cynthia is preparing a new server for deployment, and her process includes turning off unnecessary services, setting security settings to match her organization’s baseline configurations, and installing patches and updates. What is this process known as?",
     "options": {
       "A": "OS hardening",
@@ -2691,12 +2740,13 @@
       "D": "Endpoint lockdown"
     },
     "answer": "A",
-    "answerText": "OS hardening"
+    "answerText": "OS hardening",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 53
   },
   {
     "id": 204,
-    "sourceQuestionNumber": 54,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "John is performing a port scan of a network as part of a security audit. He notices that the domain controller is using secure LDAP. Which of the following ports would lead him to that conclusion?",
     "options": {
       "A": "53",
@@ -2705,12 +2755,13 @@
       "D": "636"
     },
     "answer": "D",
-    "answerText": "636"
+    "answerText": "636",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 54
   },
   {
     "id": 205,
-    "sourceQuestionNumber": 55,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Which of the following access control methods grants permissions based on the user’s position in the organization?",
     "options": {
       "A": "MAC",
@@ -2719,12 +2770,13 @@
       "D": "ABAC"
     },
     "answer": "B",
-    "answerText": "RBAC"
+    "answerText": "RBAC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 55
   },
   {
     "id": 206,
-    "sourceQuestionNumber": 56,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Gary is designing his cloud infrastructure and needs to provide a firewall-like capability for the virtual systems he is running. Which of the following cloud capabilities acts like a virtual firewall?",
     "options": {
       "A": "Security groups",
@@ -2733,12 +2785,13 @@
       "D": "Instance awareness"
     },
     "answer": "A",
-    "answerText": "Security groups"
+    "answerText": "Security groups",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 56
   },
   {
     "id": 207,
-    "sourceQuestionNumber": 57,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Henry is an employee at Acme Company. The company requires him to change his password every three months. He has trouble remembering new passwords, so he keeps switching between just two passwords. Which policy would be most effective in preventing this?",
     "options": {
       "A": "Password complexity",
@@ -2747,12 +2800,13 @@
       "D": "Multifactor authentication"
     },
     "answer": "B",
-    "answerText": "Password history"
+    "answerText": "Password history",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 57
   },
   {
     "id": 208,
-    "sourceQuestionNumber": 58,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Tracy wants to limit when users can log in to a stand-alone Windows workstation. What should Tracy do to meet this requirement?",
     "options": {
       "A": "Set login time restrictions.",
@@ -2761,12 +2815,13 @@
       "D": "Disable remote login during the hours the system should not be used."
     },
     "answer": "A",
-    "answerText": "Set login time restrictions."
+    "answerText": "Set login time restrictions.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 58
   },
   {
     "id": 209,
-    "sourceQuestionNumber": 59,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Lucas is looking for an XML-based open standard for exchanging authentication information. Which of the following would best meet his needs?",
     "options": {
       "A": "SAML",
@@ -2775,12 +2830,13 @@
       "D": "NTLM"
     },
     "answer": "A",
-    "answerText": "SAML"
+    "answerText": "SAML",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 59
   },
   {
     "id": 210,
-    "sourceQuestionNumber": 60,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Murali is preparing to acquire data from various devices and systems that are targets in a forensic investigation. Which of the following devices is the least volatile according to the order of volatility?",
     "options": {
       "A": "Backups",
@@ -2789,12 +2845,13 @@
       "D": "RAM"
     },
     "answer": "A",
-    "answerText": "Backups"
+    "answerText": "Backups",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 60
   },
   {
     "id": 211,
-    "sourceQuestionNumber": 61,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "What phase of the incident response process should be placed at point A in the following image?\n\n(Shown phases: Preparation → Detection → Analysis → Containment → Eradication → A → back to Preparation)",
     "options": {
       "A": "Simulations",
@@ -2804,13 +2861,12 @@
     },
     "answer": "C",
     "answerText": "Recovery",
-    "imageNeeded": true,
-    "imageNote": "This question in the source references an image. Add an image field later if you have the screenshot."
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 61
   },
   {
     "id": 212,
-    "sourceQuestionNumber": 62,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Brent wants to use a tool to help him analyze malware and attacks and wants to cover a broad range of tactics and tools that are used by adversaries. Which of the following is broadly implemented in technical tools and covers techniques and tactics without requiring a specific order of operations?",
     "options": {
       "A": "The CIS Benchmark",
@@ -2819,12 +2875,13 @@
       "D": "The CVSS standard"
     },
     "answer": "C",
-    "answerText": "The MITRE ATT&CK framework"
+    "answerText": "The MITRE ATT&CK framework",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 62
   },
   {
     "id": 213,
-    "sourceQuestionNumber": 63,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Ted needs to preserve a server for forensic purposes. Which of the following should he not do?",
     "options": {
       "A": "Turn the system off to ensure that data does not change.",
@@ -2833,12 +2890,13 @@
       "D": "All of the above."
     },
     "answer": "D",
-    "answerText": "All of the above."
+    "answerText": "All of the above.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 63
   },
   {
     "id": 214,
-    "sourceQuestionNumber": 64,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Jessica wants to review the network traffic that her Windows system has sent to determine if a file containing sensitive data was uploaded from the system. What Windows log file can she use to find this information?",
     "options": {
       "A": "The application log",
@@ -2847,12 +2905,13 @@
       "D": "None of the above"
     },
     "answer": "D",
-    "answerText": "None of the above"
+    "answerText": "None of the above",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 64
   },
   {
     "id": 215,
-    "sourceQuestionNumber": 65,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "What term is used to describe the documentation trail for control, analysis, transfer, and final disposition of evidence for digital forensic work?",
     "options": {
       "A": "Evidence log",
@@ -2861,12 +2920,13 @@
       "D": "Digital footprint"
     },
     "answer": "C",
-    "answerText": "Chain of custody"
+    "answerText": "Chain of custody",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 65
   },
   {
     "id": 216,
-    "sourceQuestionNumber": 66,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Nathan needs to know how many times an event occurred and wants to check a log file for that event. Which of the following grep commands will tell him how many times the event happened if each occurrence is logged independently in the logfile.txt log file and uses a unique event ID, event101?",
     "options": {
       "A": "grep logfile.txt -n 'event101'",
@@ -2875,12 +2935,13 @@
       "D": "grep -c event101 -i logfile.txt"
     },
     "answer": "B",
-    "answerText": "grep -c 'event101' logfile.txt"
+    "answerText": "grep -c 'event101' logfile.txt",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 66
   },
   {
     "id": 217,
-    "sourceQuestionNumber": 67,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Eric wants to determine how much bandwidth was used during a compromise and where the traffic was directed to. What technology can he implement before the event to help him see this detail and allow him to have an effective bandwidth monitoring solution?",
     "options": {
       "A": "A firewall",
@@ -2889,12 +2950,13 @@
       "D": "A DLP"
     },
     "answer": "B",
-    "answerText": "NetFlow"
+    "answerText": "NetFlow",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 67
   },
   {
     "id": 218,
-    "sourceQuestionNumber": 68,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Naomi has acquired an image of a drive as part of a forensic process. She wants to ensure that the drive image matches the original. What should she create and record to validate this?",
     "options": {
       "A": "A third image to compare to the original and new image",
@@ -2903,12 +2965,13 @@
       "D": "A hash of the drives to show that their hashes match"
     },
     "answer": "D",
-    "answerText": "A hash of the drives to show that their hashes match"
+    "answerText": "A hash of the drives to show that their hashes match",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 68
   },
   {
     "id": 219,
-    "sourceQuestionNumber": 69,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Ryan has been asked to run Nessus on his network. What type of tool has he been asked to run?",
     "options": {
       "A": "A fuzzer",
@@ -2917,12 +2980,13 @@
       "D": "A protocol analyzer"
     },
     "answer": "B",
-    "answerText": "A vulnerability scanner"
+    "answerText": "A vulnerability scanner",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 69
   },
   {
     "id": 220,
-    "sourceQuestionNumber": 70,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Michelle wants to check for authentication failures on a Red Hat Linux–based system. Where should she look for these event logs?",
     "options": {
       "A": "/var/log/auth.log",
@@ -2931,12 +2995,13 @@
       "D": "/var/log/secure"
     },
     "answer": "D",
-    "answerText": "/var/log/secure"
+    "answerText": "/var/log/secure",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 70
   },
   {
     "id": 221,
-    "sourceQuestionNumber": 71,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Nelson has discovered malware on one of the systems he is responsible for and wants to test it in a safe environment. Which of the following tools is best suited to that testing?",
     "options": {
       "A": "strings",
@@ -2945,12 +3010,13 @@
       "D": "Sn1per"
     },
     "answer": "C",
-    "answerText": "Cuckoo"
+    "answerText": "Cuckoo",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 71
   },
   {
     "id": 222,
-    "sourceQuestionNumber": 72,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Lucca wants to review metadata related to a JPEG file. What will he need to do to review it?",
     "options": {
       "A": "Change the JPEG to a GIF to see the metadata.",
@@ -2959,12 +3025,13 @@
       "D": "Analyze the hash of the file."
     },
     "answer": "C",
-    "answerText": "Use a metadata viewer."
+    "answerText": "Use a metadata viewer.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 72
   },
   {
     "id": 223,
-    "sourceQuestionNumber": 73,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Jason is conducting a forensic investigation and has retrieved artifacts in addition to drives and files. What should he do to document the artifacts he has acquired?",
     "options": {
       "A": "Image them using dd and ensure that a valid MD5sum is generated.",
@@ -2973,12 +3040,13 @@
       "D": "Engage legal counsel to advise him how to handle artifacts in an investigation."
     },
     "answer": "B",
-    "answerText": "Take a picture of them, label them, and add them to the chain-of-custody documentation."
+    "answerText": "Take a picture of them, label them, and add them to the chain-of-custody documentation.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 73
   },
   {
     "id": 224,
-    "sourceQuestionNumber": 74,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Joseph is writing a forensic report and wants to be sure he includes appropriate detail. Which of the following would not typically be included while discussing analysis of a system?",
     "options": {
       "A": "Validation of the system clock’s time settings",
@@ -2987,12 +3055,13 @@
       "D": "A picture of the person from whom the system was taken"
     },
     "answer": "D",
-    "answerText": "A picture of the person from whom the system was taken"
+    "answerText": "A picture of the person from whom the system was taken",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 74
   },
   {
     "id": 225,
-    "sourceQuestionNumber": 75,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Elaine wants to determine what websites a user has recently visited using the contents of a forensically acquired hard drive. Which of the following locations would not be useful for her investigation?",
     "options": {
       "A": "The browser cache",
@@ -3001,12 +3070,13 @@
       "D": "Session data"
     },
     "answer": "C",
-    "answerText": "The browser’s bookmarks"
+    "answerText": "The browser’s bookmarks",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 75
   },
   {
     "id": 226,
-    "sourceQuestionNumber": 76,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Susan has discovered evidence of a compromise that occurred approximately five months ago. She wants to conduct an incident investigation but is concerned about whether the data will exist. What policy guides how long logs and other data are kept in most organizations?",
     "options": {
       "A": "The organization’s data classification policy",
@@ -3015,12 +3085,13 @@
       "D": "The organization’s legal hold policy"
     },
     "answer": "C",
-    "answerText": "The organization’s retention policy"
+    "answerText": "The organization’s retention policy",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 76
   },
   {
     "id": 227,
-    "sourceQuestionNumber": 77,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Alaina sets her antimalware solution to move infected files to a safe storage location without removing them from the system. What type of setting has she enabled?",
     "options": {
       "A": "Purge",
@@ -3029,12 +3100,13 @@
       "D": "Retention"
     },
     "answer": "C",
-    "answerText": "Quarantine"
+    "answerText": "Quarantine",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 77
   },
   {
     "id": 228,
-    "sourceQuestionNumber": 78,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "A senior vice president in the organization that Chuck works in recently lost a phone that contained sensitive business plans and information about suppliers, designs, and other important materials. After interviewing the vice president, Chuck finds out that the phone did not have a passcode set and was not encrypted, and that it could not be remotely wiped.\n\nWhat type of control should Chuck recommend for his company to help prevent future issues like this?",
     "options": {
       "A": "Use containment techniques on the impacted phones.",
@@ -3043,12 +3115,13 @@
       "D": "Isolate the impacted phones."
     },
     "answer": "C",
-    "answerText": "Deploy an MDM system."
+    "answerText": "Deploy an MDM system.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 78
   },
   {
     "id": 229,
-    "sourceQuestionNumber": 79,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Charles wants to ensure that the forensic work that he is doing cannot be repudiated. How can he validate his attestations and documentation to ensure nonrepudiation?",
     "options": {
       "A": "Encrypt all forensic output.",
@@ -3057,12 +3130,13 @@
       "D": "All of the above."
     },
     "answer": "B",
-    "answerText": "Digitally sign the records."
+    "answerText": "Digitally sign the records.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 79
   },
   {
     "id": 230,
-    "sourceQuestionNumber": 80,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Megan needs to conduct a forensic investigation of a virtual machine (VM) hosted in a VMware environment as part of an incident response effort. What is the best way for her to collect the VM?",
     "options": {
       "A": "As a snapshot using the VMware built-in tools",
@@ -3071,12 +3145,13 @@
       "D": "By using a forensic imaging device after removing the server’s drives"
     },
     "answer": "A",
-    "answerText": "As a snapshot using the VMware built-in tools"
+    "answerText": "As a snapshot using the VMware built-in tools",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 80
   },
   {
     "id": 231,
-    "sourceQuestionNumber": 81,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Which of the following groups is not typically part of an incident response team?",
     "options": {
       "A": "Law enforcement",
@@ -3085,12 +3160,13 @@
       "D": "Communications staff"
     },
     "answer": "A",
-    "answerText": "Law enforcement"
+    "answerText": "Law enforcement",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 81
   },
   {
     "id": 232,
-    "sourceQuestionNumber": 82,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Bob needs to block Secure Shell (SSH) traffic between two security zones. Which of the following Linux iptables firewall rules will block that traffic from the 10.0.10.0/24 network to the system the rule is running on?",
     "options": {
       "A": "iptables -A INPUT -p tcp --dport 22 -i eth0 -s 10.0.10.0/24 -j DROP",
@@ -3099,12 +3175,13 @@
       "D": "iptables -D INPUT -p udp --dport 21 -I eth0 -s 10.0.10.0/24 -j DROP"
     },
     "answer": "A",
-    "answerText": "iptables -A INPUT -p tcp --dport 22 -i eth0 -s 10.0.10.0/24 -j DROP"
+    "answerText": "iptables -A INPUT -p tcp --dport 22 -i eth0 -s 10.0.10.0/24 -j DROP",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 82
   },
   {
     "id": 233,
-    "sourceQuestionNumber": 83,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "A Windows system that Maria is responsible for has been experiencing service outages. The outages correspond to processes run on another system in the datacenter, and Maria believes that unexpected traffic may be sent to the Windows system. Which of the following data sources should Maria use to best understand what is happening?",
     "options": {
       "A": "Perform a packet capture.",
@@ -3113,12 +3190,13 @@
       "D": "Perform a forensic drive copy."
     },
     "answer": "A",
-    "answerText": "Perform a packet capture."
+    "answerText": "Perform a packet capture.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 83
   },
   {
     "id": 234,
-    "sourceQuestionNumber": 84,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Amanda’s organization does not currently have an incident response plan. Which of the following reasons is not one she should present to management in support of creating one?",
     "options": {
       "A": "It will prevent incidents from occurring.",
@@ -3127,12 +3205,13 @@
       "D": "It may be required for legal or compliance reasons."
     },
     "answer": "A",
-    "answerText": "It will prevent incidents from occurring."
+    "answerText": "It will prevent incidents from occurring.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 84
   },
   {
     "id": 235,
-    "sourceQuestionNumber": 85,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Which of the following scenarios is least likely to result in data recovery being possible?",
     "options": {
       "A": "A file is deleted from a disk.",
@@ -3141,12 +3220,13 @@
       "D": "A disk is degaussed."
     },
     "answer": "D",
-    "answerText": "A disk is degaussed."
+    "answerText": "A disk is degaussed.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 85
   },
   {
     "id": 236,
-    "sourceQuestionNumber": 86,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Henry records a video of the removal of a drive from a system as he is preparing for a forensic investigation. What is the most likely reason for Henry to record the video?",
     "options": {
       "A": "To meet the order of volatility.",
@@ -3155,12 +3235,13 @@
       "D": "To document the chain of custody and provenance of the drive."
     },
     "answer": "D",
-    "answerText": "To document the chain of custody and provenance of the drive."
+    "answerText": "To document the chain of custody and provenance of the drive.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 86
   },
   {
     "id": 237,
-    "sourceQuestionNumber": 87,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Charlene wants to set up a tool that can allow her to see all the systems a given IP address connects to and how much data is sent to that IP by port and protocol. Which of the following tools is not suited to meet that need?",
     "options": {
       "A": "IPFIX",
@@ -3169,12 +3250,13 @@
       "D": "NetFlow"
     },
     "answer": "B",
-    "answerText": "IPSec"
+    "answerText": "IPSec",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 87
   },
   {
     "id": 238,
-    "sourceQuestionNumber": 88,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Tools like PRTG and Cacti that monitor SNMP information are used to provide what type of information for an incident investigation?",
     "options": {
       "A": "Authentication logs",
@@ -3183,12 +3265,13 @@
       "D": "Email metadata"
     },
     "answer": "B",
-    "answerText": "Bandwidth monitoring"
+    "answerText": "Bandwidth monitoring",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 88
   },
   {
     "id": 239,
-    "sourceQuestionNumber": 89,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "The company Charles works for has recently had a stolen company cell phone result in a data breach. Charles wants to prevent future incidents of a similar nature. Which of the following mitigation techniques would be the most effective?",
     "options": {
       "A": "Enable FDE via MDM.",
@@ -3197,12 +3280,13 @@
       "D": "A new URL filter rule."
     },
     "answer": "A",
-    "answerText": "Enable FDE via MDM."
+    "answerText": "Enable FDE via MDM.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 89
   },
   {
     "id": 240,
-    "sourceQuestionNumber": 90,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What incident response step is missing from point X in the following image?\n\nPreparation → Detection → Analysis → X → Eradication → Recovery → Lessons Learned → Preparation",
     "options": {
       "A": "Business continuity",
@@ -3211,12 +3295,13 @@
       "D": "Discovery"
     },
     "answer": "B",
-    "answerText": "Containment"
+    "answerText": "Containment",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 90
   },
   {
     "id": 241,
-    "sourceQuestionNumber": 91,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Jill has been asked to perform data recovery due to her forensic skills. What should she tell the person asking her to perform data recovery to give her the best chance of restoring lost files that were accidentally deleted?",
     "options": {
       "A": "Immediately reboot using the reset switch to create a lost file memory dump.",
@@ -3225,12 +3310,13 @@
       "D": "All of the above."
     },
     "answer": "C",
-    "answerText": "Do not save any files or make any changes to the system."
+    "answerText": "Do not save any files or make any changes to the system.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 91
   },
   {
     "id": 242,
-    "sourceQuestionNumber": 92,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Veronica has completed the recovery phase of her organization’s incident response plan. What phase should she move into next?",
     "options": {
       "A": "Preparation",
@@ -3239,12 +3325,13 @@
       "D": "Documentation"
     },
     "answer": "B",
-    "answerText": "Lessons learned"
+    "answerText": "Lessons learned",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 92
   },
   {
     "id": 243,
-    "sourceQuestionNumber": 93,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Michelle has been asked to sanitize a number of drives to ensure that sensitive data is not exposed when systems are removed from service. Which of the following is not a valid means of sanitizing hard drives?",
     "options": {
       "A": "Physical destruction",
@@ -3253,12 +3340,13 @@
       "D": "Zero-wiping the drives"
     },
     "answer": "C",
-    "answerText": "Quick-formatting the drives"
+    "answerText": "Quick-formatting the drives",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 93
   },
   {
     "id": 244,
-    "sourceQuestionNumber": 94,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Bart is investigating an incident, and needs to identify the creator of a Microsoft Office document. Where would he find that type of information?",
     "options": {
       "A": "In the filename",
@@ -3267,12 +3355,13 @@
       "D": "In the file metadata"
     },
     "answer": "D",
-    "answerText": "In the file metadata"
+    "answerText": "In the file metadata",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 94
   },
   {
     "id": 245,
-    "sourceQuestionNumber": 95,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Nathaniel wants to allow Chrome through the Windows Defender firewall. What type of firewall rule change will he need to permit this?",
     "options": {
       "A": "Allow TCP 80 and 443 traffic from the system to the Internet.",
@@ -3281,12 +3370,13 @@
       "D": "All of the above."
     },
     "answer": "B",
-    "answerText": "Add Chrome to the Windows Defender Firewall allowed applications."
+    "answerText": "Add Chrome to the Windows Defender Firewall allowed applications.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 95
   },
   {
     "id": 246,
-    "sourceQuestionNumber": 96,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "What key forensic tool used to generate reports about what happened relies on correctly set system clocks to work properly?",
     "options": {
       "A": "Disk hashing",
@@ -3295,12 +3385,13 @@
       "D": "File metadata analysis"
     },
     "answer": "B",
-    "answerText": "Timelining"
+    "answerText": "Timelining",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 96
   },
   {
     "id": 247,
-    "sourceQuestionNumber": 97,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Valerie is writing her organization’s forensic playbooks and knows that the state that she operates in has a data breach notification law. Which of the following key items is most likely to be influenced by that law?",
     "options": {
       "A": "Whether Valerie calls the police for forensic investigation help",
@@ -3309,12 +3400,13 @@
       "D": "The maximum number of residents that she can notify about a breach"
     },
     "answer": "B",
-    "answerText": "The maximum amount of time until she has to notify customers of sensitive data breaches"
+    "answerText": "The maximum amount of time until she has to notify customers of sensitive data breaches",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 97
   },
   {
     "id": 248,
-    "sourceQuestionNumber": 98,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "As part of a breach response, Naomi discovers that Social Security numbers (SSNs) were sent in a spreadsheet via email by an attacker who gained control of a workstation at her company’s headquarters. Naomi wants to ensure that more SSNs are not sent from her environment. What type of mitigation technique is most likely to prevent this while allowing operations to continue in as normal a manner as possible?",
     "options": {
       "A": "Antimalware installed at the email gateway",
@@ -3323,12 +3415,13 @@
       "D": "An IDS rule blocking SSNs in email"
     },
     "answer": "C",
-    "answerText": "A DLP rule blocking SSNs in email"
+    "answerText": "A DLP rule blocking SSNs in email",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 98
   },
   {
     "id": 249,
-    "sourceQuestionNumber": 99,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Troy wants to review metadata about an email he has received to determine what system or server the email was sent from. Where can he find this information?",
     "options": {
       "A": "In the email message’s footer",
@@ -3337,12 +3430,13 @@
       "D": "In the from: field"
     },
     "answer": "C",
-    "answerText": "In the email message’s headers"
+    "answerText": "In the email message’s headers",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 99
   },
   {
     "id": 250,
-    "sourceQuestionNumber": 100,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Isabelle wants to gather information about what systems a host is connecting to, how much traffic is sent, and similar details. Which of the following options would not allow her to perform that task?",
     "options": {
       "A": "IPFIX",
@@ -3351,12 +3445,13 @@
       "D": "sFlow"
     },
     "answer": "C",
-    "answerText": "NXLog"
+    "answerText": "NXLog",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 100
   },
   {
     "id": 251,
-    "sourceQuestionNumber": 101,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Valerie wants to check to see if a SQL injection attack occurred against her web application on a Linux system. Which log file should she check for this type of information?",
     "options": {
       "A": "The security log",
@@ -3365,12 +3460,13 @@
       "D": "The web server log"
     },
     "answer": "D",
-    "answerText": "The web server log"
+    "answerText": "The web server log",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 101
   },
   {
     "id": 252,
-    "sourceQuestionNumber": 102,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Jean’s company is preparing for litigation with another company that they believe has caused harm to Jean’s organization. What type of legal action should Jean’s lawyer take to ensure that the company preserves files and information related to the legal case?",
     "options": {
       "A": "A chain-of-custody demand letter",
@@ -3379,12 +3475,13 @@
       "D": "An order of volatility"
     },
     "answer": "C",
-    "answerText": "A legal hold notice"
+    "answerText": "A legal hold notice",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 102
   },
   {
     "id": 253,
-    "sourceQuestionNumber": 103,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "What type of mitigation places a malicious file or application in a safe location for future review or study?",
     "options": {
       "A": "Containment",
@@ -3393,12 +3490,13 @@
       "D": "Deletion"
     },
     "answer": "B",
-    "answerText": "Quarantine"
+    "answerText": "Quarantine",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 103
   },
   {
     "id": 254,
-    "sourceQuestionNumber": 104,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "What phase of the incident response process often involves adding firewall rules and patching systems to address the incident?",
     "options": {
       "A": "Preparation",
@@ -3407,12 +3505,13 @@
       "D": "Analysis"
     },
     "answer": "C",
-    "answerText": "Recovery"
+    "answerText": "Recovery",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 104
   },
   {
     "id": 255,
-    "sourceQuestionNumber": 105,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Tim wants to check the status of malware infections in his organization using the organization’s security information and event management (SIEM) device. What SIEM dashboard will tell him about whether there are more malware infections in the past few days than normal?",
     "options": {
       "A": "The alerts dashboard",
@@ -3421,12 +3520,13 @@
       "D": "The bandwidth dashboard"
     },
     "answer": "C",
-    "answerText": "The trends dashboard"
+    "answerText": "The trends dashboard",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 105
   },
   {
     "id": 256,
-    "sourceQuestionNumber": 106,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Michelle has been asked to use the CIS benchmark for Windows as part of her system security process. What information will she be using?",
     "options": {
       "A": "Information on how secure Windows is in its default state",
@@ -3435,12 +3535,13 @@
       "D": "Vulnerability scan data for Windows systems provided by various manufacturers"
     },
     "answer": "B",
-    "answerText": "A set of recommended security configurations to secure Windows"
+    "answerText": "A set of recommended security configurations to secure Windows",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 106
   },
   {
     "id": 257,
-    "sourceQuestionNumber": 107,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "All of your organization’s traffic flows through a single connection to the Internet. Which of the following terms best describes this scenario?",
     "options": {
       "A": "Cloud computing",
@@ -3449,12 +3550,13 @@
       "D": "Virtualization"
     },
     "answer": "C",
-    "answerText": "Single point of failure"
+    "answerText": "Single point of failure",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 107
   },
   {
     "id": 258,
-    "sourceQuestionNumber": 108,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Nina is tasked with putting radio frequency identification (RFID) tags on every new piece of equipment that enters her datacenter that costs more than $500. What type of organizational policy is most likely to include this type of requirement?",
     "options": {
       "A": "A change management policy",
@@ -3463,12 +3565,13 @@
       "D": "An acceptable use policy"
     },
     "answer": "C",
-    "answerText": "An asset management policy"
+    "answerText": "An asset management policy",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 108
   },
   {
     "id": 259,
-    "sourceQuestionNumber": 109,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Megan is reviewing her organization’s datacenter network diagram as shown in the image. What should she note for point A on the diagram?",
     "options": {
       "A": "A wireless link",
@@ -3478,13 +3581,12 @@
     },
     "answer": "D",
     "answerText": "A single point of failure",
-    "imageNeeded": true,
-    "imageNote": "This question in the source references an image. Add an image field later if you have the screenshot."
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 109
   },
   {
     "id": 260,
-    "sourceQuestionNumber": 110,
-    "domain": "Domain 4 - Security Operations: Automation and Orchestration",
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Juan’s team is in charge of responding to potential phishing attacks and advertises an infosec@example.com email address to his organization to send examples of potential phishing attacks to. Which of the following is not a benefit Juan’s team would get from automating the creation of tickets in their support tool based on these emails?",
     "options": {
       "A": "The ability to track whether they’ve been resolved",
@@ -3493,12 +3595,13 @@
       "D": "The ability to trigger additional actions"
     },
     "answer": "B",
-    "answerText": "Automated phishing prevention"
+    "answerText": "Automated phishing prevention",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 110
   },
   {
     "id": 261,
-    "sourceQuestionNumber": 111,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Valerie wants to implement an email security framework that will help to ensure that only authorized systems send email on behalf of her domains. Which of the following should she implement?",
     "options": {
       "A": "DKIM",
@@ -3507,12 +3610,13 @@
       "D": "SPF"
     },
     "answer": "D",
-    "answerText": "SPF"
+    "answerText": "SPF",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 111
   },
   {
     "id": 262,
-    "sourceQuestionNumber": 112,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Jake is investigating a service outage and notices the following traffic using a Wireshark packet capture. Which of the following issues is most likely occurring?",
     "options": {
       "A": "An email phishing campaign",
@@ -3522,13 +3626,12 @@
     },
     "answer": "D",
     "answerText": "A denial-of-service attack",
-    "imageNeeded": true,
-    "imageNote": "This question in the source references an image. Add an image field later if you have the screenshot."
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 112
   },
   {
     "id": 263,
-    "sourceQuestionNumber": 113,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Gary wants to deploy a tool that will allow him to identify and effectively respond to ransomware that might target systems that his company owns. He knows that he is likely to need to identify threats based on behavior rather than just using signatures, and he wants to have a dashboard-style view of his data. What tool should Gary select to meet this need?",
     "options": {
       "A": "IPS",
@@ -3537,12 +3640,13 @@
       "D": "EDR"
     },
     "answer": "D",
-    "answerText": "EDR"
+    "answerText": "EDR",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 113
   },
   {
     "id": 264,
-    "sourceQuestionNumber": 114,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Carl wants to test his organization’s incident response process. He conducts a tabletop exercise for his security team. Which of the following best describes this type of exercise?",
     "options": {
       "A": "A scenario is introduced and each member of the team takes actions that they would use to respond to the scenario.",
@@ -3551,12 +3655,13 @@
       "D": "The organization’s datacenter is manually forced to fail over to an alternate site to test the scenario’s objectives."
     },
     "answer": "C",
-    "answerText": "The security team meets to talk through what they would do in a given scenario and takes notes on what works and what doesn’t."
+    "answerText": "The security team meets to talk through what they would do in a given scenario and takes notes on what works and what doesn’t.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 114
   },
   {
     "id": 265,
-    "sourceQuestionNumber": 115,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Michelle wants to determine why attackers were able to take her organization’s web server cluster offline after an incident occurred. What process should she and her team follow to determine this?",
     "options": {
       "A": "Threat hunting",
@@ -3565,12 +3670,13 @@
       "D": "Recovery"
     },
     "answer": "B",
-    "answerText": "Root cause analysis"
+    "answerText": "Root cause analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 115
   },
   {
     "id": 266,
-    "sourceQuestionNumber": 116,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Randy wants to harden mobile devices used by his organization. Which of the following is not a typical mobile device hardening step?",
     "options": {
       "A": "Disable Bluetooth.",
@@ -3579,12 +3685,13 @@
       "D": "Jailbreak the device."
     },
     "answer": "D",
-    "answerText": "Jailbreak the device."
+    "answerText": "Jailbreak the device.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 116
   },
   {
     "id": 267,
-    "sourceQuestionNumber": 117,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Lucca wants to ensure that his organization’s mobile device connections are secure. Which of the following connectivity options is the most secure choice?",
     "options": {
       "A": "WPA2 Personal",
@@ -3593,12 +3700,253 @@
       "D": "WPA4 Enterprise"
     },
     "answer": "C",
-    "answerText": "WPA3 Enterprise"
+    "answerText": "WPA3 Enterprise",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 117
   },
   {
     "id": 268,
-    "sourceQuestionNumber": 134,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "domain": "Domain 4 - Security Operations: Computing resources",
+    "question": "The percentage of the value of an asset that is lost due to an incident or loss event is known as what?",
+    "options": {
+      "A": "Asset depreciation",
+      "B": "Exposure factor",
+      "C": "Annual loss event",
+      "D": "Asset valuation adjustment"
+    },
+    "answer": "B",
+    "answerText": "Exposure factor",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 118
+  },
+  {
+    "id": 269,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
+    "question": "Derek’s organization has recently set up a notification process that sends a text message to system administrators when security exception log events occur on the systems they are responsible for. Unfortunately, Derek and his team have received dozens of alerts at all times of the day due to the log event happening for failed logins when users type their passwords incorrectly. What should Derek and his team do next to help with this?",
+    "options": {
+      "A": "Set alert thresholds.",
+      "B": "Engage in alert tuning.",
+      "C": "Disable the alerts.",
+      "D": "Move the alerts to email."
+    },
+    "answer": "B",
+    "answerText": "Engage in alert tuning.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 119
+  },
+  {
+    "id": 270,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
+    "question": "Jill wants to configure her IPS to detect a SQL injection attack that has become increasingly common against an open source web application that her organization runs. What information would she need to create a signature for the attack?",
+    "options": {
+      "A": "The source IP address",
+      "B": "The SQL code",
+      "C": "The hash of the attack",
+      "D": "The source port"
+    },
+    "answer": "B",
+    "answerText": "The SQL code",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 120
+  },
+  {
+    "id": 271,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
+    "question": "Ben’s organization has hired a new HR supervisor, Jack. When Jack was hired, Ben was asked to provide Jack with the same rights and permissions as the other HR supervisor, Erin. What is the most important issue Ben should identify with this process if the organization wants to follow identity and access management best practices?",
+    "options": {
+      "A": "Jack’s account should be provisioned based on his role, not on Erin’s rights.",
+      "B": "Jack may not be senior enough to have access to the same systems as Erin does.",
+      "C": "Erin may work with a different staff than Jack does.",
+      "D": "Jack should not have access to Erin’s files."
+    },
+    "answer": "A",
+    "answerText": "Jack’s account should be provisioned based on his role, not on Erin’s rights.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 121
+  },
+  {
+    "id": 272,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
+    "question": "Ian wants to deploy multifactor tokens to his organization. Which of the following provides the greatest security?",
+    "options": {
+      "A": "Hardware tokens",
+      "B": "Application-based tokens",
+      "C": "SMS multifactor",
+      "D": "Extended password length"
+    },
+    "answer": "A",
+    "answerText": "Hardware tokens",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 122
+  },
+  {
+    "id": 273,
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
+    "question": "Gurvinder wants to explain the advantages of investing in automating security workflows to his organization’s leadership. Recent audit findings have shown that systems are not all fully patched and that settings may vary between systems using the same operating system. Which common benefit of automation should he emphasize with leadership?",
+    "options": {
+      "A": "Enforcing baselines",
+      "B": "Scaling in a secure manner",
+      "C": "Improving reaction time",
+      "D": "Automation’s role as a workforce multiplier"
+    },
+    "answer": "A",
+    "answerText": "Enforcing baselines",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 123
+  },
+  {
+    "id": 274,
+    "domain": "Domain 4 - Security Operations: Incident response",
+    "question": "Jake wants to understand the root cause of a security incident. He knows a number of the events that occurred, but he wants to engage other staff members to define the root cause. What common root cause analysis (RCA) technique should he use?",
+    "options": {
+      "A": "The Five W’s",
+      "B": "A fishbone diagram",
+      "C": "The Five Why’s",
+      "D": "A recursion analysis"
+    },
+    "answer": "B",
+    "answerText": "A fishbone diagram",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 124
+  },
+  {
+    "id": 275,
+    "domain": "Domain 4 - Security Operations: Incident response",
+    "question": "Amanda is testing her company’s incident response process and has her staff perform actual recovery actions without impacting production to validate how long it would take to accomplish them. What type of event has she conducted?",
+    "options": {
+      "A": "A failover test",
+      "B": "A simulation",
+      "C": "A plan review",
+      "D": "A tabletop exercise"
+    },
+    "answer": "B",
+    "answerText": "A simulation",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 125
+  },
+  {
+    "id": 276,
+    "domain": "Domain 4 - Security Operations: Incident response",
+    "question": "Liam’s company has been notified of impending legal action and has been told to place a legal hold on related items. What must Liam’s company do?",
+    "options": {
+      "A": "Continue their normal operations, including data life-cycle-related activities.",
+      "B": "Identify data covered by the hold and preserve it, regardless of normal data life cycles or activities.",
+      "C": "Engage a law firm to preserve the data required by the legal hold.",
+      "D": "Contact law enforcement to allow them to gather the data required by the legal hold."
+    },
+    "answer": "B",
+    "answerText": "Identify data covered by the hold and preserve it, regardless of normal data life cycles or activities.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 126
+  },
+  {
+    "id": 277,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
+    "question": "Paul wants to integrate his organization’s web application with common cloud identity providers like Google and Microsoft. What authentication standard should he select if he wants to maximize interoperability?",
+    "options": {
+      "A": "OAuth",
+      "B": "Kerberos",
+      "C": "LDAP",
+      "D": "Active Directory"
+    },
+    "answer": "A",
+    "answerText": "OAuth",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 127
+  },
+  {
+    "id": 278,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
+    "question": "Jim wants to ensure that users who are located in his organization’s London office have access to the building. What type of access control scheme should he select to best fit this specific need?",
+    "options": {
+      "A": "Rule BAC",
+      "B": "ABAC",
+      "C": "Role BAC",
+      "D": "MAC"
+    },
+    "answer": "B",
+    "answerText": "ABAC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 128
+  },
+  {
+    "id": 279,
+    "domain": "Domain 4 - Security Operations: Asset management",
+    "question": "Dane wants to implement passwordless authentication for his organization. What type of device should he issue to his users to support this type of authentication?",
+    "options": {
+      "A": "A password manager",
+      "B": "An RFID card",
+      "C": "A security key",
+      "D": "A biometric token"
+    },
+    "answer": "C",
+    "answerText": "A security key",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 129
+  },
+  {
+    "id": 280,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
+    "question": "Ensuring that inetd services like echo, time, rsh, and telnet are not enabled are all examples of what type of action?",
+    "options": {
+      "A": "Preventing SQL injection",
+      "B": "Hardening a Linux system",
+      "C": "Hardening a Windows system",
+      "D": "Patching insecure services"
+    },
+    "answer": "B",
+    "answerText": "Hardening a Linux system",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 130
+  },
+  {
+    "id": 281,
+    "domain": "Domain 4 - Security Operations: Computing resources",
+    "question": "What mobile device deployment model provides the least control for the organization and leaves the end user with the greatest choice?",
+    "options": {
+      "A": "BYOD",
+      "B": "COPE",
+      "C": "CYOD",
+      "D": "COBO"
+    },
+    "answer": "A",
+    "answerText": "BYOD",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 131
+  },
+  {
+    "id": 282,
+    "domain": "Domain 4 - Security Operations: Computing resources",
+    "question": "Akio has set the Secure cookie attribute as part of her web application’s process for sending new cookies to users. What does this attribute do?",
+    "options": {
+      "A": "It encrypts the cookie’s content when it is stored.",
+      "B": "It stores the cookie on the server instead of on the remote device.",
+      "C": "It removes the cookie after it has been used.",
+      "D": "It requires that the cookie be sent only via HTTPS."
+    },
+    "answer": "D",
+    "answerText": "It requires that the cookie be sent only via HTTPS.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 132
+  },
+  {
+    "id": 283,
+    "domain": "Domain 4 - Security Operations: Computing resources",
+    "question": "Helen wants to sign her code. What will the output of code signing be?",
+    "options": {
+      "A": "An encrypted copy of the code using her private key",
+      "B": "A signed hash of the software using her private key",
+      "C": "A signed hash of the software using her public key",
+      "D": "An encrypted copy of the code using her public key"
+    },
+    "answer": "B",
+    "answerText": "A signed hash of the software using her private key",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 133
+  },
+  {
+    "id": 284,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Naomi’s organization has recently acquired another company. Naomi is concerned about asset tracking and inventory because the acquired company does not have an inventory of their systems and devices. What major security concern should she express about this from a hardware asset management perspective?",
     "options": {
       "A": "There may not be an appropriate hardware life-cycle process.",
@@ -3607,12 +3955,13 @@
       "D": "Vulnerability scans may not be accurate without an inventory."
     },
     "answer": "C",
-    "answerText": "There is no way to know if systems are missing."
+    "answerText": "There is no way to know if systems are missing.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 134
   },
   {
-    "id": 269,
-    "sourceQuestionNumber": 135,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 285,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "As part of his CI/CD pipeline process, Felix reviews source code manually to identify any flaws or security concerns. What type of process is Felix following?",
     "options": {
       "A": "Dynamic analysis",
@@ -3621,12 +3970,13 @@
       "D": "Internal review"
     },
     "answer": "C",
-    "answerText": "Static analysis"
+    "answerText": "Static analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 135
   },
   {
-    "id": 270,
-    "sourceQuestionNumber": 136,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 286,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "As part of his research, Pedro uses a TOR browser to access threat actors’ sites. He is able to see information about recent breaches and can download data dumps provided by the threat actors. What information source is Pedro using?",
     "options": {
       "A": "The dark web",
@@ -3635,12 +3985,13 @@
       "D": "A threat feed"
     },
     "answer": "A",
-    "answerText": "The dark web"
+    "answerText": "The dark web",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 136
   },
   {
-    "id": 271,
-    "sourceQuestionNumber": 137,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "id": 287,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Alaina has completed the eradication and recovery steps of the incident response process. What step commonly comes after these two phases?",
     "options": {
       "A": "A lessons learned session",
@@ -3649,12 +4000,13 @@
       "D": "A tabletop exercise"
     },
     "answer": "A",
-    "answerText": "A lessons learned session"
+    "answerText": "A lessons learned session",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 137
   },
   {
-    "id": 272,
-    "sourceQuestionNumber": 138,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 288,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Lucca knows that the CVSS environmental score is made up of three components, including an impact metric. What three components does he need to consider as part of the impact metric score?",
     "options": {
       "A": "Confidentiality, integrity, and availability",
@@ -3663,12 +4015,13 @@
       "D": "Probability, impact, and cost"
     },
     "answer": "A",
-    "answerText": "Confidentiality, integrity, and availability"
+    "answerText": "Confidentiality, integrity, and availability",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 138
   },
   {
-    "id": 273,
-    "sourceQuestionNumber": 139,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 289,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "What tool is commonly used to allow for measurement and monitoring of security settings to align with NIST 800-53 controls?",
     "options": {
       "A": "SAML",
@@ -3677,12 +4030,13 @@
       "D": "SCAP"
     },
     "answer": "D",
-    "answerText": "SCAP"
+    "answerText": "SCAP",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 139
   },
   {
-    "id": 274,
-    "sourceQuestionNumber": 140,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 290,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Adam has implemented a WPA3 Enterprise network. What type of encryption will be used to protect data sent across the Wi-Fi connection?",
     "options": {
       "A": "AES",
@@ -3691,12 +4045,13 @@
       "D": "SHA-256"
     },
     "answer": "A",
-    "answerText": "AES"
+    "answerText": "AES",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 140
   },
   {
-    "id": 275,
-    "sourceQuestionNumber": 141,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 291,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Tom wants to set up an authentication service for network devices. Which of the following is commonly used for authentication to enterprise network devices?",
     "options": {
       "A": "Kerberos",
@@ -3705,12 +4060,13 @@
       "D": "OpenID"
     },
     "answer": "A",
-    "answerText": "Kerberos"
+    "answerText": "Kerberos",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 141
   },
   {
-    "id": 276,
-    "sourceQuestionNumber": 142,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 292,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Ian wants to test embedded device web servers for potential security issues with the version of the web server software. What tool should he select to do this most effectively across his large organization’s network of IoT devices?",
     "options": {
       "A": "A WAF",
@@ -3719,12 +4075,13 @@
       "D": "A port scanner"
     },
     "answer": "C",
-    "answerText": "A vulnerability scanner"
+    "answerText": "A vulnerability scanner",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 142
   },
   {
-    "id": 277,
-    "sourceQuestionNumber": 143,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 293,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Tom wants his email servers to reject email that is not authenticated in a way to prevent spoofing. Which of the following should he implement?",
     "options": {
       "A": "SPF",
@@ -3733,12 +4090,13 @@
       "D": "TLS"
     },
     "answer": "B",
-    "answerText": "DMARC"
+    "answerText": "DMARC",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 143
   },
   {
-    "id": 278,
-    "sourceQuestionNumber": 144,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 294,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Wayne has identified a vulnerable server that is part of his organization’s critical infrastructure but that is no longer supported by the vendor and for which no additional patches exist. Every time Wayne scans the server using his vulnerability scanner, the services on the device crash. What should Wayne do?",
     "options": {
       "A": "Report the server as vulnerable and suggest that it be replaced immediately.",
@@ -3747,12 +4105,13 @@
       "D": "Document an exemption, remove the server from automated scans, and implement compensating controls."
     },
     "answer": "D",
-    "answerText": "Document an exemption, remove the server from automated scans, and implement compensating controls."
+    "answerText": "Document an exemption, remove the server from automated scans, and implement compensating controls.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 144
   },
   {
-    "id": 279,
-    "sourceQuestionNumber": 145,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 295,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Valentine’s organization wants to ensure that users who sign up for their web services are who they claim to be. As part of the process they ask for information like birth date, Social Security number, and previous addresses. What type of activity is Valentine’s organization engaging in?",
     "options": {
       "A": "Provisioning user accounts",
@@ -3761,12 +4120,13 @@
       "D": "Social identity"
     },
     "answer": "B",
-    "answerText": "Identity proofing"
+    "answerText": "Identity proofing",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 145
   },
   {
-    "id": 280,
-    "sourceQuestionNumber": 146,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 296,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Sam has completed patching of a critical vulnerability. What step is often performed next to ensure that the patching occurred properly?",
     "options": {
       "A": "Noting false positives",
@@ -3775,12 +4135,13 @@
       "D": "Performing an audit"
     },
     "answer": "C",
-    "answerText": "Rescanning the system"
+    "answerText": "Rescanning the system",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 146
   },
   {
-    "id": 281,
-    "sourceQuestionNumber": 147,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 297,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Joan’s organization has recently remediated issues in their credit card processing environment. If Joan wants to be able to attest to the security of the environment, what action might she need to take to prove the security of the environment to customers?",
     "options": {
       "A": "Have third-party auditors validate the remediation.",
@@ -3789,12 +4150,13 @@
       "D": "Allow customers to scan the systems to validate the changes."
     },
     "answer": "A",
-    "answerText": "Have third-party auditors validate the remediation."
+    "answerText": "Have third-party auditors validate the remediation.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 147
   },
   {
-    "id": 282,
-    "sourceQuestionNumber": 148,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 298,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Alan wants to configure his firewall to allow Microsoft SQL traffic through to the database server from web application servers in a screened subnet design. What is the minimum set of ports that he should port to allow this?",
     "options": {
       "A": "TCP 3389 and 1433",
@@ -3803,12 +4165,13 @@
       "D": "TCP 139 and 445"
     },
     "answer": "B",
-    "answerText": "TCP 1433"
+    "answerText": "TCP 1433",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 148
   },
   {
-    "id": 283,
-    "sourceQuestionNumber": 149,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 299,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Which of the following terms refers to the process of establishing a standard for security?",
     "options": {
       "A": "Baselining",
@@ -3817,12 +4180,13 @@
       "D": "Normalization"
     },
     "answer": "A",
-    "answerText": "Baselining"
+    "answerText": "Baselining",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 149
   },
   {
-    "id": 284,
-    "sourceQuestionNumber": 150,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 300,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Zhen’s new organization has informed him that they use a COPE model for their mobile devices. What does this tell Zhen about what he can do with the device?",
     "options": {
       "A": "He can choose what device he uses, but the organization will own it.",
@@ -3831,12 +4195,13 @@
       "D": "He will have to bring his own device but can use it for personal and business use."
     },
     "answer": "B",
-    "answerText": "He will be provided with a device but can use it for reasonable personal use."
+    "answerText": "He will be provided with a device but can use it for reasonable personal use.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 150
   },
   {
-    "id": 285,
-    "sourceQuestionNumber": 151,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "id": 301,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "The Windows Task Manager can be used to identify malware through what technique?",
     "options": {
       "A": "Dynamic analysis",
@@ -3845,12 +4210,13 @@
       "D": "Vulnerability scanning"
     },
     "answer": "B",
-    "answerText": "Process auditing"
+    "answerText": "Process auditing",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 151
   },
   {
-    "id": 286,
-    "sourceQuestionNumber": 152,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 302,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Ujama wants to deploy a network device that will allow him to use policy-based controls for email as well as active defenses against phishing attacks before email is delivered to his users. Which of the following devices is best suited to this purpose?",
     "options": {
       "A": "A web application firewall",
@@ -3859,12 +4225,13 @@
       "D": "A DMARC appliance"
     },
     "answer": "B",
-    "answerText": "An email security gateway"
+    "answerText": "An email security gateway",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 152
   },
   {
-    "id": 287,
-    "sourceQuestionNumber": 153,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 303,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Allison wants to aggregate her logs and have them automatically correlated and reported on. What sort of tool should she acquire for her organization?",
     "options": {
       "A": "MDM",
@@ -3873,12 +4240,13 @@
       "D": "SIEM"
     },
     "answer": "D",
-    "answerText": "SIEM"
+    "answerText": "SIEM",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 153
   },
   {
-    "id": 288,
-    "sourceQuestionNumber": 154,
-    "domain": "Domain 4 - Security Operations: Automation and Orchestration",
+    "id": 304,
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Natasha’s staff have been complaining about repetitive tasks that must be manually accomplished to secure endpoint devices before they are deployed. What could Natasha ask her team to do to address this?",
     "options": {
       "A": "Leverage automation and scripting.",
@@ -3887,12 +4255,13 @@
       "D": "Move devices to the cloud."
     },
     "answer": "A",
-    "answerText": "Leverage automation and scripting."
+    "answerText": "Leverage automation and scripting.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 154
   },
   {
-    "id": 289,
-    "sourceQuestionNumber": 155,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 305,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Which of the following methods typically provides the greatest insight into vulnerabilities that exist on systems owned by a company?",
     "options": {
       "A": "Penetration tests",
@@ -3901,12 +4270,13 @@
       "D": "Port scans"
     },
     "answer": "B",
-    "answerText": "Authenticated scans"
+    "answerText": "Authenticated scans",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 155
   },
   {
-    "id": 290,
-    "sourceQuestionNumber": 156,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "id": 306,
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Quarantine and isolation are both common options in what phase of the incident response process?",
     "options": {
       "A": "Detection",
@@ -3915,12 +4285,13 @@
       "D": "Eradication"
     },
     "answer": "C",
-    "answerText": "Containment"
+    "answerText": "Containment",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 156
   },
   {
-    "id": 291,
-    "sourceQuestionNumber": 157,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 307,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Rick is reviewing Linux system permissions and finds a directory that is set to:\n\n-rwxr--r--\n\nWho will have access to the directory to read the file?",
     "options": {
       "A": "The user",
@@ -3929,12 +4300,13 @@
       "D": "No users except root"
     },
     "answer": "C",
-    "answerText": "All users"
+    "answerText": "All users",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 157
   },
   {
-    "id": 292,
-    "sourceQuestionNumber": 158,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 308,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Beena is granted access to her organization’s customer information because she is a data steward; her access occurs between 8 a.m. and 5 p.m., and it is occurring from a known workstation that has passed security checks. What type of access control scheme is in use?",
     "options": {
       "A": "Rule-based access control",
@@ -3943,12 +4315,13 @@
       "D": "Attribute-based access control"
     },
     "answer": "D",
-    "answerText": "Attribute-based access control"
+    "answerText": "Attribute-based access control",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 158
   },
   {
-    "id": 293,
-    "sourceQuestionNumber": 159,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 309,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Juan wants to use his IDS to detect anomalous behavior. What type of detection technique would most effectively help him identify unknown new attacks?",
     "options": {
       "A": "Trend analysis",
@@ -3957,12 +4330,13 @@
       "D": "Port-based detection"
     },
     "answer": "A",
-    "answerText": "Trend analysis"
+    "answerText": "Trend analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 159
   },
   {
-    "id": 294,
-    "sourceQuestionNumber": 160,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 310,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Geenah wants to identify where Wi-Fi signals are weakest in her building. What should she create to visually display signal coverage and strength throughout her building?",
     "options": {
       "A": "A war walk",
@@ -3971,12 +4345,13 @@
       "D": "A heatmap"
     },
     "answer": "D",
-    "answerText": "A heatmap"
+    "answerText": "A heatmap",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 160
   },
   {
-    "id": 295,
-    "sourceQuestionNumber": 161,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 311,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What term describes the concept that individuals should be given the minimum permissions necessary to accomplish their role or tasks?",
     "options": {
       "A": "Zero trust",
@@ -3985,12 +4360,13 @@
       "D": "Deprovisioning"
     },
     "answer": "C",
-    "answerText": "Least privilege"
+    "answerText": "Least privilege",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 161
   },
   {
-    "id": 296,
-    "sourceQuestionNumber": 162,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 312,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Joanna wants to explain the advantages of automation for user and resource provisioning. Which of the following is not an advantage of automation over manual processes for provisioning?",
     "options": {
       "A": "Automation ensures consistency in the provisioning process.",
@@ -3999,12 +4375,13 @@
       "D": "Automation provides auditability of provisioning."
     },
     "answer": "D",
-    "answerText": "Automation provides auditability of provisioning."
+    "answerText": "Automation provides auditability of provisioning.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 162
   },
   {
-    "id": 297,
-    "sourceQuestionNumber": 163,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 313,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Bug bounty programs are an example of what type of program?",
     "options": {
       "A": "Contracted penetration testing",
@@ -4013,12 +4390,13 @@
       "D": "Trusted threat"
     },
     "answer": "B",
-    "answerText": "Responsible disclosure"
+    "answerText": "Responsible disclosure",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 163
   },
   {
-    "id": 298,
-    "sourceQuestionNumber": 164,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 314,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Jack is hardening a Cisco switch based on the CIS IOS benchmark. As part of the configuration process, he configures settings including ntp authenticate and ntp trusted-key. Why would Jack configure this on his network switches?",
     "options": {
       "A": "To ensure that the switch has Network Terminal Protocol enabled",
@@ -4027,12 +4405,13 @@
       "D": "To ensure that network time is from a trusted source"
     },
     "answer": "D",
-    "answerText": "To ensure that network time is from a trusted source"
+    "answerText": "To ensure that network time is from a trusted source",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 164
   },
   {
-    "id": 299,
-    "sourceQuestionNumber": 165,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 315,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Tony wants to use a cellular connection to transfer data to his organization. What should he do to ensure that his data is as secure as possible?",
     "options": {
       "A": "Make sure he is connected to his cellular provider’s towers.",
@@ -4041,12 +4420,13 @@
       "D": "Deploy a security baseline to the phone."
     },
     "answer": "C",
-    "answerText": "Use a VPN."
+    "answerText": "Use a VPN.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 165
   },
   {
-    "id": 300,
-    "sourceQuestionNumber": 166,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "id": 316,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "The hospital that Isabella works for leverages threat information from the Health-ISAC as part of their security team’s work. What type of threat information provider is the Health-ISAC?",
     "options": {
       "A": "An OSINT provider",
@@ -4055,12 +4435,13 @@
       "D": "A proprietary threat data source"
     },
     "answer": "C",
-    "answerText": "An information-sharing organization"
+    "answerText": "An information-sharing organization",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 166
   },
   {
-    "id": 301,
-    "sourceQuestionNumber": 167,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 317,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Mark presents his driver’s license as part of the creation of his user account for a secure online service. What process requires this type of information to validate ownership of an identity?",
     "options": {
       "A": "Attestation",
@@ -4069,12 +4450,13 @@
       "D": "De-provisioning"
     },
     "answer": "A",
-    "answerText": "Attestation"
+    "answerText": "Attestation",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 167
   },
   {
-    "id": 302,
-    "sourceQuestionNumber": 168,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 318,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Hector is concerned about Bluetooth security. Which of the following is a legitimate security concern about Bluetooth?",
     "options": {
       "A": "It is not encrypted.",
@@ -4083,12 +4465,13 @@
       "D": "Bluetooth devices can be fingerprinted."
     },
     "answer": "C",
-    "answerText": "Bluejacking may occur."
+    "answerText": "Bluejacking may occur.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 168
   },
   {
-    "id": 303,
-    "sourceQuestionNumber": 169,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 319,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Privileged access management (PAM) tools provide functions for enterprise access management. Which of the following is not a common PAM component?",
     "options": {
       "A": "Just-in-time permissions",
@@ -4097,12 +4480,13 @@
       "D": "Password persistence"
     },
     "answer": "D",
-    "answerText": "Password persistence"
+    "answerText": "Password persistence",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 169
   },
   {
-    "id": 304,
-    "sourceQuestionNumber": 170,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 320,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "What role do port scans play in asset tracking?",
     "options": {
       "A": "Enumeration of assets.",
@@ -4111,12 +4495,13 @@
       "D": "They do not play a role in asset tracking."
     },
     "answer": "A",
-    "answerText": "Enumeration of assets."
+    "answerText": "Enumeration of assets.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 170
   },
   {
-    "id": 305,
-    "sourceQuestionNumber": 171,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 321,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "A fingerprint is an example of what type of authentication factor?",
     "options": {
       "A": "Something you know",
@@ -4125,12 +4510,13 @@
       "D": "Somewhere you are"
     },
     "answer": "C",
-    "answerText": "Something you are"
+    "answerText": "Something you are",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 171
   },
   {
-    "id": 306,
-    "sourceQuestionNumber": 172,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 322,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Dana wants to ensure that her software acquisition process for open source software is as secure as possible. What should she do to validate the security of the open source software?",
     "options": {
       "A": "Ensure that the software source code is escrowed.",
@@ -4139,12 +4525,13 @@
       "D": "Purchase the software from a software vendor."
     },
     "answer": "C",
-    "answerText": "Check dependencies for known vulnerabilities."
+    "answerText": "Check dependencies for known vulnerabilities.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 172
   },
   {
-    "id": 307,
-    "sourceQuestionNumber": 173,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 323,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Sharon wants to implement WPA3 Enterprise. What technology will she need to use for authorization after wireless devices associate with access points?",
     "options": {
       "A": "LDAP",
@@ -4153,12 +4540,13 @@
       "D": "SAML"
     },
     "answer": "B",
-    "answerText": "802.1X"
+    "answerText": "802.1X",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 173
   },
   {
-    "id": 308,
-    "sourceQuestionNumber": 174,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 324,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What purpose do the password history and password minimum age settings have in Windows?",
     "options": {
       "A": "To prevent attackers from resetting passwords",
@@ -4167,12 +4555,13 @@
       "D": "To ensure proper password expiration"
     },
     "answer": "C",
-    "answerText": "To prevent password reuse"
+    "answerText": "To prevent password reuse",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 174
   },
   {
-    "id": 309,
-    "sourceQuestionNumber": 175,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 325,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "A CVSS score is based on what three metric groups of data?",
     "options": {
       "A": "Scope, Impact, Environmental",
@@ -4181,12 +4570,13 @@
       "D": "Time, Risk, Scope"
     },
     "answer": "B",
-    "answerText": "Base, Temporal, and Environmental"
+    "answerText": "Base, Temporal, and Environmental",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 175
   },
   {
-    "id": 310,
-    "sourceQuestionNumber": 176,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 326,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Quentin wants to decommission solid-state drives (SSDs). What process should he follow if he wants to be absolutely certain that the data cannot be recovered?",
     "options": {
       "A": "Zero wiping",
@@ -4195,12 +4585,13 @@
       "D": "Reformatting"
     },
     "answer": "B",
-    "answerText": "Destruction"
+    "answerText": "Destruction",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 176
   },
   {
-    "id": 311,
-    "sourceQuestionNumber": 177,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 327,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "What challenge is commonly encountered when organizations want to harden IoT devices?",
     "options": {
       "A": "The devices have limited security options.",
@@ -4209,12 +4600,13 @@
       "D": "Central management tools only support new devices."
     },
     "answer": "A",
-    "answerText": "The devices have limited security options."
+    "answerText": "The devices have limited security options.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 177
   },
   {
-    "id": 312,
-    "sourceQuestionNumber": 178,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 328,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Guillermo wants to establish his organization's security baseline for Linux systems. After selecting the CIS benchmark that best matches his organization's commonly used Linux distribution, what should he do next?",
     "options": {
       "A": "Deploy the benchmark to a test system to see how it performs in normal use.",
@@ -4223,12 +4615,13 @@
       "D": "Identify the deployment method for the baseline to the Linux systems."
     },
     "answer": "C",
-    "answerText": "Review the baseline to determine any settings that are not a good fit for the organization's usage."
+    "answerText": "Review the baseline to determine any settings that are not a good fit for the organization's usage.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 178
   },
   {
-    "id": 313,
-    "sourceQuestionNumber": 179,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 329,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Renee has implemented WPA3 Enterprise, and she wants to use an EAP protocol for secure authentication. What EAP version should she implement?",
     "options": {
       "A": "LEAP",
@@ -4237,12 +4630,13 @@
       "D": "EAP-PWD"
     },
     "answer": "B",
-    "answerText": "EAP-TLS"
+    "answerText": "EAP-TLS",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 179
   },
   {
-    "id": 314,
-    "sourceQuestionNumber": 180,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 330,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "The organization that Chris works for has recently acquired another company. As part of the acquisition, Chris is preparing to address the data that the newly acquired company used, including setting up rules to handle it in his data loss prevention (DLP) system. What step is commonly required prior to data being protected by a DLP system?",
     "options": {
       "A": "Hashing the data and creating signatures",
@@ -4251,12 +4645,13 @@
       "D": "Applying a mandatory access control scheme to the data"
     },
     "answer": "C",
-    "answerText": "Classifying and tagging the data"
+    "answerText": "Classifying and tagging the data",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 180
   },
   {
-    "id": 315,
-    "sourceQuestionNumber": 181,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 331,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Mark wants to have a way to determine if attackers have modified files on a critical web application server. What type of tool should he deploy if he wants to be able to check for changes of this nature?",
     "options": {
       "A": "Drive encryption",
@@ -4265,12 +4660,13 @@
       "D": "File integrity monitoring"
     },
     "answer": "D",
-    "answerText": "File integrity monitoring"
+    "answerText": "File integrity monitoring",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 181
   },
   {
-    "id": 316,
-    "sourceQuestionNumber": 182,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "id": 332,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Katie's organization uses an IoC feed that helps her to identify new threats. A recent feed update includes the following hash for Emotet malware:\n\ncecc5bba6193d744837e689e68bc25c43eda7235\n\nWhere is Katie most likely going to be able to use this hash to identify potential attacks?",
     "options": {
       "A": "Via her EDR tools",
@@ -4279,12 +4675,13 @@
       "D": "All of the above"
     },
     "answer": "A",
-    "answerText": "Via her EDR tools"
+    "answerText": "Via her EDR tools",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 182
   },
   {
-    "id": 317,
-    "sourceQuestionNumber": 183,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 333,
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Which of the following tools is best suited to deploying and maintaining a secure baseline for Windows systems for an entire enterprise?",
     "options": {
       "A": "PowerShell",
@@ -4293,12 +4690,13 @@
       "D": "Script-based deployments"
     },
     "answer": "B",
-    "answerText": "Group Policy"
+    "answerText": "Group Policy",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 183
   },
   {
-    "id": 318,
-    "sourceQuestionNumber": 184,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "id": 334,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Perry wants to ensure that an unsecure protocol is secured when in transit through his local network. What solution could he adopt to ensure that this traffic is protected?",
     "options": {
       "A": "Use SD-WAN.",
@@ -4307,12 +4705,13 @@
       "D": "Encrypt all files that are sent using SHA-1."
     },
     "answer": "B",
-    "answerText": "Wrap the protocol using TLS."
+    "answerText": "Wrap the protocol using TLS.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 184
   },
   {
-    "id": 319,
-    "sourceQuestionNumber": 185,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 335,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Annie wants to implement a passwordless authentication system. Which of the following would not meet her needs?",
     "options": {
       "A": "Windows Hello",
@@ -4321,12 +4720,13 @@
       "D": "A FIDO2 security key"
     },
     "answer": "B",
-    "answerText": "A PIN-based factor"
+    "answerText": "A PIN-based factor",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 185
   },
   {
-    "id": 320,
-    "sourceQuestionNumber": 186,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 336,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Laura wants to harden an ICS and SCADA devices her organization uses to manage critical infrastructure. The devices are old and unsupported, without recent updates. What hardening techniques are most likely to be available to her to help deal with these devices?",
     "options": {
       "A": "Isolation",
@@ -4334,13 +4734,14 @@
       "C": "Adding host-based firewalls",
       "D": "Configuring host-based IPS"
     },
-    "answer": "A",
-    "answerText": "Isolation"
+    "answer": "B",
+    "answerText": "Segmentation",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 186
   },
   {
-    "id": 321,
-    "sourceQuestionNumber": 187,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "id": 337,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Bob uses an IoC feed to allow his SIEM to identify and correlate common malicious activity. What phase of the incident response process best describes this?",
     "options": {
       "A": "Preparation",
@@ -4349,12 +4750,13 @@
       "D": "Eradication"
     },
     "answer": "B",
-    "answerText": "Detection"
+    "answerText": "Detection",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 187
   },
   {
-    "id": 322,
-    "sourceQuestionNumber": 188,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 338,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Yael's organization has received a very convincing phishing email that has resulted in staff clicking on a malicious link. If Yael can't remove the email from inboxes, which of the following options will allow her to quickly prevent users from being compromised?",
     "options": {
       "A": "Set up DNS filtering using the URL from the email.",
@@ -4363,12 +4765,13 @@
       "D": "Enable reputation services for the email."
     },
     "answer": "A",
-    "answerText": "Set up DNS filtering using the URL from the email."
+    "answerText": "Set up DNS filtering using the URL from the email.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 188
   },
   {
-    "id": 323,
-    "sourceQuestionNumber": 189,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "id": 339,
+    "domain": "Domain 4 - Security Operations: Data sources",
     "question": "Nick is reviewing his system configurations and notes that logon event auditing settings on the system are set as shown in the example figure. What concern should he express about the setting?",
     "options": {
       "A": "Log files may fill up quickly.",
@@ -4378,13 +4781,12 @@
     },
     "answer": "C",
     "answerText": "Failed authentication will not be logged.",
-    "imageNeeded": true,
-    "imageNote": "This question in the source references an image. Add an image field later if you have the screenshot."
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 189
   },
   {
-    "id": 324,
-    "sourceQuestionNumber": 190,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 340,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Brian is reviewing vulnerabilities discovered as part of a vulnerability scan. He sees a score of 3.0. What does he know about this vulnerability based on its score?",
     "options": {
       "A": "It is a high-severity vulnerability and should be addressed quickly.",
@@ -4393,12 +4795,13 @@
       "D": "It is a critical vulnerability and should be addressed immediately."
     },
     "answer": "B",
-    "answerText": "It is a low-severity vulnerability and may not need to be addressed."
+    "answerText": "It is a low-severity vulnerability and may not need to be addressed.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 190
   },
   {
-    "id": 325,
-    "sourceQuestionNumber": 191,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 341,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Nick wants to allow email servers to validate that email from his servers is actually from them. What email security framework should he adopt to allow this?",
     "options": {
       "A": "DKIM",
@@ -4407,12 +4810,13 @@
       "D": "SMTP"
     },
     "answer": "A",
-    "answerText": "DKIM"
+    "answerText": "DKIM",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 191
   },
   {
-    "id": 326,
-    "sourceQuestionNumber": 192,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 342,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Jack wants to configure a Linux system to use mandatory access controls. What tool should he select that is commonly used to provide this functionality?",
     "options": {
       "A": "Group Policy",
@@ -4421,12 +4825,13 @@
       "D": "Containerization"
     },
     "answer": "C",
-    "answerText": "SELinux"
+    "answerText": "SELinux",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 192
   },
   {
-    "id": 327,
-    "sourceQuestionNumber": 193,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 343,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "What process is commonly used with open source tools to ensure that dependencies are secure?",
     "options": {
       "A": "Static analysis",
@@ -4435,12 +4840,13 @@
       "D": "Port scanning"
     },
     "answer": "B",
-    "answerText": "Package monitoring"
+    "answerText": "Package monitoring",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 193
   },
   {
-    "id": 328,
-    "sourceQuestionNumber": 194,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 344,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Yarif wants to harden his SaaS cloud infrastructure. Which of the following hardening techniques is he most likely to be able to implement in an SaaS environment?",
     "options": {
       "A": "Host-based firewalls",
@@ -4449,12 +4855,13 @@
       "D": "Physical security for systems"
     },
     "answer": "B",
-    "answerText": "Least privilege"
+    "answerText": "Least privilege",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 194
   },
   {
-    "id": 329,
-    "sourceQuestionNumber": 195,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 345,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Which of the following is not a technical control used to address a vulnerability?",
     "options": {
       "A": "Insurance",
@@ -4463,12 +4870,13 @@
       "D": "Firewalling"
     },
     "answer": "A",
-    "answerText": "Insurance"
+    "answerText": "Insurance",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 195
   },
   {
-    "id": 330,
-    "sourceQuestionNumber": 196,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 346,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Kelsey's organization has established an asset and inventory management process for servers. Which of the following is not a common part of asset tracking?",
     "options": {
       "A": "Data classification",
@@ -4476,13 +4884,14 @@
       "C": "Documenting acquisition dates",
       "D": "Sanitization"
     },
-    "answer": "D",
-    "answerText": "Sanitization"
+    "answer": "A",
+    "answerText": "Data classification",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 196
   },
   {
-    "id": 331,
-    "sourceQuestionNumber": 197,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 347,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Kirk needs to allow system administrators to access root passwords in emergencies. What type of solution could he implement to allow them to check out passwords when needed while also tracking those checkouts and requiring the passwords to be changed after use?",
     "options": {
       "A": "EAP",
@@ -4491,12 +4900,13 @@
       "D": "Passwordless"
     },
     "answer": "C",
-    "answerText": "An enterprise password manager"
+    "answerText": "An enterprise password manager",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 197
   },
   {
-    "id": 332,
-    "sourceQuestionNumber": 198,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 348,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Selah wants to prevent staff in her organization from visiting malicious websites while they're in the office. If she wants to use the most up-to-date threat data, what web filter capability should she take advantage of?",
     "options": {
       "A": "Agent-based web filtering",
@@ -4505,12 +4915,13 @@
       "D": "URL scanning"
     },
     "answer": "B",
-    "answerText": "Reputation tools"
+    "answerText": "Reputation tools",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 198
   },
   {
-    "id": 333,
-    "sourceQuestionNumber": 199,
-    "domain": "Domain 4 - Security Operations: Enterprise Security",
+    "id": 349,
+    "domain": "Domain 4 - Security Operations: Enterprise security",
     "question": "Joe has configured ACLs on a Cisco network device. The ACL he has configured is as follows:\n\ninterface ethernet0\n ip access-group 111 in\n!\n\naccess-list 111 deny tcp any any eq http\naccess-list 111 permit ip any any\naccess-list 111 deny tcp any any eq https\n\nWhat does this ACL do?",
     "options": {
       "A": "Blocks HTTP traffic",
@@ -4519,12 +4930,13 @@
       "D": "Allows for inspection of web traffic"
     },
     "answer": "A",
-    "answerText": "Blocks HTTP traffic"
+    "answerText": "Blocks HTTP traffic",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 199
   },
   {
-    "id": 334,
-    "sourceQuestionNumber": 200,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 350,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "The use of machine learning and algorithms to analyze user behavior in order to identify anomalous behavior is a feature of what specialized type of tool?",
     "options": {
       "A": "UEBA",
@@ -4533,12 +4945,13 @@
       "D": "DMARC"
     },
     "answer": "A",
-    "answerText": "UEBA"
+    "answerText": "UEBA",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 200
   },
   {
-    "id": 335,
-    "sourceQuestionNumber": 201,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 351,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What password best practice is supported by the ability to set password history in Windows?",
     "options": {
       "A": "Password length",
@@ -4547,12 +4960,13 @@
       "D": "Password age"
     },
     "answer": "C",
-    "answerText": "Password reuse"
+    "answerText": "Password reuse",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 201
   },
   {
-    "id": 336,
-    "sourceQuestionNumber": 202,
-    "domain": "Domain 4 - Security Operations: Automation and Orchestration",
+    "id": 352,
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Donna is reviewing a script that was found on a Windows system. What does the following script do?\n\n$ip = \"10.1.1.101\"\n\n$svc_name = \"WinDefend\"\n\nget-service -ComputerName $ip |\nWhere-Object {$_.Name -eq $svc_name} |\nStop-Service |\nSet-Service -StartupType Disabled",
     "options": {
       "A": "Stops the Windows Defender service",
@@ -4561,12 +4975,13 @@
       "D": "Enables the Windows Defender service"
     },
     "answer": "C",
-    "answerText": "Stops and disables the Windows Defender service"
+    "answerText": "Stops and disables the Windows Defender service",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 202
   },
   {
-    "id": 337,
-    "sourceQuestionNumber": 203,
-    "domain": "Domain 4 - Security Operations: Automation and Orchestration",
+    "id": 353,
+    "domain": "Domain 4 - Security Operations: Automation and orchestration",
     "question": "Batu has been asked to build scripts that will allow automated ticket creation through a new help desk tool for his organization. As he considers the lifespan of the scripts, which of the following concerns should he address to ensure that the scripts do not become an issue over time?",
     "options": {
       "A": "Their initial creation cost",
@@ -4575,12 +4990,13 @@
       "D": "Whether they're a single point of failure"
     },
     "answer": "B",
-    "answerText": "Their ongoing supportability"
+    "answerText": "Their ongoing supportability",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 203
   },
   {
-    "id": 338,
-    "sourceQuestionNumber": 204,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 354,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Alex is responsible for his organization's vulnerability management program. A recent vulnerability scan shows that IoT devices that are used for building automation are vulnerable to a known issue with their built-in web server. Alex is unable to find an updated operating system or software update. After reviewing the manufacturer's website, he chooses to move the IoT devices to a protected VLAN and require a jump server to access them. What vulnerability remediation option has he used?",
     "options": {
       "A": "A compensating control",
@@ -4589,12 +5005,13 @@
       "D": "An exemption"
     },
     "answer": "A",
-    "answerText": "A compensating control"
+    "answerText": "A compensating control",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 204
   },
   {
-    "id": 339,
-    "sourceQuestionNumber": 205,
-    "domain": "Domain 4 - Security Operations: Incident Response",
+    "id": 355,
+    "domain": "Domain 4 - Security Operations: Incident response",
     "question": "Wiping a drive and reinstalling from known good media is an example of what incident response option?",
     "options": {
       "A": "Recovery",
@@ -4603,12 +5020,13 @@
       "D": "Root cause elimination"
     },
     "answer": "C",
-    "answerText": "Eradication"
+    "answerText": "Eradication",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 205
   },
   {
-    "id": 340,
-    "sourceQuestionNumber": 206,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 356,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Melissa’s company wants to contract with a third-party organization to oversee their hardware decommissioning and disposal process. What should she ask the company to do to prove that the disposal process was done properly?",
     "options": {
       "A": "Certification",
@@ -4617,12 +5035,13 @@
       "D": "Keep a log of devices"
     },
     "answer": "A",
-    "answerText": "Certification"
+    "answerText": "Certification",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 206
   },
   {
-    "id": 341,
-    "sourceQuestionNumber": 207,
-    "domain": "Domain 4 - Security Operations: Vulnerability Management",
+    "id": 357,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Sally wants to identify a way to prioritize vulnerabilities discovered by her vulnerability scanner. Which of the following options will allow her to prioritize vulnerabilities effectively while taking her own organization’s needs into account?",
     "options": {
       "A": "Use CVSS base and temporal metrics.",
@@ -4631,12 +5050,13 @@
       "D": "Use a quantitative risk assessment process."
     },
     "answer": "C",
-    "answerText": "Use CVSS scores that include environmental metrics."
+    "answerText": "Use CVSS scores that include environmental metrics.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 207
   },
   {
-    "id": 342,
-    "sourceQuestionNumber": 208,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 358,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Henry wants to prevent password reuse outside of his organization from impacting the accounts his staff use. Which of the following password settings can have the largest impact if passwords are reused outside of his organization and they are breached due to a security issue at the third-party site or service?",
     "options": {
       "A": "Password expiration policies",
@@ -4645,12 +5065,13 @@
       "D": "Password minimum age policies"
     },
     "answer": "A",
-    "answerText": "Password expiration policies"
+    "answerText": "Password expiration policies",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 208
   },
   {
-    "id": 343,
-    "sourceQuestionNumber": 209,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 359,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Fuzzing is an example of what type of code analysis?",
     "options": {
       "A": "Static analysis",
@@ -4659,12 +5080,13 @@
       "D": "Dynamic analysis"
     },
     "answer": "D",
-    "answerText": "Dynamic analysis"
+    "answerText": "Dynamic analysis",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 209
   },
   {
-    "id": 344,
-    "sourceQuestionNumber": 210,
-    "domain": "Domain 4 - Security Operations: Asset Management",
+    "id": 360,
+    "domain": "Domain 4 - Security Operations: Asset management",
     "question": "Steve’s organization is concerned about the potential for devices they are purchasing to be modified before they reach the organization. Which of the following solutions will help the most in preventing this potential issue?",
     "options": {
       "A": "Buying from a value-added reseller",
@@ -4673,12 +5095,13 @@
       "D": "Buying from a local reseller"
     },
     "answer": "B",
-    "answerText": "Buying directly from the OEM"
+    "answerText": "Buying directly from the OEM",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 210
   },
   {
-    "id": 345,
-    "sourceQuestionNumber": 211,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 361,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "What password setting has the greatest impact when attempting to prevent brute-force password cracking?",
     "options": {
       "A": "Password history settings",
@@ -4687,12 +5110,13 @@
       "D": "Password length decreases"
     },
     "answer": "B",
-    "answerText": "Password length increases"
+    "answerText": "Password length increases",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 211
   },
   {
-    "id": 346,
-    "sourceQuestionNumber": 212,
-    "domain": "Domain 4 - Security Operations: Data Sources, Alerting and Monitoring",
+    "id": 362,
+    "domain": "Domain 4 - Security Operations: Alerting and monitoring",
     "question": "Jill wants to identify a potential network-based distributed denial-of-service (DDoS) attack. Which of the following log sources is most likely to provide information that will allow her to identify the attack?",
     "options": {
       "A": "OS-specific security logs",
@@ -4701,12 +5125,13 @@
       "D": "Authentication logs"
     },
     "answer": "C",
-    "answerText": "IDS/IPS logs"
+    "answerText": "IDS/IPS logs",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 212
   },
   {
-    "id": 347,
-    "sourceQuestionNumber": 213,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 363,
+    "domain": "Domain 4 - Security Operations: Computing resources",
     "question": "Jake has configured WPA3 Personal for his network. What feature makes WPA3 more secure than WPA2’s PSK mode?",
     "options": {
       "A": "SAE",
@@ -4715,12 +5140,13 @@
       "D": "EAP"
     },
     "answer": "A",
-    "answerText": "SAE"
+    "answerText": "SAE",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 213
   },
   {
-    "id": 348,
-    "sourceQuestionNumber": 214,
-    "domain": "Domain 4 - Security Operations: Computing Resources",
+    "id": 364,
+    "domain": "Domain 4 - Security Operations: Vulnerability management",
     "question": "Molly wants to harden embedded systems in her environment. Which of the following options is most likely to be available?",
     "options": {
       "A": "Hardening benchmarks",
@@ -4729,12 +5155,13 @@
       "D": "None; embedded systems have very limited hardening options."
     },
     "answer": "D",
-    "answerText": "None; embedded systems have very limited hardening options."
+    "answerText": "None; embedded systems have very limited hardening options.",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 214
   },
   {
-    "id": 349,
-    "sourceQuestionNumber": 215,
-    "domain": "Domain 4 - Security Operations: Identity and Access Management",
+    "id": 365,
+    "domain": "Domain 4 - Security Operations: Identity and access management",
     "question": "Jean wants to use an identity proofing process as part of her user account creation process. Which of the following is most likely to be useful for identity proofing?",
     "options": {
       "A": "A Google email account",
@@ -4743,6 +5170,8 @@
       "D": "A credit card"
     },
     "answer": "B",
-    "answerText": "A state or nationally issued ID"
+    "answerText": "A state or nationally issued ID",
+    "sourceDomain": "Domain 4.0 Security Operations",
+    "sourceQuestionNumber": 215
   }
 ]
