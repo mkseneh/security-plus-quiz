@@ -2409,8 +2409,8 @@
       "C": "Install antivirus from one vendor on PCs and from another vendor on the server to provide a greater chance of catching malware.",
       "D": "Install antivirus only on workstations to avoid potential issues with server performance."
     },
-    "answer": "A",
-    "answerText": "Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security.",
+    "answer": "C",
+    "answerText": "Install antivirus from one vendor on PCs and from another vendor on the server to provide a greater chance of catching malware.",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 31
   },
@@ -2649,8 +2649,8 @@
       "C": "Role-based access control",
       "D": "Rule-based access control"
     },
-    "answer": "B",
-    "answerText": "Discretionary access control (DAC)",
+    "answer": "D",
+    "answerText": "Rule-based access control",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 47
   },
@@ -2694,8 +2694,8 @@
       "C": "Require password complexity.",
       "D": "Implement single sign-on (SSO)."
     },
-    "answer": "A",
-    "answerText": "Increase minimum password length.",
+    "answer": "C",
+    "answerText": "Require password complexity.",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 50
   },
@@ -3804,8 +3804,8 @@
       "C": "The Five Why’s",
       "D": "A recursion analysis"
     },
-    "answer": "B",
-    "answerText": "A fishbone diagram",
+    "answer": "C",
+    "answerText": "The Five Why’s",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 124
   },
@@ -4314,8 +4314,8 @@
       "C": "Mandatory access control",
       "D": "Attribute-based access control"
     },
-    "answer": "D",
-    "answerText": "Attribute-based access control",
+    "answer": "A",
+    "answerText": "Rule-based access control",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 158
   },
@@ -4464,8 +4464,8 @@
       "C": "Bluejacking may occur.",
       "D": "Bluetooth devices can be fingerprinted."
     },
-    "answer": "C",
-    "answerText": "Bluejacking may occur.",
+    "answer": "D",
+    "answerText": "Bluetooth devices can be fingerprinted.",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 168
   },
@@ -4779,8 +4779,8 @@
       "C": "Failed authentication will not be logged.",
       "D": "Policy may not be enforced properly."
     },
-    "answer": "C",
-    "answerText": "Failed authentication will not be logged.",
+    "answer": "B",
+    "answerText": "Successful authentication will not be logged.",
     "sourceDomain": "Domain 4.0 Security Operations",
     "sourceQuestionNumber": 189
   },
