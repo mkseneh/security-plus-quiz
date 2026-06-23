@@ -23,6 +23,13 @@ const mistakesBtn = document.getElementById("mistakesBtn");
 const clearMistakesBtn = document.getElementById("clearMistakesBtn");
 const mistakeCountEl = document.getElementById("mistakeCount");
 
+const questionImageEl = document.createElement("div");
+questionImageEl.id = "questionImage";
+
+if (questionEl) {
+  questionEl.insertAdjacentElement("afterend", questionImageEl);
+}
+
 fetch("questions.json?v=" + Date.now())
   .then(response => response.json())
   .then(data => {
@@ -83,6 +90,27 @@ function hideFeedbackAreas() {
   explanationEl.style.display = "none";
 }
 
+function hideQuestionImage() {
+  questionImageEl.innerHTML = "";
+  questionImageEl.style.display = "none";
+}
+
+function renderQuestionImage(q) {
+  hideQuestionImage();
+
+  if (!q.image) {
+    return;
+  }
+
+  const img = document.createElement("img");
+  img.src = q.image;
+  img.alt = q.imageAlt || "Question image";
+  img.className = "question-image";
+
+  questionImageEl.appendChild(img);
+  questionImageEl.style.display = "block";
+}
+
 function getCorrectText(q) {
   if (q.answerText) {
     return q.answerText;
@@ -127,6 +155,7 @@ function showQuestion() {
   }
 
   hideFeedbackAreas();
+  hideQuestionImage();
   optionsEl.innerHTML = "";
 
   if (questions.length === 0) {
@@ -175,6 +204,8 @@ function showQuestion() {
 
   domainEl.textContent = q.domain || "";
   questionEl.textContent = q.question || "";
+
+  renderQuestionImage(q);
 
   for (const [letter, text] of Object.entries(q.options || {})) {
     const option = document.createElement("div");
