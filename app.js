@@ -6,6 +6,7 @@ let answered = false;
 let selectedLetter = null;
 let selectedOption = null;
 let reviewMode = false;
+let currentDomainFilter = localStorage.getItem("securityPlusDomainFilter") || "all";
 
 const progressEl = document.getElementById("progress");
 const domainEl = document.getElementById("domain");
@@ -23,6 +24,13 @@ const mistakesBtn = document.getElementById("mistakesBtn");
 const clearMistakesBtn = document.getElementById("clearMistakesBtn");
 const mistakeCountEl = document.getElementById("mistakeCount");
 
+const domainFilterEl = document.createElement("div");
+domainFilterEl.id = "domainFilter";
+
+if (progressEl) {
+  progressEl.insertAdjacentElement("beforebegin", domainFilterEl);
+}
+
 const questionImageEl = document.createElement("div");
 questionImageEl.id = "questionImage";
 
@@ -34,12 +42,9 @@ fetch("questions.json?v=" + Date.now())
   .then(response => response.json())
   .then(data => {
     questions = data;
-    activeQuestions = questions;
 
-    if (currentIndex >= activeQuestions.length) {
-      currentIndex = 0;
-      localStorage.setItem("securityPlusQuestionIndex", currentIndex);
-    }
+    buildDomainButtons();
+    applyCurrentDomainFilter(false);
 
     updateMistakeCount();
     showQuestion();
@@ -135,6 +140,89 @@ function getExplanationText(q) {
   return "";
 }
 
+function getDomainNumber(q) {
+  const domainText = q.domain || "";
+  const match = domainText.match(/Domain\s+(\d+)/i);
+
+  if (!match) {
+    return null;
+  }
+
+  return match[1];
+}
+
+function getAvailableDomains() {
+  const domains = new Set();
+
+  questions.forEach(q => {
+    const domainNumber = getDomainNumber(q);
+
+    if (domainNumber) {
+      domains.add(domainNumber);
+    }
+  });
+
+  return Array.from(domains).sort((a, b) => Number(a) - Number(b));
+}
+
+function buildDomainButtons() {
+  domainFilterEl.innerHTML = "";
+
+  const allButton = document.createElement("button");
+  allButton.type = "button";
+  allButton.textContent = "All";
+  allButton.className = currentDomainFilter === "all" ? "domain-filter-btn active-domain" : "domain-filter-btn";
+
+  allButton.addEventListener("click", () => {
+    reviewMode = false;
+    currentDomainFilter = "all";
+    localStorage.setItem("securityPlusDomainFilter", currentDomainFilter);
+    currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
+    applyCurrentDomainFilter(true);
+    buildDomainButtons();
+    showQuestion();
+  });
+
+  domainFilterEl.appendChild(allButton);
+
+  const domains = getAvailableDomains();
+
+  domains.forEach(domainNumber => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Domain " + domainNumber;
+    button.className = currentDomainFilter === domainNumber ? "domain-filter-btn active-domain" : "domain-filter-btn";
+
+    button.addEventListener("click", () => {
+      reviewMode = false;
+      currentDomainFilter = domainNumber;
+      localStorage.setItem("securityPlusDomainFilter", currentDomainFilter);
+      currentIndex = 0;
+      applyCurrentDomainFilter(true);
+      buildDomainButtons();
+      showQuestion();
+    });
+
+    domainFilterEl.appendChild(button);
+  });
+}
+
+function applyCurrentDomainFilter(resetIfNeeded) {
+  if (currentDomainFilter === "all") {
+    activeQuestions = questions;
+  } else {
+    activeQuestions = questions.filter(q => getDomainNumber(q) === currentDomainFilter);
+  }
+
+  if (resetIfNeeded || currentIndex >= activeQuestions.length) {
+    currentIndex = 0;
+  }
+
+  if (!reviewMode && currentDomainFilter === "all") {
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  }
+}
+
 function showQuestion() {
   if (prevBtn) {
     prevBtn.disabled = currentIndex <= 0;
@@ -180,6 +268,17 @@ function showQuestion() {
     return;
   }
 
+  if (!reviewMode && currentDomainFilter !== "all" && activeQuestions.length === 0) {
+    questionEl.textContent = "No questions found for Domain " + currentDomainFilter + ".";
+    domainEl.textContent = "";
+    progressEl.textContent = "Domain " + currentDomainFilter;
+
+    if (nextBtn) nextBtn.style.display = "none";
+    if (skipBtn) skipBtn.style.display = "none";
+
+    return;
+  }
+
   if (currentIndex >= activeQuestions.length) {
     questionEl.textContent = reviewMode
       ? "You have reviewed all missed questions."
@@ -198,9 +297,13 @@ function showQuestion() {
 
   const q = activeQuestions[currentIndex];
 
-  progressEl.textContent = reviewMode
-    ? "Review Mistakes: Question " + (currentIndex + 1) + " of " + activeQuestions.length
-    : "Question " + (currentIndex + 1) + " of " + activeQuestions.length;
+  if (reviewMode) {
+    progressEl.textContent = "Review Mistakes: Question " + (currentIndex + 1) + " of " + activeQuestions.length;
+  } else if (currentDomainFilter === "all") {
+    progressEl.textContent = "Question " + (currentIndex + 1) + " of " + activeQuestions.length;
+  } else {
+    progressEl.textContent = "Domain " + currentDomainFilter + ": Question " + (currentIndex + 1) + " of " + activeQuestions.length;
+  }
 
   domainEl.textContent = q.domain || "";
   questionEl.textContent = q.question || "";
@@ -323,7 +426,7 @@ if (nextBtn) {
   nextBtn.addEventListener("click", () => {
     currentIndex++;
 
-    if (!reviewMode) {
+    if (!reviewMode && currentDomainFilter === "all") {
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
 
@@ -335,7 +438,7 @@ if (skipBtn) {
   skipBtn.addEventListener("click", () => {
     currentIndex++;
 
-    if (!reviewMode) {
+    if (!reviewMode && currentDomainFilter === "all") {
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
 
@@ -346,9 +449,12 @@ if (skipBtn) {
 if (resetBtn) {
   resetBtn.addEventListener("click", () => {
     reviewMode = false;
+    currentDomainFilter = "all";
+    localStorage.setItem("securityPlusDomainFilter", currentDomainFilter);
     activeQuestions = questions;
     currentIndex = 0;
     localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+    buildDomainButtons();
     showQuestion();
   });
 }
@@ -356,6 +462,8 @@ if (resetBtn) {
 if (allBtn) {
   allBtn.addEventListener("click", () => {
     reviewMode = false;
+    currentDomainFilter = "all";
+    localStorage.setItem("securityPlusDomainFilter", currentDomainFilter);
     activeQuestions = questions;
     currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
 
@@ -363,6 +471,7 @@ if (allBtn) {
       currentIndex = 0;
     }
 
+    buildDomainButtons();
     showQuestion();
   });
 }
@@ -370,9 +479,11 @@ if (allBtn) {
 if (mistakesBtn) {
   mistakesBtn.addEventListener("click", () => {
     reviewMode = true;
+    currentDomainFilter = "mistakes";
     const mistakeIds = getMistakeIds();
     activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
     currentIndex = 0;
+    buildDomainButtons();
     showQuestion();
   });
 }
@@ -397,7 +508,7 @@ if (prevBtn) {
 
     currentIndex--;
 
-    if (!reviewMode) {
+    if (!reviewMode && currentDomainFilter === "all") {
       localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     }
 
