@@ -84,19 +84,27 @@ function hideFeedbackAreas() {
 }
 
 function getCorrectText(q) {
-  return q.answerText || (q.options && q.options[q.answer]) || "";
+  if (q.answerText) {
+    return q.answerText;
+  }
+
+  if (q.options && q.options[q.answer]) {
+    return q.options[q.answer];
+  }
+
+  return "";
 }
 
 function getExplanationText(q) {
-  if (q.moreText) return q.moreText;
-  if (q.more) return q.more;
-  if (q.explanation) return q.explanation;
+  if (q.explanation) {
+    return q.explanation;
+  }
 
   if (q.teachingExplanation && q.teachingExplanation.finalAnswerExplanation) {
     return q.teachingExplanation.finalAnswerExplanation;
   }
 
-  return "No explanation has been added for this question yet.";
+  return "";
 }
 
 function showQuestion() {
@@ -214,11 +222,18 @@ function selectOption(option, letter) {
 }
 
 function renderExplanation(q) {
+  const explanationText = getExplanationText(q);
+
   explanationEl.innerHTML = "";
+
+  if (!explanationText) {
+    explanationEl.style.display = "none";
+    return;
+  }
 
   const box = document.createElement("div");
   box.className = "explanation-box";
-  box.textContent = getExplanationText(q);
+  box.textContent = explanationText;
 
   explanationEl.appendChild(box);
   explanationEl.style.display = "block";
@@ -254,16 +269,21 @@ function checkAnswer(selectedOption, selected, q) {
 
   feedbackEl.style.display = "block";
   feedbackEl.innerHTML = "";
-  explanationEl.innerHTML = "";
 
   const result = document.createElement("p");
   result.className = selected === q.answer ? "correct-text" : "wrong-text";
 
   result.textContent = selected === q.answer
     ? "You selected " + selected + ". Correct."
-    : "You selected " + selected + ". Correct answer: " + q.answer + ". " + getCorrectText(q);
+    : "You selected " + selected + ". Incorrect.";
 
   feedbackEl.appendChild(result);
+
+  const correctAnswer = document.createElement("p");
+  correctAnswer.className = "correct-answer-text";
+  correctAnswer.textContent = "Correct answer: " + q.answer + ". " + getCorrectText(q);
+
+  feedbackEl.appendChild(correctAnswer);
 
   renderExplanation(q);
 }
