@@ -87,8 +87,8 @@
       "C": "Operational",
       "D": "Physical"
     },
-    "answer": "A",
-    "answerText": "Technical"
+    "answer": "C",
+    "answerText": "Operational"
   },
   {
     "id": 8,
@@ -165,8 +165,8 @@
       "C": "Corrective",
       "D": "Preventive"
     },
-    "answer": "B",
-    "answerText": "Detective"
+    "answer": "D",
+    "answerText": "Preventive"
   },
   {
     "id": 14,
@@ -204,8 +204,8 @@
       "C": "Zero trust",
       "D": "Multifactor authentication (MFA)"
     },
-    "answer": "D",
-    "answerText": "Multifactor authentication (MFA)"
+    "answer": "C",
+    "answerText": "Zero trust"
   },
   {
     "id": 17,
@@ -607,8 +607,8 @@
       "C": "A list of stakeholders",
       "D": "A list of dependencies for impacted systems"
     },
-    "answer": "D",
-    "answerText": "A list of dependencies for impacted systems"
+    "answer": "B",
+    "answerText": "An estimate of the downtime expected"
   },
   {
     "id": 48,
@@ -789,8 +789,8 @@
       "C": "A compensating control",
       "D": "A preventive control"
     },
-    "answer": "D",
-    "answerText": "A preventive control"
+    "answer": "B",
+    "answerText": "A directive control"
   },
   {
     "id": 62,
@@ -971,8 +971,8 @@
       "C": "They provide control over cryptographic security for the customer.",
       "D": "They allow more flexibility in TLS version selection."
     },
-    "answer": "B",
-    "answerText": "They allow certificates for domains other than the service provider's domain."
+    "answer": "C",
+    "answerText": "They provide control over cryptographic security for the customer."
   },
   {
     "id": 76,
@@ -1816,8 +1816,8 @@
       "C": "Microwave sensors",
       "D": "Ultrasonic sensors"
     },
-    "answer": "D",
-    "answerText": "Ultrasonic sensors"
+    "answer": "C",
+    "answerText": "Microwave sensors"
   },
   {
     "id": 141,
