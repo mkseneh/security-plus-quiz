@@ -299,3 +299,55 @@ button.danger {
   border-radius: 10px;
   border: 1px solid #d1d5db;
 }
+
+#gotoBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0 20px 0;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+#gotoBar span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#gotoDomainSelect,
+#gotoQuestionInput {
+  width: 230px;
+}
+
+#gotoQuestionInput {
+  width: 130px;
+}
+
+#gotoQuestionBtn {
+  padding: 11px 18px;
+}
+
+#gotoMessage {
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+#gotoDomainSelect {
+  width: 180px;
+  min-width: 180px;
+}
+
+#gotoQuestionBtn {
+  height: 62px;
+  min-width: 90px;
+  border-radius: 12px;
+}
+
+#gotoBar {
+  align-items: center;
+}
