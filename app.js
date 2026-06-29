@@ -158,9 +158,30 @@ function renderQuestionImage(q) {
   img.src = q.image;
   img.alt = q.imageAlt || "Question image";
   img.className = "question-image";
+  img.loading = "lazy";
+
+  /*
+    Image sizing is controlled here deliberately.
+    This avoids old CSS conflicts and works better on iPhone.
+  */
+  img.style.width = "100%";
+  img.style.maxWidth = "100%";
+  img.style.height = "auto";
+  img.style.maxHeight = "none";
+  img.style.objectFit = "contain";
+  img.style.display = "block";
+  img.style.borderRadius = "10px";
+  img.style.border = "1px solid #d1d5db";
+  img.style.background = "#f8fafc";
+
+  questionImageEl.innerHTML = "";
+  questionImageEl.style.display = "block";
+  questionImageEl.style.width = "100%";
+  questionImageEl.style.maxWidth = "100%";
+  questionImageEl.style.margin = "16px 0 20px 0";
+  questionImageEl.style.overflow = "visible";
 
   questionImageEl.appendChild(img);
-  questionImageEl.style.display = "block";
 }
 
 function getCorrectText(q) {
