@@ -328,6 +328,38 @@ function applyCurrentDomainFilter(resetIfNeeded) {
   }
 }
 
+
+/* iPhone single tap support START */
+function enableSingleTapButtons() {
+  const buttonIds = [
+    "nextBtn",
+    "prevBtn",
+    "skipBtn",
+    "checkAnswerBtn",
+    "gotoQuestionBtn"
+  ];
+
+  buttonIds.forEach(id => {
+    const button = document.getElementById(id);
+
+    if (!button || button.dataset.singleTapReady === "1") {
+      return;
+    }
+
+    button.dataset.singleTapReady = "1";
+
+    button.addEventListener("touchend", event => {
+      if (button.disabled) {
+        return;
+      }
+
+      event.preventDefault();
+      button.click();
+    }, { passive: false });
+  });
+}
+/* iPhone single tap support END */
+
 function showQuestion() {
   if (prevBtn) {
     prevBtn.disabled = currentIndex <= 0;
@@ -693,3 +725,6 @@ function professionaliseButtonLayout() {
 
 setTimeout(professionaliseButtonLayout, 50);
 window.addEventListener("load", professionaliseButtonLayout);
+
+
+window.addEventListener("load", enableSingleTapButtons);

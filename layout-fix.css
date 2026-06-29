@@ -217,3 +217,15 @@ h1 {
     font-size: 0.85rem !important;
   }
 }
+
+
+/* iPhone single tap fix */
+button,
+.option {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  user-select: none;
+}
