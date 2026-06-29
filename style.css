@@ -1368,3 +1368,38 @@ button {
     box-sizing: border-box !important;
   }
 }
+
+
+/* WIDE mobile question card fix */
+@media (max-width: 600px) {
+  .card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #question {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #options {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #options .option {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
