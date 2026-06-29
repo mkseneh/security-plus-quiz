@@ -31,6 +31,52 @@ if (progressEl) {
   progressEl.insertAdjacentElement("beforebegin", domainFilterEl);
 }
 
+const gotoBarEl = document.createElement("div");
+gotoBarEl.id = "gotoBar";
+
+const gotoLabelEl = document.createElement("span");
+gotoLabelEl.className = "goto-label";
+gotoLabelEl.textContent = "Go to:";
+
+const gotoDomainSelectEl = document.createElement("select");
+gotoDomainSelectEl.className = "goto-domain-select";
+gotoDomainSelectEl.id = "gotoDomainSelect";
+
+const gotoQuestionInputEl = document.createElement("input");
+gotoQuestionInputEl.className = "goto-question-input";
+gotoQuestionInputEl.id = "gotoQuestionInput";
+gotoQuestionInputEl.type = "number";
+gotoQuestionInputEl.min = "1";
+gotoQuestionInputEl.placeholder = "Question no.";
+
+const gotoButtonEl = document.createElement("button");
+gotoButtonEl.id = "gotoButton";
+gotoButtonEl.className = "goto-button";
+gotoButtonEl.type = "button";
+gotoButtonEl.id = "gotoQuestionBtn";
+gotoButtonEl.textContent = "Go";
+
+const gotoMessageEl = document.createElement("span");
+gotoMessageEl.id = "gotoMessage";
+gotoMessageEl.className = "goto-message";
+
+gotoBarEl.appendChild(gotoLabelEl);
+gotoBarEl.appendChild(gotoDomainSelectEl);
+gotoBarEl.appendChild(gotoQuestionInputEl);
+gotoBarEl.appendChild(gotoButtonEl);
+gotoBarEl.appendChild(gotoMessageEl);
+
+if (domainFilterEl) {
+  domainFilterEl.insertAdjacentElement("afterend", gotoBarEl);
+}
+
+gotoButtonEl.addEventListener("click", goToRequestedQuestion);
+gotoQuestionInputEl.addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    goToRequestedQuestion();
+  }
+});
+
 const questionImageEl = document.createElement("div");
 questionImageEl.id = "questionImage";
 
@@ -44,6 +90,7 @@ fetch("questions.json?v=" + Date.now())
     questions = data;
 
     buildDomainButtons();
+    buildGotoControls();
     applyCurrentDomainFilter(false);
 
     updateMistakeCount();
@@ -180,6 +227,7 @@ function buildDomainButtons() {
     currentIndex = Number(localStorage.getItem("securityPlusQuestionIndex")) || 0;
     applyCurrentDomainFilter(true);
     buildDomainButtons();
+    buildGotoControls();
     showQuestion();
   });
 
@@ -205,6 +253,63 @@ function buildDomainButtons() {
 
     domainFilterEl.appendChild(button);
   });
+}
+
+function buildGotoControls() {
+  if (!gotoDomainSelectEl) return;
+
+  gotoDomainSelectEl.innerHTML = "";
+
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "All domains";
+  gotoDomainSelectEl.appendChild(allOption);
+
+  getAvailableDomains().forEach(domainNumber => {
+    const option = document.createElement("option");
+    option.value = domainNumber;
+    option.textContent = "Domain " + domainNumber;
+    gotoDomainSelectEl.appendChild(option);
+  });
+
+  gotoDomainSelectEl.value = currentDomainFilter === "mistakes" ? "all" : currentDomainFilter;
+}
+
+function goToRequestedQuestion() {
+  const selectedDomain = gotoDomainSelectEl.value || "all";
+  const requestedNumber = Number(gotoQuestionInputEl.value);
+
+  gotoMessageEl.textContent = "";
+
+  if (!Number.isInteger(requestedNumber) || requestedNumber < 1) {
+    gotoMessageEl.textContent = "Enter a valid question number.";
+    return;
+  }
+
+  reviewMode = false;
+  currentDomainFilter = selectedDomain;
+  localStorage.setItem("securityPlusDomainFilter", currentDomainFilter);
+
+  applyCurrentDomainFilter(true);
+
+  if (requestedNumber > activeQuestions.length) {
+    gotoMessageEl.textContent = "Only " + activeQuestions.length + " question(s) in this selection.";
+    return;
+  }
+
+  currentIndex = requestedNumber - 1;
+
+  if (currentDomainFilter === "all") {
+    localStorage.setItem("securityPlusQuestionIndex", currentIndex);
+  }
+
+  buildDomainButtons();
+  buildGotoControls();
+  showQuestion();
+
+  gotoMessageEl.textContent = currentDomainFilter === "all"
+    ? "Showing question " + requestedNumber + "."
+    : "Showing Domain " + currentDomainFilter + ", question " + requestedNumber + ".";
 }
 
 function applyCurrentDomainFilter(resetIfNeeded) {
@@ -455,6 +560,7 @@ if (resetBtn) {
     currentIndex = 0;
     localStorage.setItem("securityPlusQuestionIndex", currentIndex);
     buildDomainButtons();
+    buildGotoControls();
     showQuestion();
   });
 }
@@ -472,6 +578,7 @@ if (allBtn) {
     }
 
     buildDomainButtons();
+    buildGotoControls();
     showQuestion();
   });
 }
@@ -484,6 +591,7 @@ if (mistakesBtn) {
     activeQuestions = questions.filter(q => mistakeIds.includes(String(q.id)));
     currentIndex = 0;
     buildDomainButtons();
+    buildGotoControls();
     showQuestion();
   });
 }
