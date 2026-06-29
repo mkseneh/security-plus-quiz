@@ -654,131 +654,214 @@ button {
 }
 
 
-/* FINAL SIMPLE MOBILE LAYOUT - DO NOT ADD MORE BELOW */
+/* FINAL clean quiz layout */
 * {
   box-sizing: border-box;
 }
 
-/* Desktop/tablet question card */
-.card {
+/* Keep main controls tidy */
+#gotoBar {
+  width: min(760px, 100%);
+  margin: 14px auto 18px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr 150px 80px;
+  gap: 8px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+}
+
+#gotoBar span:first-child {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#gotoDomainSelect,
+#gotoQuestionInput {
   width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#gotoQuestionBtn {
+  height: 40px;
+  min-width: 0;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+/* Button groups */
+#quizToolbar {
+  width: min(760px, 100%);
+  margin: 0 auto 18px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.quiz-toolbar-group {
+  display: contents;
+}
+
+#quizToolbar button {
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.quiz-toolbar-danger-group button:last-child {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+/* Critical: answer options stay inside the card */
+.card {
+  overflow: visible;
   max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
 }
 
 #options {
   width: 100%;
   max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  overflow: visible;
 }
 
 #options .option {
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  margin: 0;
+  display: block;
   white-space: normal;
   overflow-wrap: break-word;
+  word-break: normal;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
+/* Bottom question actions */
+#questionActionBar {
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
+.question-action-primary,
+.question-action-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
   body {
+    padding: 10px;
     overflow-x: hidden;
   }
 
   h1 {
-    font-size: 1.55rem !important;
+    font-size: 1.55rem;
     line-height: 1.2;
-    margin: 12px 0 14px 0;
+    margin: 12px 0;
   }
 
-  #domainFilter {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  #domainButtons,
+  .domain-buttons {
+    display: flex;
     justify-content: center;
     gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 
-  #domainFilter .domain-filter-btn {
-    height: 34px;
-    padding: 0 10px;
+  #domainButtons button,
+  .domain-buttons button {
+    min-height: 32px;
+    padding: 6px 10px;
     font-size: 0.82rem;
     border-radius: 8px;
   }
 
   #gotoBar {
-    width: 100% !important;
-    margin: 8px 0 12px 0 !important;
-    padding: 8px !important;
-    display: grid !important;
-    grid-template-columns: 1fr 76px !important;
-    gap: 7px !important;
+    width: 100%;
+    margin: 8px 0 12px 0;
+    padding: 8px;
+    grid-template-columns: 1fr 76px;
+    gap: 7px;
   }
 
-  #gotoBar .goto-label,
   #gotoBar span:first-child {
-    display: none !important;
+    display: none;
   }
 
   #gotoDomainSelect {
     grid-column: 1 / -1;
-    width: 100% !important;
-    min-width: 0 !important;
     height: 36px;
     font-size: 0.88rem;
   }
 
   #gotoQuestionInput {
     grid-column: 1 / 2;
-    width: 100% !important;
-    min-width: 0 !important;
     height: 36px;
     font-size: 0.88rem;
   }
 
   #gotoQuestionBtn {
     grid-column: 2 / 3;
-    width: 100% !important;
-    min-width: 0 !important;
     height: 36px;
-    padding: 0 !important;
     font-size: 0.88rem;
+    padding: 0;
   }
 
-  #progress {
-    width: 100% !important;
-    margin: 10px 0 12px 0 !important;
-    font-size: 0.92rem;
+  #quizToolbar {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  #quizToolbar button {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 0.78rem;
   }
 
   .card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 10px 0 !important;
-    padding: 16px !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0;
+    padding: 16px;
     border-radius: 12px;
-    overflow: hidden !important;
+    overflow: visible;
   }
 
   #domain {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   #question {
-    width: 100% !important;
-    max-width: 100% !important;
-    font-size: 1.18rem !important;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.22rem;
     line-height: 1.35;
     overflow-wrap: break-word;
   }
@@ -786,41 +869,575 @@ button {
   #questionImage,
   #questionImage img,
   .question-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #options {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #options .option {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 11px 12px;
+    font-size: 0.92rem;
+    line-height: 1.3;
+    border-radius: 8px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  #questionActionBar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .question-action-primary,
+  .question-action-nav {
+    width: 100%;
+    display: grid;
+    gap: 7px;
+  }
+
+  .question-action-primary {
+    grid-template-columns: 1fr;
+  }
+
+  .question-action-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #questionActionBar button {
+    width: 100%;
+    min-height: 34px;
+    padding: 6px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+}
+
+
+/* FINAL clean quiz layout */
+* {
+  box-sizing: border-box;
+}
+
+/* Keep main controls tidy */
+#gotoBar {
+  width: min(760px, 100%);
+  margin: 14px auto 18px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr 150px 80px;
+  gap: 8px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+}
+
+#gotoBar span:first-child {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#gotoDomainSelect,
+#gotoQuestionInput {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#gotoQuestionBtn {
+  height: 40px;
+  min-width: 0;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+/* Button groups */
+#quizToolbar {
+  width: min(760px, 100%);
+  margin: 0 auto 18px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.quiz-toolbar-group {
+  display: contents;
+}
+
+#quizToolbar button {
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.quiz-toolbar-danger-group button:last-child {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+/* Critical: answer options stay inside the card */
+.card {
+  overflow: visible;
+  max-width: 1100px;
+}
+
+#options {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  overflow: visible;
+}
+
+#options .option {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: block;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Bottom question actions */
+#questionActionBar {
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.question-action-primary,
+.question-action-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin: 12px 0;
+  }
+
+  #domainButtons,
+  .domain-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  #domainButtons button,
+  .domain-buttons button {
+    min-height: 32px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    border-radius: 8px;
+  }
+
+  #gotoBar {
+    width: 100%;
+    margin: 8px 0 12px 0;
+    padding: 8px;
+    grid-template-columns: 1fr 76px;
+    gap: 7px;
+  }
+
+  #gotoBar span:first-child {
+    display: none;
+  }
+
+  #gotoDomainSelect {
+    grid-column: 1 / -1;
+    height: 36px;
+    font-size: 0.88rem;
+  }
+
+  #gotoQuestionInput {
+    grid-column: 1 / 2;
+    height: 36px;
+    font-size: 0.88rem;
+  }
+
+  #gotoQuestionBtn {
+    grid-column: 2 / 3;
+    height: 36px;
+    font-size: 0.88rem;
+    padding: 0;
+  }
+
+  #quizToolbar {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  #quizToolbar button {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 0.78rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 12px;
+    overflow: visible;
+  }
+
+  #domain {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  #question {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.22rem;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
+
+  #questionImage,
+  #questionImage img,
+  .question-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #options {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #options .option {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 11px 12px;
+    font-size: 0.92rem;
+    line-height: 1.3;
+    border-radius: 8px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  #questionActionBar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .question-action-primary,
+  .question-action-nav {
+    width: 100%;
+    display: grid;
+    gap: 7px;
+  }
+
+  .question-action-primary {
+    grid-template-columns: 1fr;
+  }
+
+  .question-action-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #questionActionBar button {
+    width: 100%;
+    min-height: 34px;
+    padding: 6px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+}
+
+
+/* EMERGENCY mobile containment fix */
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .card {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    padding: 18px !important;
+    overflow: hidden !important;
+  }
+
+  #question {
+    font-size: 1.28rem !important;
+    line-height: 1.35 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+
+  #options {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 16px 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  #options .option {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 0 10px 0 !important;
+    padding: 12px 14px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
+  }
+
+  #checkAnswerBtn,
+  #prevBtn,
+  #skipBtn,
+  #nextBtn,
+  #questionActionBar button {
+    width: auto !important;
+    max-width: 100% !important;
+    min-height: 38px !important;
+    padding: 8px 12px !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+  }
+
+  #questionActionBar {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .question-action-primary,
+  .question-action-nav {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+
+
+
+/* FINAL REAL mobile overflow fix */
+@media (max-width: 600px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .card {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 16px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  #question {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 1.22rem !important;
+    line-height: 1.35 !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
   }
 
   #options {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 14px;
-    padding: 0;
     display: block !important;
-    overflow: hidden;
+    margin: 14px 0 0 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   #options .option {
-    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 10px 0 !important;
     padding: 11px 12px !important;
-    font-size: 0.92rem !important;
-    line-height: 1.3;
-    border-radius: 8px;
     box-sizing: border-box !important;
+    display: block !important;
     white-space: normal !important;
     overflow-wrap: break-word !important;
+    word-break: normal !important;
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
   }
 
-  .button-row {
+  #questionActionBar {
+    width: 100% !important;
+    max-width: 100% !important;
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 8px;
+    gap: 8px !important;
+    box-sizing: border-box !important;
   }
 
-  button {
-    max-width: 100%;
-    box-sizing: border-box;
+  .question-action-primary,
+  .question-action-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  #questionActionBar button,
+  #checkAnswerBtn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 38px !important;
+    padding: 8px 10px !important;
+    font-size: 0.9rem !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
+/* WIDE mobile question card fix */
+@media (max-width: 600px) {
+  .card {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #question {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #options {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #options .option {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+/* TRUE full width mobile card fix */
+@media (max-width: 600px) {
+  body {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    overflow-x: hidden !important;
+  }
+
+  .card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #options {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #options .option {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
 }
