@@ -717,3 +717,198 @@ button {
     text-align: left !important;
   }
 }
+
+/* ============================================================
+   FINAL iPhone / mobile cleanup
+   Put this at the very bottom of style.css
+   ============================================================ */
+
+/* Stop the page feeling cramped on phones */
+body {
+  overflow-x: hidden;
+}
+
+/* Domain buttons */
+#domainFilter {
+  width: min(1000px, calc(100% - 24px)) !important;
+  margin: 0 auto 18px auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+/* Go-to bar desktop/tablet */
+#gotoBar {
+  width: min(760px, calc(100% - 24px)) !important;
+  margin: 0 auto 24px auto !important;
+  padding: 14px !important;
+  box-sizing: border-box !important;
+}
+
+/* The image wrapper */
+#questionImage {
+  width: 100% !important;
+  margin: 18px 0 22px 0 !important;
+  overflow: hidden !important;
+}
+
+/* Desktop image: readable, not massive */
+#questionImage img.question-image,
+.question-image {
+  width: auto !important;
+  max-width: min(100%, 620px) !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important;
+}
+
+/* ============================================================
+   iPhone layout
+   ============================================================ */
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.15 !important;
+    margin: 18px 12px 20px 12px !important;
+    text-align: center !important;
+  }
+
+  #domainFilter {
+    width: calc(100% - 24px) !important;
+    margin: 0 auto 14px auto !important;
+    justify-content: center !important;
+  }
+
+  #domainFilter .domain-filter-btn {
+    height: 36px !important;
+    padding: 0 12px !important;
+    font-size: 0.85rem !important;
+    border-radius: 8px !important;
+  }
+
+  #gotoBar {
+    width: calc(100% - 24px) !important;
+    margin: 0 auto 20px auto !important;
+    padding: 14px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    border-radius: 12px !important;
+  }
+
+  #gotoBar .goto-label {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+  }
+
+  #gotoDomainSelect,
+  #gotoQuestionInput,
+  #gotoButton {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 42px !important;
+    box-sizing: border-box !important;
+    font-size: 1rem !important;
+  }
+
+  #gotoMessage {
+    grid-column: auto !important;
+    text-align: left !important;
+    font-size: 0.9rem !important;
+    margin-top: 0 !important;
+  }
+
+  #progress {
+    width: calc(100% - 24px) !important;
+    margin: 18px auto !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Main quiz card */
+  .quiz-card,
+  .question-card,
+  .card,
+  main,
+  #quiz,
+  #quizContainer {
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Question card spacing */
+  .quiz-card,
+  .question-card,
+  .card {
+    padding: 18px !important;
+    border-radius: 14px !important;
+  }
+
+  #domain {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  #question {
+    font-size: 1.25rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* iPhone image: use full card width, keep natural shape */
+  #questionImage {
+    width: 100% !important;
+    margin: 16px 0 20px 0 !important;
+  }
+
+  #questionImage img.question-image,
+  .question-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 10px !important;
+  }
+
+  #options {
+    width: 100% !important;
+  }
+
+  #options button,
+  .option,
+  .answer-option {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    padding: 12px 14px !important;
+  }
+
+  #checkAnswerBtn,
+  #prevBtn,
+  #skipBtn,
+  #nextBtn,
+  #resetBtn,
+  #allBtn,
+  #mistakesBtn,
+  #clearMistakesBtn {
+    min-height: 42px !important;
+    font-size: 0.95rem !important;
+    border-radius: 9px !important;
+  }
+}
+
