@@ -2854,7 +2854,7 @@
   {
     "id": 211,
     "domain": "Domain 4 - Security Operations: Vulnerability management",
-    "question": "What phase of the incident response process should be placed at point A in the following image?
+    "question": "What phase of the incident response process should be placed at point A in the following image?",
     "options": {
       "A": "Simulations",
       "B": "Review",
