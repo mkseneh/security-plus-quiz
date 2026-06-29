@@ -2172,7 +2172,9 @@
     "answer": "C",
     "answerText": "Review the vulnerability descriptions in the CVEs listed.",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 15
+    "sourceQuestionNumber": 15,
+    "image": "images/domain4-question15.jpg",
+    "imageAlt": "Image for Domain 4 question 15"
   },
   {
     "id": 166,
@@ -2862,7 +2864,9 @@
     "answer": "C",
     "answerText": "Recovery",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 61
+    "sourceQuestionNumber": 61,
+    "image": "images/domain4-question61.jpg",
+    "imageAlt": "Image for Domain 4 question 61"
   },
   {
     "id": 212,
@@ -3297,7 +3301,9 @@
     "answer": "B",
     "answerText": "Containment",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 90
+    "sourceQuestionNumber": 90,
+    "image": "images/domain4-question90.jpg",
+    "imageAlt": "Image for Domain 4 question 90"
   },
   {
     "id": 241,
@@ -3582,7 +3588,9 @@
     "answer": "D",
     "answerText": "A single point of failure",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 109
+    "sourceQuestionNumber": 109,
+    "image": "images/domain4-question109.jpg",
+    "imageAlt": "Image for Domain 4 question 109"
   },
   {
     "id": 260,
@@ -3627,7 +3635,9 @@
     "answer": "D",
     "answerText": "A denial-of-service attack",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 112
+    "sourceQuestionNumber": 112,
+    "image": "images/domain4-question112.jpg",
+    "imageAlt": "Image for Domain 4 question 112"
   },
   {
     "id": 263,
@@ -4782,7 +4792,9 @@
     "answer": "B",
     "answerText": "Successful authentication will not be logged.",
     "sourceDomain": "Domain 4.0 Security Operations",
-    "sourceQuestionNumber": 189
+    "sourceQuestionNumber": 189,
+    "image": "images/domain4-question189.jpg",
+    "imageAlt": "Image for Domain 4 question 189"
   },
   {
     "id": 340,
