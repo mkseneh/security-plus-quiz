@@ -623,3 +623,73 @@ if (prevBtn) {
     showQuestion();
   });
 }
+
+function professionaliseButtonLayout() {
+  if (document.body.dataset.buttonLayoutReady === "true") return;
+
+  const allButtons = Array.from(document.querySelectorAll("button"));
+
+  function findButton(text) {
+    return allButtons.find(btn => btn.textContent.trim().toLowerCase() === text.toLowerCase());
+  }
+
+  const allQuestionsBtn = findButton("All Questions");
+  const reviewMistakesBtn = allButtons.find(btn => btn.textContent.trim().toLowerCase().startsWith("review mistakes"));
+  const resetProgressBtn = findButton("Reset Progress");
+  const clearMistakesBtn = findButton("Clear Mistakes");
+
+  const gotoBar = document.getElementById("gotoBar");
+
+  if (gotoBar && (allQuestionsBtn || reviewMistakesBtn || resetProgressBtn || clearMistakesBtn)) {
+    const toolbar = document.createElement("div");
+    toolbar.id = "quizToolbar";
+
+    const leftGroup = document.createElement("div");
+    leftGroup.className = "quiz-toolbar-group";
+
+    const rightGroup = document.createElement("div");
+    rightGroup.className = "quiz-toolbar-group quiz-toolbar-danger-group";
+
+    if (allQuestionsBtn) leftGroup.appendChild(allQuestionsBtn);
+    if (reviewMistakesBtn) leftGroup.appendChild(reviewMistakesBtn);
+    if (resetProgressBtn) rightGroup.appendChild(resetProgressBtn);
+    if (clearMistakesBtn) rightGroup.appendChild(clearMistakesBtn);
+
+    toolbar.appendChild(leftGroup);
+    toolbar.appendChild(rightGroup);
+
+    gotoBar.insertAdjacentElement("afterend", toolbar);
+  }
+
+  const checkAnswerBtn = findButton("Check Answer");
+  const previousBtn = findButton("Previous Question");
+  const skipBtn = findButton("Skip Question");
+  const nextBtn = findButton("Next Question");
+
+  if (checkAnswerBtn && (previousBtn || skipBtn || nextBtn)) {
+    const actionBar = document.createElement("div");
+    actionBar.id = "questionActionBar";
+
+    const primaryGroup = document.createElement("div");
+    primaryGroup.className = "question-action-primary";
+
+    const navGroup = document.createElement("div");
+    navGroup.className = "question-action-nav";
+
+    primaryGroup.appendChild(checkAnswerBtn);
+    if (previousBtn) navGroup.appendChild(previousBtn);
+    if (skipBtn) navGroup.appendChild(skipBtn);
+    if (nextBtn) navGroup.appendChild(nextBtn);
+
+    actionBar.appendChild(primaryGroup);
+    actionBar.appendChild(navGroup);
+
+    const questionCard = checkAnswerBtn.closest(".card") || checkAnswerBtn.parentElement;
+    questionCard.appendChild(actionBar);
+  }
+
+  document.body.dataset.buttonLayoutReady = "true";
+}
+
+setTimeout(professionaliseButtonLayout, 50);
+window.addEventListener("load", professionaliseButtonLayout);
